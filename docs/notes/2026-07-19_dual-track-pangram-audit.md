@@ -1,7 +1,7 @@
 # Dual-track experiment: quality harness vs Pangram harness (audit)
 
 **Date:** 2026-07-19
-**Status:** in progress — wave 0–2 complete; Pangram scoring pending quota reset
+**Status:** in progress — wave 0–3 complete (Q/P panel + Draft Mode review logged); Pangram scoring pending quota reset
 **Depends on:** Pangram free quota reset; Variant B (human from-memory rewrite) still load-bearing
 **Related:** `2026-07-18_ai-writing-quality-and-detectors.md` (decoupling result, n=4); `2026-07-18_anti-slop-harness-panel.md` (quality judges)
 
