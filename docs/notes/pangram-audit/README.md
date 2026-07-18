@@ -61,6 +61,7 @@ Plan board: `docs/plans/2026-07-19_writing-skill-pangram-audit/STATUS.md`
 
 ## Next
 
-1. Author: taste Q3–Q5 (`taste-profile.md`) + Morris–Shin rewrite (`morris-shin-1998-track-b.md`)
-2. Pangram: score Track C when quota resets
-3. Agent: wire taste into skill after author picks; apply C1 skill fixes (C2)
+1. Author: write Track B **blind** (`morris-shin-1998-track-b.md`), then compare AI probe in `docs/notes/taste-probes/`
+2. Author: confirm taste Q3–Q5 (+ draft P3–P5 proposal in taste-probes)
+3. Pangram: score Track C when quota resets
+4. Agent: wire taste into skill after author picks; apply C1 skill fixes (C2)

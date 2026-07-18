@@ -1,6 +1,8 @@
 # Taste profile — elicited writing preferences
 
-**Started:** 2026-07-18
+**Started:** 2026-07-18  
+**Overnight AI proposals (2026-07-19):** see `docs/notes/taste-probes/` — Q3–Q5 recommendations + draft P3–P5. **Not author judgments.** Confirm or reject here yourself after writing Track B blind.
+
 **Purpose:** capture the author's *taste* (what they judge good vs. bad prose) as clean personalization signal for Draft Mode. Built one judgment at a time from concrete minimal-pair passages; each answer yields a distilled principle that feeds D3 (positive levers) and D4 (contrast + the author's own "why").
 
 **Why this works when a voice corpus doesn't.** There is no clean sample of the author's *unaided* prose (the JMP is substantially AI-assisted, per author, 2026-07-18). But *taste* is elicitable directly and live, uncontaminated. Preferences are clean signal even though the prose isn't. And eliciting "which is better, and why" is exactly the TICL contrast structure the evidence favours over piling on positive exemplars.
