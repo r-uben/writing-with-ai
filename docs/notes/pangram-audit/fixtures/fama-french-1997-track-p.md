@@ -1,0 +1,19 @@
+## Draft: Track P output
+
+**Source:** /Users/rubenffuertes/repos/skills/writing-with-ai/docs/notes/pangram-audit/fixtures/fama-french-1997-track-q.md
+**Run:** /Users/rubenffuertes/repos/skills/writing-with-ai/docs/notes/pangram-audit/runs/fama-french-1997-track-q-20260719-005446
+**Rounds:** 1
+
+### Draft
+
+Corporate finance texts train managers to fear forecast error in cash flows, yet forecast error in the discount rate draws far less attention. The rate, though, is itself an estimate — and for industries, a noisy one. Apply the CAPM to industry portfolios, or the three-factor model, and typical standard errors run above 3.0% per year; Fama and French document exactly that. Quote a "cost of equity" to one decimal place, and you misstate what the data allow.
+
+Two errors compound. The factor risk premia come from long historical samples, and they stay uncertain even after decades of data. The industry loadings on those factors carry error of their own — sometimes a lot — because betas drift as composition shifts, and because industries lump firms into coarse buckets. Switching models won't save you. The CAPM anchors the textbooks, but it describes the cross-section poorly; the three-factor model fits better in sample, though it grew from the data rather than from a tight utility foundation. Either way, the industry-level cost of equity arrives with bands wide enough to swamp the spreads that many projects assume.
+
+And here's the thing: industries this imprecise are the favorable case. Single-firm and project-level estimates, built on shorter histories and noisier regressions, come out worse. Until estimation risk enters the decision on its own terms, precision in NPV is partly a mirage.
+
+### Pangram (manual)
+- [ ] Score: ___% AI / ___% Human (version ___)
+
+### Notes
+- Record each Pangram check in run.log

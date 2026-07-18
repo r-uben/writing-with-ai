@@ -1,0 +1,6 @@
+file: /Users/rubenffuertes/repos/skills/writing-with-ai/docs/notes/pangram-audit/runs/fama-french-1997-track-q-20260719-005446/r1-final.md
+sentences: 13
+words: 227
+mean_sentence_length: 17.5
+sentence_length_sd: 8.2
+type_token_ratio: 0.694

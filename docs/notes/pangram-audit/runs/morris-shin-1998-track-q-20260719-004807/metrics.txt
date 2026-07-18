@@ -1,0 +1,6 @@
+file: /Users/rubenffuertes/repos/skills/writing-with-ai/docs/notes/pangram-audit/runs/morris-shin-1998-track-q-20260719-004807/r1-final.md
+sentences: 15
+words: 224
+mean_sentence_length: 14.9
+sentence_length_sd: 6.2
+type_token_ratio: 0.653

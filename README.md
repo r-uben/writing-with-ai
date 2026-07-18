@@ -6,7 +6,7 @@ Research and tooling for using AI to improve writing while preserving authorial 
 
 ```text
 writing-with-ai/
-├── STATUS.md              # volatile stage + next action
+├── STATUS.md              # volatile TODO + next action (no separate TODO.md)
 ├── skill/SKILL.md         # /writing skill (Review + Draft) — source of truth
 ├── docs/notes/            # research notes and experiment fixtures
 ├── src/writing_audit/     # Python research harnesses (uv)

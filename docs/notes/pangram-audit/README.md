@@ -1,49 +1,54 @@
 # Pangram audit: three-concept parallel build
 
-**Status:** fixtures + Track Q baselines ready; Track P harness in `src/writing_audit/`; Pangram scoring pending quota reset.
+**Status (2026-07-19):** Wave 0–2 complete. See dispatch log below.
 
-Broad economics coverage across three registers:
+## What's done
 
-| ID | Paper | Register | Human control (Track C) |
-|---|---|---|---|
-| `nakamura-steinsson-2018` | Nakamura & Steinsson (2018, QJE) | Empirical macro / identification | Intro + HF window passage from OCR library |
-| `morris-shin-1998` | Morris & Shin (1998, AER) | Theoretical macro / global games | Intro from OCR library |
-| `fama-french-1997` | Fama & French (1997, JFE) | Empirical finance / asset pricing | Abstract + intro from OCR library |
+| Artifact | Status |
+|---|---|
+| Experiment protocol | Frozen in `2026-07-19_dual-track-pangram-audit.md` |
+| Human originals (Track C) | `*-track-c.md` — all 3 concepts |
+| AI quality drafts (Track Q) | `*-track-q.md` — all 3 concepts |
+| AI detector-chase drafts (Track P) | `*-track-p.md` — all 3 concepts (2026-07-19) |
+| Layer-1 baseline | `metrics-baseline.md` |
+| Human rewrites (Track B) | Empty — **author** |
+| Pangram scores | None yet — quota |
 
-## Tracks (per concept)
+## Concepts
 
-| Track | Location | Status |
+| ID | Paper | Register |
 |---|---|---|
-| **Concept + outline** | `fixtures/<id>.md` | ready |
-| **Q** — quality draft | `fixtures/<id>-track-q.md` | ready |
-| **P** — Pangram harness | `uv run track-p fixtures/<id>-track-q.md` → `fixtures/<id>-track-p.md` | harness ready; outputs pending run |
-| **B** — human rewrite | `fixtures/<id>-track-b.md` | **author only** — empty template |
-| **C** — human control | noted in each fixture | extract from library when scoring |
+| `nakamura-steinsson-2018` | Nakamura & Steinsson (2018, QJE) | Empirical macro |
+| `morris-shin-1998` | Morris & Shin (1998, AER) | Theoretical macro |
+| `fama-french-1997` | Fama & French (1997, JFE) | Empirical finance |
+
+## Fixture map
+
+| Track | Meaning | Files |
+|---|---|---|
+| **C** | Human published prose | `*-track-c.md` |
+| **Q** | AI quality draft | `*-track-q.md` |
+| **P** | AI detector-chase draft | `*-track-p.md` |
+| **B** | Your from-memory rewrite | `*-track-b.md` |
 
 ## Commands
 
-Layer-1 metrics (sentence-length SD, TTR, etc.):
-
 ```bash
-uv run writing-metrics docs/notes/pangram-audit/fixtures/nakamura-steinsson-2018-track-q.md
+uv run writing-metrics docs/notes/pangram-audit/fixtures/<fixture>.md
+uv run track-p docs/notes/pangram-audit/fixtures/<id>-track-q.md --rounds 1
 ```
 
-Track P pipeline (research only — 3-stage multi-agent rewrite):
+## Dispatch log
 
-```bash
-uv run track-p docs/notes/pangram-audit/fixtures/nakamura-steinsson-2018-track-q.md --rounds 2
-uv run track-p docs/notes/pangram-audit/fixtures/morris-shin-1998-track-q.md --reviser agy
-```
+| Wave | Date | Log |
+|---|---|---|
+| 0–1 | 2026-07-19 | `docs/plans/.../logs/2026-07-19_wave0-1.md` |
+| 2 | 2026-07-19 | `docs/plans/.../logs/2026-07-19_wave2.md` |
 
-Run logs and intermediates land in `docs/notes/pangram-audit/runs/<fixture>-<timestamp>/`.
+Plan board: `docs/plans/2026-07-19_writing-skill-pangram-audit/STATUS.md`
 
-## Run order (when Pangram quota available)
+## Next
 
-1. Score **C** passages (human library extracts) — calibration anchors.
-2. Score **Q** drafts (already written).
-3. Run **P** via `uv run track-p` on each Q draft; score each iteration; cap checks per concept.
-4. Author produces **B** from-memory rewrites (do not read Q while writing).
-5. Blind quality panel on Q/P/B; record Pangram + Layer-1 metrics (`writing-metrics` on each cell).
-6. Write results to `docs/notes/2026-07-19_dual-track-pangram-audit.md`.
-
-**Quota budget suggestion:** 4 free checks/day → prioritize B (1) + Q (1) + best P iteration (1) per concept; defer extra P iterations.
+1. Author: taste Q3–Q5 (`taste-profile.md`) + Morris–Shin rewrite (`morris-shin-1998-track-b.md`)
+2. Pangram: score Track C when quota resets
+3. Agent: wire taste into skill after author picks

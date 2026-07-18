@@ -1,0 +1,6 @@
+file: /Users/rubenffuertes/repos/skills/writing-with-ai/docs/notes/pangram-audit/runs/nakamura-steinsson-2018-track-q-20260719-005102/r1-final.md
+sentences: 18
+words: 265
+mean_sentence_length: 14.7
+sentence_length_sd: 9.0
+type_token_ratio: 0.639

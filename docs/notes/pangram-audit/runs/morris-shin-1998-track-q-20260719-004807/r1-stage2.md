@@ -1,0 +1,7 @@
+A currency crisis is self-fulfilling when speculators expect an attack: their sales force the devaluation, and so the expectation proves itself. That story is reproduced by common-knowledge models of fundamentals, and multiple equilibria come with it. Ask why the ERM broke in September 1992 rather than September 1990, and these models stay silent. Nor can they score a policy that raises the cost of short-selling; after the fact, any outcome fits.
+
+The fix runs the other way: not richer fundamentals but poorer common knowledge. Hand each speculator a private, noisy signal about θ. Everyone can now know the economy is sound and still not know that everyone else knows it — and still not know that everyone knows that everyone knows it. Coordination rides not on θ alone but on beliefs about others' beliefs.
+
+The multiplicity is killed by that structure. A single cutoff survives, θ*: attacking dominates below it, holding dominates above. Each enters as a comparative static — the hot money in circulation, the attack cost t, the government's defense cost c(α, θ). Once you leave the model, throwing sand in the wheels stops being a metaphor: it moves the unique threshold. Monetary-policy transparency works for the same reason, shifting higher-order beliefs rather than just the first-order forecast of θ.
+
+Multiple equilibria left policy with nothing to say; a unique global-games cutoff makes timing and intervention analysable.
