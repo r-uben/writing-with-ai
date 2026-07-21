@@ -1,0 +1,22 @@
+{
+  "_comment": "Incidence data for the prose-moves graph. Rendered by `uv run prose-graph-viz`. Papers with band='control' are the negative control. ptype='ai' = machine draft of the same content (human-vs-AI axis). ptype='placeholder' = a still-empty control slot drawn so the missing counterfactual stays visible. Move degree counts PUBLISHED papers only; control edges are drawn but never counted, so an AI draft that reproduces a move shows an edge without inflating its 'genre law' degree.",
+  "papers": [
+    {"id": "MS", "label": "Morris–Shin 1998", "band": "published", "subfield": "theory macro"},
+    {"id": "FF", "label": "Fama–French 1997", "band": "published", "subfield": "empirical AP"},
+    {"id": "NS", "label": "Nakamura–Steinsson 2018", "band": "published", "subfield": "empirical macro"},
+    {"id": "AI_MS", "label": "AI probes · Morris–Shin (3/3)", "band": "control", "ptype": "ai", "subfield": "grok · gpt-sol · ollama — identical move set"},
+    {"id": "WEAK", "label": "weak / lower-tier human", "band": "control", "ptype": "placeholder", "subfield": "external pull TODO"}
+  ],
+  "moves": [
+    {"id": "incumbent→defect→our-fix", "papers": ["MS", "FF", "NS", "AI_MS"]},
+    {"id": "thesis-in-first-sentence", "papers": ["MS", "FF"]},
+    {"id": "enumerated-gaps", "papers": ["MS", "FF"]},
+    {"id": "concrete-episode-as-evidence", "papers": ["MS", "NS", "AI_MS"]},
+    {"id": "plain-mechanism-before-math", "papers": ["MS", "NS", "AI_MS"]},
+    {"id": "concede-then-claim", "papers": ["MS", "AI_MS"]},
+    {"id": "big-question-opener", "papers": ["NS"]},
+    {"id": "named-models-as-landscape", "papers": ["FF"]},
+    {"id": "concede-own-limitation-early", "papers": ["NS"]},
+    {"id": "rhetorical-question-pivot", "papers": ["MS"]}
+  ]
+}
