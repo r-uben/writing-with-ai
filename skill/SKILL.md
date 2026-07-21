@@ -72,7 +72,9 @@ Read the concept (file or inline). Extract: the central claim/argument, any sub-
 
 ### Step D2: Plan (claim outline)
 
-Expand the concept into a one-line-per-paragraph outline where each line states *the point that paragraph makes* (not its topic). Present the outline to the human for a quick confirmation or reorder. This is where the human steers the argument — by shaping the outline, not by editing finished prose. Do not draft until the outline is confirmed (or the human says "just draft it").
+Expand the concept into a one-line-per-paragraph outline where each line states *the point that paragraph makes* (not its topic). Present the outline to the human for a quick confirmation or reorder. This is where the human steers the argument — by shaping the outline, not by editing finished prose.
+
+**Non-interactive / automation:** if the user already said “just draft it”, passed `--yes`, or the invocation is headless with no human in the loop, treat the outline as auto-confirmed after showing it once in the output (do not deadlock waiting for a reply). Otherwise do not draft until the outline is confirmed.
 
 ### Step D3: Draft with anti-tells as generation constraints
 
@@ -83,7 +85,7 @@ Draft prose from the confirmed outline in a strong academic register (`--venue` 
 - **Stock-register test**: stock academic phrases are slop even when off any tell list ("do the heavy lifting", "in the classic sense", "the standard prescription"). If a phrase could appear unchanged in a hundred other papers, replace it.
 - **Argument-carried transitions**: the logic of adjacent sentences carries the turn; do not scaffold with *therefore/thus/yet/hence* where the content already turns.
 - **S4/S5/S10/S11/S16**: no filler, conclusion-first, confident not arrogant, no apologetic hedging. The memorable formulation must compress the argument's mechanism itself ("the bank that must keep the promise is not the bank that made it") — decorative symmetry that could caption any argument gets cut. One owned first-person move ("I argue", per S12) and an occasional colloquial grace note are allowed.
-- **S6/S7**: anchor claims to the human-supplied numbers; label uncertainty the human flagged. Never fabricate a figure to satisfy S6 — if a claim needs a number the human did not supply, mark it (Step D5), do not invent one.
+- **S6/S7**: anchor claims to the human-supplied numbers; label uncertainty the human flagged. Never fabricate a figure to satisfy S6 — if a claim needs a number the human did not supply, insert `[VERIFY: description]` **inline in the prose** at that point (do not invent a plausible value). Placeholders flow into D5 automatically.
 
 **Exemplar levers (positive contrast, distilled from rated field prose — full ratings in `docs/notes/2026-07-18_prose-exemplar-ratings.md`).** Condition on the *move*, never imitate a passage (naive imitation ranked 4th of 7 on slop):
 
@@ -99,11 +101,15 @@ Critique the draft against the 20 rules and the anti-tell register. For each wea
 
 ### Step D5: Verify-before-use list
 
-Extract every factual claim, quantity, date, and citation in the draft into a checklist for the human to confirm. This is the accountability pass — one review, not heavy editing. Flag explicitly any place the draft needed a fact the human did not supply. Nothing in this list may be an invented value.
+Extract every factual claim, quantity, date, and citation in the draft into a checklist for the human to confirm. This is the accountability pass — one review, not heavy editing. Flag explicitly any place the draft needed a fact the human did not supply. Nothing in this list may be an invented value. Any `NEEDS SOURCE` item must correspond to a `[VERIFY: …]` placeholder still in the draft body — confirmation of the list alone is not permission to use unverified prose; the human must supply the value or delete the claim.
 
 ### Step D6: Independent evaluation (required)
 
-The drafting model must not be the sole reviewer of its own draft (project charter). Hand the draft to an independent judge — reuse the Antigravity/Gemini path (Review Mode, Step 3) to score the draft against the 20 rules and return concrete fixes. Optionally run the deterministic linguistic metrics (sentence-length SD, tell-word frequency) as a cheap pre-filter before the judge. `--no-gemini` disables this; warn the human that draft mode then has no independent check.
+The drafting model must not be the sole reviewer of its own draft (project charter).
+
+1. **Materialize the draft** to a temp `.tex` or `.md` file under the project (or `/tmp`) so `agy` can use `@FILE_PATH` — D3/D4 output in the chat buffer alone is not enough.
+2. Hand that file to an independent judge — reuse the Antigravity/Gemini path (Review Mode, Step 3) against the 20 rules. Optionally run deterministic linguistic metrics first.
+3. `--no-gemini` disables this; warn that draft mode then has no independent check. If `agy` fails, say so and do not pretend D6 passed.
 
 ### Draft Mode output
 
