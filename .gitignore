@@ -5,6 +5,7 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 
-# Literature PDFs + OCR engine caches (local; bib + md notes are tracked)
+# Literature PDFs + OCR output — LOCAL ONLY (third-party full text; do not publish).
+# Only the bibliography is tracked: refs.bib + README.md.
 docs/notes/literature/pdfs/
-docs/notes/literature/ocr/**/cache/
+docs/notes/literature/ocr/
