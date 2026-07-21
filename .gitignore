@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.pytest_cache/
+.ruff_cache/
+
+# Literature PDFs + OCR engine caches (local; bib + md notes are tracked)
+docs/notes/literature/pdfs/
+docs/notes/literature/ocr/**/cache/
