@@ -108,3 +108,33 @@ This dual-track run slots in **with** Variant B (same quota window, same concept
 **Passage length band:** 200–330 words for fair cross-cell comparison.
 
 **Hard separation:** Track P never writes into `skill/SKILL.md`.
+
+---
+
+## Results — 2026-07-19 checks (Pangram 3.3.2, quota 4/4 used)
+
+Checks run by author ~19:47–19:53 CEST, before the agent session; details recovered from Pangram history (no extra quota spent). `P(AI)` is the raw `prediction_prob` from the dashboard API.
+
+| # | Time (CEST) | Text | Words | Verdict | Confidence | P(AI) |
+|---|---|---|---|---|---|---|
+| 1 | 19:47 | MS variant A — "Multiple-equilibrium models … **explain** self-fulfillment, but they do not explain timing or policy" | 233 | AI (100%) | High | 0.9931 |
+| 2 | 19:47 | MS variant B — "Multiple-equilibrium models … **capture** self-fulfillment: a continuum of speculators" | 214 | AI (100%) | High | 0.9929 |
+| 3 | 19:50 | Morris–Shin (1998) published paragraph, verbatim ("We argue here that the apparent multiplicity…") — final ¶ of `morris-shin-1998-track-c.md` | 156 | Human (100%) | High | 0.0025 |
+| 4 | 19:53 | Close paraphrase of the same paragraph ("We argue that the apparent multiplicity…") | 133 | Human (100%) | Low | 0.0747 |
+
+### Provenance caveats (author to confirm)
+
+- Checks 1–2 do **not** match the frozen `morris-shin-1998-track-q.md` / `-track-p.md` fixtures verbatim. They read as revised Q-side variants (the "counsel of despair" flourish flagged by the panel is gone). Confirm what they were and whether either counts as a protocol cell; if not, they are off-protocol probes and the frozen Q/P cells are still unscored.
+- Check 3 scored only the final paragraph (156 w) of the Track C extract, not the full ~265 w fixture.
+- Check 4's origin is unattested (author paraphrase from the open paper? from memory?). If author-written with the source visible, it is neither Track B (must be from outline only) nor Track C. Log as an off-protocol probe unless attested otherwise.
+- Checks 3–4 are below the 200–330 word band; Pangram confidence may degrade on short passages (cf. FF fixture note).
+
+### Directional reading (n small, off-protocol cells included)
+
+- Same concept, same claims, same register: AI-side drafts ~0.993, published human prose 0.0025. Consistent with the decoupling result — Pangram tracks origin/fingerprint, not quality.
+- The paraphrase cell is the most informative: near-identical semantics to the published paragraph, still "Human" but confidence Low and P(AI) up 30× (0.0025 → 0.0747). Human-performed re-encoding of the same content moves the score toward AI without changing the claims — a fingerprint, not a content, signal.
+- No protocol cell is fully scored yet: NS/FF Track C, all Track Q, all Track P, and Track B remain for the next quota windows (per the frozen budget: C first, then Q, then P + B).
+
+### Quota log
+
+- 2026-07-19: 4/4 used (author, pre-session). Next window: 4 checks after daily reset (~06:00 CEST 2026-07-20 based on prior-day usage at ~18:30–19:00 ET clearing overnight; verify at first check).

@@ -1,6 +1,6 @@
 # Pangram audit: three-concept parallel build
 
-**Status (2026-07-19):** Wave 0–3 agent work complete. Blind Q/P panel done; Pangram scoring still pending quota.
+**Status (2026-07-19 evening):** Wave 0–3 agent work complete. Blind Q/P panel done. First Pangram results in: 4/4 checks used 2026-07-19 (author, off-protocol MS probes — see results section of `2026-07-19_dual-track-pangram-audit.md`). Protocol cells (C/Q/P/B) still unscored; quota 0/4 until reset.
 
 ## What's done
 
@@ -13,7 +13,7 @@
 | Layer-1 metrics | `metrics-baseline.md` — Q, C, P |
 | Blind Layer-2 panel (Q vs P) | `docs/plans/.../logs/panel-{ns,ms,ff}.md` |
 | Human rewrites (Track B) | Empty — **author** |
-| Pangram scores | None yet — quota |
+| Pangram scores | 4 off-protocol MS probes scored 2026-07-19 (2×AI ~0.993 high-conf; MS-C final ¶ Human 0.0025 high-conf; paraphrase Human 0.0747 low-conf). Protocol cells pending quota |
 
 ## Concepts
 
