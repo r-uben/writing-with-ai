@@ -1,0 +1,7 @@
+# PDFs are open-access but not committed (publisher binaries, repo weight).
+# Retrieve them with the URLs / DOIs in README.md and refs.bib.
+pdfs/
+
+# OCR'd full text is derived from the same third-party papers — kept local,
+# same copyright posture as the PDFs. The tracked index is README.md + refs.bib.
+ocr/
