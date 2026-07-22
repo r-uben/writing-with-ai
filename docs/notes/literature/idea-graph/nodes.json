@@ -1,0 +1,4169 @@
+{
+  "version": 1,
+  "phase": "merge-draft",
+  "papers": [
+    {
+      "key": "padmakumar-he-2024",
+      "prefix": "PH",
+      "node_count": 35,
+      "edge_count": 37,
+      "extractionFlags": [],
+      "extractor_notes": "ICLR 2024 controlled co-writing study (Solo vs GPT3/davinci vs InstructGPT/text-davinci-003) on NYT student-opinion essays via CoAuthor; diversity/homogenization measured at lexical and key-point levels; effect attributed to model-contributed text. Related-work name-drops kept only where relied upon (Jakesch opinion bias; Bai/Song RLHF entropy; Kleinberg monoculture framing)."
+    },
+    {
+      "key": "doshi-hauser-2024",
+      "prefix": "DH",
+      "node_count": 33,
+      "edge_count": 38,
+      "extractionFlags": {
+        "design": "opt-in GenAI within assigned arms; ITT causal claims; no prompt customization or multi-turn chat",
+        "scope_walls": "eight-sentence English microfiction; three adventure topics; non-professional UK Prolific writers/readers; GPT-4 at study time",
+        "construct_adaptation": "usefulness redefined toward YA appropriateness / book developability / publisher likelihood",
+        "exploratory_vs_preregistered": "ownership, profit split, ethics, disclosure are exploratory (S5); emotional characteristics partly exploratory",
+        "self_vs_other": "writer self-ratings null across conditions while evaluator ratings move",
+        "orphans_emitted": [
+          "collective-social-dilemma",
+          "ownership-credit"
+        ]
+      },
+      "extractor_notes": "Science Advances online experiment: N=293 UK Prolific writers (8-sentence YA microfiction; GPT-4 three-sentence idea opt-in; Human-only vs 1 vs ≤5 ideas) and N=600 evaluators (3519 ratings). Preregistered novelty/usefulness; similarity via OpenAI embeddings; DAT heterogeneity; ownership/ethics exploratory (S5). Intention-to-treat; 88.4% GenAI take-up. No skill-implication nodes."
+    },
+    {
+      "key": "kobak-biomed-2025",
+      "prefix": "KB",
+      "node_count": 30,
+      "edge_count": 31,
+      "extractionFlags": [],
+      "extractor_notes": "Published Science Advances OCR only (same study as kobak-academic-2024 preprint — do not dual-corroborate). Corpus-level excess-vocabulary design; no per-abstract detection. Numbers from abstract/results: Δ=0.135 lower bound; COVID content Δ=0.069; subcorpus peaks to ~0.40+."
+    },
+    {
+      "key": "jakesch-2023",
+      "prefix": "JK",
+      "node_count": 32,
+      "edge_count": 34,
+      "extractionFlags": [],
+      "extractor_notes": "CHI 2023 / arXiv 2302.00560. Online experiment N=1,506 writers + N=500 judges; GPT-3 davinci-002 writing assistant opinionated via invisible prefix+infix prompts on 'Is social media good for society?'. Core claims: written-opinion shift and post-task attitude shift (latent persuasion), with low awareness. Mechanisms discussed as informational / normative / behavioral; gaps on topic generalizability, persistence, and weaker deployed opinions."
+    },
+    {
+      "key": "williams-ceci-2026",
+      "prefix": "WC",
+      "node_count": 34,
+      "edge_count": 38,
+      "extractionFlags": {
+        "preregistered": true,
+        "n_total": 2582,
+        "experiments": 2,
+        "safeguards_tested": [
+          "Warning (prebunk)",
+          "Debrief (debunk)",
+          "Static Text (information-only control)",
+          "Write-in-Favor (overt behavior manipulation)"
+        ]
+      },
+      "extractor_notes": "Science Advances 2026; two preregistered Prolific experiments (Exp1 N=1485 standardized tests; Exp2 N=1097 four partisan issues with pre–post ~34 days). GPT-3.5/GPT-4 autocomplete biased by design. Capture attitude-shift main effects, unawareness, Static Text vs autocomplete, Write-in-Favor benchmark, and Warning/Debrief safeguards that fail. No skill-implication nodes."
+    },
+    {
+      "key": "kosmyna-2025",
+      "prefix": "KS",
+      "node_count": 37,
+      "edge_count": 50,
+      "extractionFlags": [
+        "partial_ocr"
+      ],
+      "extractor_notes": "PARTIAL OCR (~67k words / 216pp metadata). Extracted from abstract, intro RQ framing, experimental design, interview/ownership/quoting results, NLP discussion, EEG summaries, Session 4 crossover, Discussion cognitive-debt passage, Limitations, Conclusions. Skipped exhaustive appendix dDTF tables and topic-by-topic appendix mining. No skill-implication nodes."
+    },
+    {
+      "key": "stankovic-2026",
+      "prefix": "ST",
+      "node_count": 17,
+      "edge_count": 18,
+      "extractionFlags": [],
+      "extractor_notes": "Short arXiv commentary (~2.5k words) on Kosmyna et al. 2025; no original experiment. Nodes are mostly critique/gap/interpretation of Kosmyna design, EEG stats, reporting, and cognitive-debt claims. Inherited Kosmyna findings summarized only where needed as critique targets. Quote+anchor on all finding/critique/gap/lever nodes."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "PH-01",
+      "type": "framing",
+      "statement": "Shared LLM writing assistants risk an algorithmic monoculture that shifts content toward modal, less colorful writing.",
+      "quote": "As millions of users rely on the same underlying model to produce text, there is a potential risk of shifting the content towards the mode—good but not colorful writing.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 1
+      },
+      "status": "asserted",
+      "scope": "LLM writing assistants; public discourse",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": "Cites Kleinberg and Raghavan algorithmic monoculture."
+    },
+    {
+      "id": "PH-02",
+      "type": "framing",
+      "statement": "The paper hypothesizes that incorporating model suggestions dilutes each writer's unique voice, homogenizing writers and thereby reducing collective content diversity.",
+      "quote": "We hypothesize that incorporating model suggestions dilutes the writer's unique voice, leading to different writers producing similar content, and this homogenization in turn reduces the overall diversity of content produced by many writers.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 1
+      },
+      "status": "asserted",
+      "scope": "LLM co-writing of open-ended argumentative essays",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "PH-03",
+      "type": "finding",
+      "statement": "Prior work shows writing with opinion-controlled LLMs can bias the opinions users express.",
+      "quote": "Jakesch et al. (2023) and Bhat et al. (2023) find that users' opinions expressed in their writing can be biased by controlling LLMs to promote a specific argument",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 1
+      },
+      "status": "inherited",
+      "scope": "Opinionated LLM co-writing; cited motivation",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": "Relied upon as motivation for diversity risk; not re-tested here."
+    },
+    {
+      "id": "PH-04",
+      "type": "assumption",
+      "statement": "Base vs feedback-tuned LLMs must be compared separately because human-feedback finetuning tends to decrease output-distribution entropy and thus diversity.",
+      "quote": "We distinguish the two types of language models because prior work has shown that finetuning language models on human feedback tends to decrease the entropy of the output distribution Bai et al. (2022) and thus may decrease text diversity in general.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 3
+      },
+      "status": "inherited",
+      "scope": "RLHF/feedback-tuned LMs vs base LMs",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": "Design assumption grounded in Bai et al. 2022; Song et al. 2023 echoed later."
+    },
+    {
+      "id": "PH-05",
+      "type": "lever",
+      "statement": "A three-arm controlled co-writing design (Solo, GPT3/davinci, InstructGPT/text-davinci-003) with randomized topic and setting order tests diversity effects.",
+      "quote": "We assign participants to three groups: a control group where participants write essays without model help, an LLM treatment group where participants write essays with a base language model (GPT3), and a feedback-tuned LLM treatment group ... (InstructGPT).",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 1
+      },
+      "status": "measured",
+      "scope": "38 Upwork native-English writers; 10 NYT topics; 300 essays",
+      "theme_fit": "framing/co-writing",
+      "numbers": [
+        "38 writers",
+        "10 topics",
+        "100 essays/group",
+        "300 total"
+      ],
+      "notes": "CoAuthor TAB continuations; ≥5 queries required; temp 0.9, freq penalty 0.5."
+    },
+    {
+      "id": "PH-06",
+      "type": "metric",
+      "statement": "Model contribution is the percentage of essay characters introduced by the model according to keystroke logs.",
+      "quote": "The interface used for data collection records keystroke-level information about whether each character was introduced by the model or the user. Thus, we report the average percentage of characters introduced by the model in each essay.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 3
+      },
+      "status": "measured",
+      "scope": "CoAuthor character-level authorship logs",
+      "theme_fit": "framing/co-writing",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "PH-07",
+      "type": "finding",
+      "statement": "Users engage GPT3 and InstructGPT similarly: ~9 queries, ~70% acceptance, ~33–36% model-written characters, with no significant usage difference.",
+      "quote": "We do not observe a significant difference between their usage statistics: an independent samples t-test on the number of queries and acceptance rates shows no significance at the 5% level.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "Co-written essays; Table 1 usage stats",
+      "theme_fit": "framing/co-writing",
+      "numbers": [
+        "InstructGPT: 9.15 queries, 70.49% accept, 32.45% model-written",
+        "GPT3: 9.62, 71.32%, 35.57%"
+      ],
+      "notes": null
+    },
+    {
+      "id": "PH-08",
+      "type": "metric",
+      "statement": "Key points are zero-shot LLM summaries of each essay; authorship is assigned by Rouge-L alignment to a sentence plus majority model characters.",
+      "quote": "we align each key point to a sentence in the essay with which it has the highest overlap, as measured by Rouge-L ... If more than half of the sentence's characters are model-generated ... the key point is attributed to the model",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "gpt-3.5-turbo summarization; Rouge-L alignment",
+      "theme_fit": "homogenization",
+      "numbers": [
+        "mean 6.86 key points/essay",
+        "SD 1.53"
+      ],
+      "notes": null
+    },
+    {
+      "id": "PH-09",
+      "type": "finding",
+      "statement": "Both GPT3 and InstructGPT contribute a median of roughly 0.4 of essay key points, with high cross-user variance.",
+      "quote": "We observe that the median fraction for both GPT3 and InstructGPT is around 0.4, indicating that models make a significant contribution to the key content of the essay.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "Key-point attribution; co-written arms",
+      "theme_fit": "framing/co-writing",
+      "numbers": [
+        "median model key-point fraction ≈0.4"
+      ],
+      "notes": null
+    },
+    {
+      "id": "PH-10",
+      "type": "metric",
+      "statement": "Essay homogenization is mean pairwise similarity to other same-topic essays; corpus homogenization averages those scores (Rouge-L or BertScore).",
+      "quote": "the homogenization score of an essay d (written in response to topic t) is hom(d | t) = 1/(|D_t|-1) ∑_{d' ∈ D_t \\ d} sim(d, d') ... we define corpus homogenization as the average homogenization score of all essays.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "Same-topic pairwise similarity; essay or key-point concat",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": "Also measured after concatenating key points per essay."
+    },
+    {
+      "id": "PH-11",
+      "type": "finding",
+      "statement": "InstructGPT co-writing yields significantly higher corpus homogenization than Solo and GPT3 at key-point and essay levels.",
+      "quote": "The corpus homogenization scores when comparing essays from the three groups at the key point level using Rouge-L are 0.1536 for Solo, 0.1578 for GPT3 and 0.1660 for InstructGPT. InstructGPT exhibit higher corpus homogenization than both other groups to a statistically significant degree",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 5
+      },
+      "status": "measured",
+      "scope": "Key-point Rouge-L; holds for BertScore and essay-level",
+      "theme_fit": "homogenization",
+      "numbers": [
+        "Solo 0.1536",
+        "GPT3 0.1578",
+        "InstructGPT 0.1660",
+        "p<0.05",
+        "higher median on 7/10 topics"
+      ],
+      "notes": null
+    },
+    {
+      "id": "PH-12",
+      "type": "finding",
+      "statement": "Despite similar model contribution, GPT3 co-writing does not significantly raise corpus homogenization versus Solo.",
+      "quote": "there is no statistically significant difference between the corpus homogenization score of GPT3 and that of Solo at the 5% significance level using an independent samples t-test.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 5
+      },
+      "status": "measured",
+      "scope": "GPT3 vs Solo; same usage contribution as InstructGPT",
+      "theme_fit": "homogenization",
+      "numbers": [
+        "p>0.05 vs Solo"
+      ],
+      "notes": null
+    },
+    {
+      "id": "PH-13",
+      "type": "interpretation",
+      "statement": "InstructGPT's benchmark gains may trade off against producing more homogeneous content in interactive co-writing.",
+      "quote": "While InstructGPT often outperforms GPT3 on benchmarks across a wide range of metrics (Liang et al., 2022), our results highlight that this performance boost may come at the cost of creating more homogeneous content in interactive settings.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 5
+      },
+      "status": "suggested",
+      "scope": "Interactive co-writing vs static benchmarks",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "PH-14",
+      "type": "metric",
+      "statement": "Corpus diversity is the fraction of unique information units (n-grams or clustered key points) over total information units.",
+      "quote": "we represent the corpus as a bag of information units (e.g., n-grams), and compute the number of unique information units divided by the total number of information units, such as the type-token ratio.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 5
+      },
+      "status": "measured",
+      "scope": "Per-condition essay corpora",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "PH-15",
+      "type": "metric",
+      "statement": "Key-point uniqueness uses agglomerative clustering with complete linkage on Rouge-L (or BertScore) distance 1−sim.",
+      "quote": "To compute the number of unique key points, we perform agglomerative clustering and consider all key points in one cluster to be equivalent. ... using the complete linkage criterion. We convert Rouge-L to a distance metric ... by subtracting the similarity score from 1",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 6
+      },
+      "status": "measured",
+      "scope": "All key points pooled per condition; threshold varied",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "PH-16",
+      "type": "finding",
+      "statement": "InstructGPT essays show the lowest unique n-gram fractions for n=1..5; GPT3 does not significantly decrease lexical diversity.",
+      "quote": "We see that the InstructGPT group consistently exhibits lower diversity across all values of n, whereas GPT3 does not significantly decrease the diversity score.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 6
+      },
+      "status": "measured",
+      "scope": "Table 3a n-gram type-token ratios",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "5-gram: Solo 0.991, GPT3 0.988, InstructGPT 0.977"
+      ],
+      "notes": null
+    },
+    {
+      "id": "PH-17",
+      "type": "finding",
+      "statement": "InstructGPT yields significantly lower unique key-point fractions than Solo and GPT3 across clustering distance thresholds.",
+      "quote": "InstructGPT consistently exhibits lower content diversity across all selected thresholds. In addition, the diversity of the InstructGPT group is lower than both the Solo and GPT3 groups by a statistically significant margin (p < 0.05)",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 6
+      },
+      "status": "measured",
+      "scope": "Rouge-L clustering; BertScore appendix corroboration",
+      "theme_fit": "homogenization",
+      "numbers": [
+        "threshold 0.6: Solo 0.941, GPT3 0.927, InstructGPT 0.877",
+        "p<0.05 permutation test"
+      ],
+      "notes": null
+    },
+    {
+      "id": "PH-18",
+      "type": "finding",
+      "statement": "InstructGPT corpora concentrate probability on common topical 5-grams more than Solo, with significant 5-gram frequency differences.",
+      "quote": "In the InstructGPT group, a notable concentration of probability mass in the head of the distribution for 5-grams suggests a higher degree of repetition ... We verify the significance of the difference in 5-gram frequencies between InstructGPT and Solo via a chi-square test (p<0.05).",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 7
+      },
+      "status": "measured",
+      "scope": "Top-50 5-gram distributions; topical vs generic phrases",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "chi-square p<0.05"
+      ],
+      "notes": null
+    },
+    {
+      "id": "PH-19",
+      "type": "mechanism",
+      "statement": "Diversity loss could come from less diverse InstructGPT generations and/or users writing differently under assistance.",
+      "quote": "There are two potential contributors. First, InstructGPT may produce less diverse text, influencing the essay by directly contributing text. Second, users may write differently in the presence of assistance, e.g., adopting the model's opinion (Jakesch et al., 2023).",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 7
+      },
+      "status": "asserted",
+      "scope": "Disentangling model vs user contributions",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "PH-20",
+      "type": "finding",
+      "statement": "InstructGPT's five continuations per query are more similar to each other than GPT3's (mean pairwise Rouge-L 0.20 vs 0.11).",
+      "quote": "We observe that InstructGPT indeed generates less diverse text than GPT3 on average (0.20 vs 0.11 on Rouge-L), with significance at the 5% level using an independent samples t-test.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 7
+      },
+      "status": "measured",
+      "scope": "Pairwise similarity of 5 suggestions per query",
+      "theme_fit": "homogenization",
+      "numbers": [
+        "InstructGPT 0.20",
+        "GPT3 0.11",
+        "p<0.05"
+      ],
+      "notes": "Self-BLEU-like; BertScore appendix same conclusion."
+    },
+    {
+      "id": "PH-21",
+      "type": "finding",
+      "statement": "User-written 5-gram distributions stay similar with or without model help; InstructGPT-introduced 5-grams carry the excess head mass.",
+      "quote": "the 5-gram distributions of user-written text remain the same regardless of whether the user writes with a model ... and which model they write with ... Instead, the increased repetition of 5-grams ... is more model-related as evidenced by the high probability mass on common 5-grams introduced by InstructGPT.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 8
+      },
+      "status": "measured",
+      "scope": "Token authorship via keystrokes; continuous n-gram spans",
+      "theme_fit": "lexical shift",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "PH-22",
+      "type": "finding",
+      "statement": "Homogenization of user-attributed key points is similar across GPT3 and InstructGPT; InstructGPT-attributed key points are more homogenized.",
+      "quote": "while the average homogenization score of user-contributed key points does not change between the two groups, the InstructGPT contributed key points have higher average homogenization than GPT3 (p < 0.05).",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 8
+      },
+      "status": "measured",
+      "scope": "Key points split by model vs user authorship",
+      "theme_fit": "homogenization",
+      "numbers": [
+        "p<0.05 model-key-point homogenization"
+      ],
+      "notes": null
+    },
+    {
+      "id": "PH-23",
+      "type": "mechanism",
+      "statement": "Reduced co-writing diversity is mainly due to less diverse InstructGPT-contributed text, not changes in users' lexical or argument generation.",
+      "quote": "Our results suggest that the users' lexical choice and argument generation is not affected when writing with model assistance. The reduction in diversity in collaborative writing is attributed more to text contributed directly by the InstructGPT model.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 8
+      },
+      "status": "measured",
+      "scope": "Single-session co-writing; InstructGPT vs GPT3",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "PH-24",
+      "type": "interpretation",
+      "statement": "Limited change in user writing under assistance suggests a lower risk of a user–model mutual-influence feedback loop in single interactions.",
+      "quote": "This paints a relatively optimistic picture as the risk of forming a feedback loop through the mutual influence between the user and the model is potentially limited. However, it is important to note that our study focuses on single interactions",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 8
+      },
+      "status": "suggested",
+      "scope": "Single interactions only",
+      "theme_fit": "orphan",
+      "numbers": [],
+      "notes": "theme_fit orphan: feedback-loop dynamics not in README theme list."
+    },
+    {
+      "id": "PH-25",
+      "type": "framing",
+      "statement": "Content diversity in interactive settings is a necessary evaluation axis before deploying LLM writing assistants.",
+      "quote": "These findings highlight a new axis on which to evaluate the impact of LLMs prior to their deployment. While adapting a model with human feedback leads to an improvement in instruction following, this may be accompanied by a reduction in content diversity.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 9
+      },
+      "status": "asserted",
+      "scope": "Interactive LLM evaluation / deployment",
+      "theme_fit": "framing/co-writing",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "PH-26",
+      "type": "lever",
+      "statement": "Future mitigation directions include learning from diverse multi-user feedback and personalizing model generations to individuals.",
+      "quote": "Learning from the diverse feedback of many users and personalizing model generations to individuals are challenging future directions.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 10
+      },
+      "status": "asserted",
+      "scope": "RLHF open problems; proposed, not tested",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": "Proposed only; no outcome measured."
+    },
+    {
+      "id": "PH-27",
+      "type": "metric",
+      "statement": "Information-theoretic diversity is operationalized as lossless compression ratio of concatenated essays (LZMA, ZLIB, GZIP).",
+      "quote": "we measure the compression ratio of essays written in the three settings using various lossless compression algorithms: LZMA, ZLIB, and GZIP ... calculate the ratio of the compressed file size to the original file size.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 22
+      },
+      "status": "measured",
+      "scope": "Concatenated per-condition corpora",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "PH-28",
+      "type": "finding",
+      "statement": "InstructGPT essay corpora are significantly more compressible than Solo and GPT3 across LZMA, ZLIB, and GZIP.",
+      "quote": "InstructGPT essays are consistently more compressible across all three compression algorithms, which is statistically significant with p < 0.05 according to permutation tests",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 27
+      },
+      "status": "measured",
+      "scope": "Table 13 compression ratios",
+      "theme_fit": "homogenization",
+      "numbers": [
+        "LZMA: Solo 0.305, GPT3 0.302, InstructGPT 0.293",
+        "p<0.05"
+      ],
+      "notes": null
+    },
+    {
+      "id": "PH-29",
+      "type": "finding",
+      "statement": "InstructGPT essays show lower GPT-2 perplexity and slightly flatter dependency-parse trees than Solo/GPT3.",
+      "quote": "writing with InstructGPT also results in sentences with less complexity on average. ... Writing with the help of a model reduces the perplexity (measured via GPT2) of the essays in InstructGPT and GPT3.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 20
+      },
+      "status": "measured",
+      "scope": "Table 9 basic linguistic statistics",
+      "theme_fit": "graph-structure",
+      "numbers": [
+        "PPL: Solo 25.067, GPT3 22.10, InstructGPT 20.26",
+        "syntax height: Solo 5.93, GPT3 5.98, InstructGPT 5.71"
+      ],
+      "notes": "Syntax-tree height is a structural complexity signal."
+    },
+    {
+      "id": "PH-30",
+      "type": "finding",
+      "statement": "Human ratings of relevance, grammaticality, and discussion depth do not differ clearly across Solo, GPT3, and InstructGPT.",
+      "quote": "This analysis showed no clear differences between the setups ... to find that there is no significance in essay quality across setups.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 20
+      },
+      "status": "measured",
+      "scope": "1 essay/topic/setup (n=10 per arm) quality ratings",
+      "theme_fit": "framing/co-writing",
+      "numbers": [
+        "Relevance Solo 4.30 / GPT3 4.15 / InstructGPT 4.10"
+      ],
+      "notes": "Used to argue quality is not a confounder of diversity results."
+    },
+    {
+      "id": "PH-31",
+      "type": "gap",
+      "statement": "Whether feedback-tuned diversity loss can be mitigated by prompt engineering or richer interaction (e.g., dialogue) remains untested.",
+      "quote": "Further investigation is needed to evaluate if the reduction in content diversity with feedback-tuned models can be mitigated with prompt engineering or richer forms of interaction (e.g., through a dialogue).",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 30
+      },
+      "status": "asserted",
+      "scope": "Continuation-only CoAuthor interface",
+      "theme_fit": "framing/co-writing",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "PH-32",
+      "type": "gap",
+      "statement": "Results may not generalize to students learning to write or second-language speakers with different goals and incentives.",
+      "quote": "it is unclear whether these results will generalize to other groups such as students learning to write or second language speakers, who have different goals and incentives for using writing assistants.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 30
+      },
+      "status": "asserted",
+      "scope": "Upwork US native-English professional writers",
+      "theme_fit": "bias/equity",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "PH-33",
+      "type": "gap",
+      "statement": "Only two limited-access OpenAI models were tested; other models or customized RLHF pipelines may behave differently.",
+      "quote": "Our experiments are conducted using two limited-access models from OpenAI. ... it is possible that the other models may exhibit different behavior, especially given that the RLHF pipeline is highly customized.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 30
+      },
+      "status": "asserted",
+      "scope": "davinci and text-davinci-003 only",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "PH-34",
+      "type": "gap",
+      "statement": "Dynamics of diversity under repeated user–model interactions over time are not studied.",
+      "quote": "our study focuses on single interactions between users and models, and the dynamics might change through repeated interactions over time.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 8
+      },
+      "status": "asserted",
+      "scope": "Single-session essays",
+      "theme_fit": "orphan",
+      "numbers": [],
+      "notes": "Pairs with PH-24 feedback-loop interpretation."
+    },
+    {
+      "id": "PH-35",
+      "type": "critique",
+      "statement": "Traditional reference-based and helpfulness metrics for interactive generation under-emphasize collective content diversity costs.",
+      "quote": "In interactive contexts where references are absent, alternative metrics gauge model assistance effectiveness indirectly. These include user-rated model helpfulness ... retention of model suggestions ... and completion time. ... Our work extends existing metrics that evaluate lexical diversity ... We adapt these metrics for co-writing scenarios and introduce content-specific diversity measures.",
+      "anchor": {
+        "paper": "padmakumar-he-2024",
+        "file": "padmakumar-he-2024.md",
+        "approx_page": 9
+      },
+      "status": "asserted",
+      "scope": "Interactive text-generation evaluation literature",
+      "theme_fit": "framing/co-writing",
+      "numbers": [],
+      "notes": "Positions paper as extending evaluation practice."
+    },
+    {
+      "id": "DH-01",
+      "type": "framing",
+      "statement": "GenAI may raise individual creative output while shrinking the collective diversity of novel content.",
+      "quote": "These results point to an increase in individual creativity at the risk of losing collective novelty. This dynamic resembles a social dilemma: With generative AI, writers are individually better off, but collectively a narrower scope of novel content is produced.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 1
+      },
+      "status": "asserted",
+      "scope": "abstract framing for GenAI-assisted short fiction",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "DH-02",
+      "type": "definition",
+      "statement": "Creativity is assessed as novelty plus usefulness, following Harvey and Berry, with task-adapted components.",
+      "quote": "Creativity is typically assessed across two dimensions: novelty and usefulness (11, 12). Because the two were designed for other creativity tasks … we slightly adjusted some components of the constructs.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 1
+      },
+      "status": "inherited",
+      "scope": "microfiction creativity evaluation in this study",
+      "theme_fit": "framing/co-writing",
+      "numbers": [],
+      "notes": "Harvey & Berry (2023) meta-theory cited"
+    },
+    {
+      "id": "DH-03",
+      "type": "definition",
+      "statement": "Usefulness here means YA appropriateness, feasibility of book development, and publisher likelihood—not generic practicality.",
+      "quote": "our usefulness index was adjusted to capture the story’s appropriateness for the targeted audience, feasibility of being developed into a complete book, and likelihood of a publisher developing the book.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 1
+      },
+      "status": "asserted",
+      "scope": "teen/young-adult short-story publishing frame",
+      "theme_fit": "framing/co-writing",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "DH-04",
+      "type": "mechanism",
+      "statement": "GenAI ideas can springboard writers into a branching tree of storylines and overcome blank-page blocks.",
+      "quote": "Generated ideas from AI may be used as a “springboard” for the human mind, providing potential starting points that can result in a “tree structure” of different storylines … help a human writer overcome “writer’s block”",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 1
+      },
+      "status": "suggested",
+      "scope": "proposed enhancement pathway for short creative writing",
+      "theme_fit": "framing/co-writing",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "DH-05",
+      "type": "mechanism",
+      "statement": "GenAI may hamper creativity by anchoring writers on a starting idea and offering derivative material.",
+      "quote": "By anchoring the writer to a specific idea, or starting point for a story, generative AI may restrict the variability of a writer’s own ideas from the start … the output offered by generative AI may be derivative",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 1
+      },
+      "status": "suggested",
+      "scope": "proposed hampering pathway for short creative writing",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "DH-06",
+      "type": "metric",
+      "statement": "Novelty index averages evaluator ratings of novel, original, and rare on a nine-point scale.",
+      "quote": "Our novelty index had three components (novel, original, and rare), with which we created an average value. … Cronbach’s α for the novelty and usefulness indices was 0.92 and 0.89, respectively.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 8
+      },
+      "status": "measured",
+      "scope": "third-party evaluator ratings of microfiction",
+      "theme_fit": "homogenization",
+      "numbers": [
+        "α=0.92 novelty",
+        "9-point scale"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-07",
+      "type": "metric",
+      "statement": "Usefulness index averages appropriate, feasible, and publishable ratings on a nine-point scale.",
+      "quote": "The usefulness index also had three components (appropriate, feasible, and publishable), with which we also created an average value. Cronbach’s α for the novelty and usefulness indices was 0.92 and 0.89, respectively.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 8
+      },
+      "status": "measured",
+      "scope": "third-party evaluator ratings of microfiction",
+      "theme_fit": "framing/co-writing",
+      "numbers": [
+        "α=0.89 usefulness"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-08",
+      "type": "metric",
+      "statement": "DAT score is cosine distance of ten divergent word embeddings, scaled to 100, indexing inherent creativity.",
+      "quote": "The task entails providing 10 words that are as different from each other as possible. The DAT score is the cosine distance of the underlying word embeddings (scaled to 100) and captures the individual’s inherent creativity.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 3
+      },
+      "status": "inherited",
+      "scope": "pre-writing trait measure; Olson et al. DAT",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "sample mean 77.24",
+        "SD 6.48",
+        "291/293 computable"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-09",
+      "type": "lever",
+      "statement": "Offering writers optional GPT-4 three-sentence story ideas, with a five-idea cap, is the tested GenAI intervention.",
+      "quote": "In the two generative AI conditions, we gave writers the option to call upon a generative AI platform (OpenAI’s GPT-4 LLM) to provide a three-sentence starting idea … (Human with five GenAI ideas), writers could choose to receive up to five generative AI ideas",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 2
+      },
+      "status": "measured",
+      "scope": "fixed prompt; no copy-paste of ideas; GPT-4 API",
+      "theme_fit": "framing/co-writing",
+      "numbers": [
+        "up to 5 ideas",
+        "3-sentence idea"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-10",
+      "type": "finding",
+      "statement": "Access to one GenAI idea raises evaluator novelty about 5.4%; five ideas raise it about 8.1% versus Human-only.",
+      "quote": "writers in the Human with one GenAI idea condition experience an increase of 5.4% (b = 0.207, P = 0.021 …) … writers in the Human with five GenAI ideas condition show an increase in novelty of 8.1% (b = 0.311, P < 0.001)",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 3
+      },
+      "status": "measured",
+      "scope": "ITT; UK Prolific writers; evaluator novelty index",
+      "theme_fit": "framing/co-writing",
+      "numbers": [
+        "+5.4% one idea",
+        "b=0.207 P=0.021",
+        "+8.1% five ideas",
+        "b=0.311 P<0.001"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-11",
+      "type": "finding",
+      "statement": "Access to one GenAI idea raises usefulness about 3.7%; five ideas raise it about 9.0% versus Human-only.",
+      "quote": "The usefulness of stories from writers with access to one generative AI idea is 3.7% (b = 0.185, P = 0.039) higher … Having access to up to five AI ideas increases usefulness by 9.0% (b = 0.453, P < 0.001)",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 3
+      },
+      "status": "measured",
+      "scope": "ITT; evaluator usefulness index",
+      "theme_fit": "framing/co-writing",
+      "numbers": [
+        "+3.7% one",
+        "b=0.185 P=0.039",
+        "+9.0% five",
+        "b=0.453 P<0.001",
+        "+5.1% five vs one P=0.0012"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-12",
+      "type": "finding",
+      "statement": "Writers’ self-assessed novelty and usefulness do not differ significantly across GenAI conditions.",
+      "quote": "writers self-assessing their own stories show no statistically significant differences in the novelty and usefulness between authors who were offered generative AI ideas and those who were not (see table S5).",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 3
+      },
+      "status": "measured",
+      "scope": "writer self-ratings after composition",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": "same null pattern for self-rated emotional characteristics (table S7)"
+    },
+    {
+      "id": "DH-13",
+      "type": "finding",
+      "statement": "GenAI-access stories are rated more enjoyable and more likely to have plot twists than Human-only stories.",
+      "quote": "stories written by writers with access to generative AI ideas are more enjoyable (… one … b = 0.216, P = 0.028; … five … b = 0.375, P < 0.001 …) and are more likely to have plot twists (… b = 0.384 …; … b = 0.468 …).",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 3
+      },
+      "status": "measured",
+      "scope": "evaluator emotional-characteristic ratings",
+      "theme_fit": "framing/co-writing",
+      "numbers": [
+        "enjoy b=0.216/0.375",
+        "twist b=0.384/0.468"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-14",
+      "type": "finding",
+      "statement": "With five GenAI ideas, stories are better written, less boring, and shift readers’ future-story expectations more.",
+      "quote": "when the writer had access to up to five generative AI ideas, the stories are considered to be better written (b = 0.372, P < 0.001), have more of an effect on the evaluator’s expectations of future stories (b = 0.251, P = 0.005), and be less boring (b = −0.200, P = 0.049).",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 3
+      },
+      "status": "measured",
+      "scope": "five-idea arm vs Human-only evaluators",
+      "theme_fit": "framing/co-writing",
+      "numbers": [
+        "written b=0.372",
+        "expectations b=0.251",
+        "boring b=-0.200"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-15",
+      "type": "finding",
+      "statement": "Five GenAI ideas do not make stories significantly funnier than Human-only; the coefficient is negative and nonsignificant.",
+      "quote": "Stories in the Human with five GenAI ideas condition are, however, not evaluated as more funny than those in the Human-only condition; if anything, the coefficient is negative but not statistically significant (b = −0.106, P = 0.115).",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 3
+      },
+      "status": "measured",
+      "scope": "evaluator funny rating; five-idea arm",
+      "theme_fit": "orphan",
+      "numbers": [
+        "b=-0.106 P=0.115"
+      ],
+      "notes": "null/negative comedy effect amid other quality gains"
+    },
+    {
+      "id": "DH-16",
+      "type": "finding",
+      "statement": "More and less creative writers access GenAI at similar rates; about 24.5% request all five ideas in both groups.",
+      "quote": "We do not find differences between more creative writers and less creative writers in how frequently they accessed generative AI ideas … Among both more and less creative writers in the Human with five GenAI ideas condition, all five ideas were requested 24.5% of the time.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "GenAI arms; DAT-split take-up",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "24.5% request all five",
+        "88.4% overall ≥1 GenAI call"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-17",
+      "type": "finding",
+      "statement": "High-DAT writers’ novelty, usefulness, and key emotional ratings stay high and barely change with GenAI access.",
+      "quote": "Among the most inherently creative writers (i.e., high-DAT writers), there is little effect of having access to generative AI ideas on the creativity of their stories. … providing them with access to generative AI does not affect their high evaluations.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "DAT×condition interactions; high-DAT writers",
+      "theme_fit": "bias/equity",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "DH-18",
+      "type": "finding",
+      "statement": "Low-DAT writers gain large novelty and usefulness boosts from GenAI; five ideas roughly equalize them with high-DAT writers.",
+      "quote": "Among low-DAT writers, having access to one generative AI idea improves a story’s novelty by 6.3% and … five … 10.7%. … usefulness by 5.5 and 11.5%, respectively. … the Human with five GenAI ideas condition effectively equalizes the creativity scores across less and more creative writers.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "low-DAT writers; evaluator creativity indices",
+      "theme_fit": "bias/equity",
+      "numbers": [
+        "novelty +6.3%/+10.7%",
+        "usefulness +5.5%/+11.5%",
+        "written up to +26.6%",
+        "enjoyment up to +22.6%"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-19",
+      "type": "metric",
+      "statement": "Within-condition similarity is cosine similarity of a story embedding to the mean embedding of other same-condition stories, ×100.",
+      "quote": "computing the cosine similarity of the embedding of the focal story with the average embedding of all other stories in the same condition. … We multiply the cosine similarity score by 100",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "OpenAI embeddings API; within experimental arm",
+      "theme_fit": "homogenization",
+      "numbers": [
+        "score 0–100"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-20",
+      "type": "finding",
+      "statement": "GenAI access increases within-condition story similarity versus Human-only by roughly 9–11% of the Human-only similarity range.",
+      "quote": "having access to generative AI ideas makes a story more similar to the average of other stories within the same condition (… one … b = 0.871, P < 0.001; … five … b = 0.718, P = 0.003 …). … increase in similarity … represents 10.7% and 8.9% of the total range, respectively.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "embedding similarity within condition",
+      "theme_fit": "homogenization",
+      "numbers": [
+        "b=0.871 P<0.001",
+        "b=0.718 P=0.003",
+        "10.7% and 8.9% of 8.10-point Human-only range"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-21",
+      "type": "finding",
+      "statement": "Stories written with GenAI access are about 5% more similar to GenAI ideas than Human-only stories, indicating anchoring.",
+      "quote": "Relative to Human-only, writers in the Human with one GenAI idea condition and Human with five GenAI ideas conditions wrote stories that were 5.2% (b = 4.29, P < 0.001 …) and 5.0% (b = 4.11, P < 0.001) more similar to the generative AI ideas … writers … are anchored to some extent on the generative AI idea",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 5
+      },
+      "status": "measured",
+      "scope": "story–idea embedding similarity; first idea if multiple",
+      "theme_fit": "homogenization",
+      "numbers": [
+        "+5.2% b=4.29",
+        "+5.0% b=4.11",
+        "Human-only mean 82.85"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-22",
+      "type": "interpretation",
+      "statement": "GenAI professionalizes stories—raising novelty and usefulness especially via multiple starting ideas—beyond solo writing.",
+      "quote": "Having access to generative AI “professionalizes” the stories beyond what writers might have otherwise accomplished alone. The overall effect is a more novel and even more useful story that is well written and enjoyable.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 5
+      },
+      "status": "suggested",
+      "scope": "discussion reading of main evaluator findings",
+      "theme_fit": "framing/co-writing",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "DH-23",
+      "type": "interpretation",
+      "statement": "This study finds no evidence that GenAI ideas raise the upper bound of creativity beyond high-DAT humans alone.",
+      "quote": "one might ask whether the generative AI ideas can push the upper bound of creativity of produced stories, beyond what particularly creative humans are capable of on their own. We do not find evidence of this possibility in this study.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 5
+      },
+      "status": "suggested",
+      "scope": "high-DAT writers; this microfiction design",
+      "theme_fit": "bias/equity",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "DH-24",
+      "type": "finding",
+      "statement": "After disclosure, evaluators impose at least a 25% ownership penalty on writers who received GenAI ideas.",
+      "quote": "We find that evaluators imposed an ownership penalty of at least 25% on writers who received generative AI ideas, relative stories written only by humans, and most evaluators indicated that the content creators, on which the models were based, should be compensated.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 6
+      },
+      "status": "measured",
+      "scope": "exploratory post-disclosure ownership; S5",
+      "theme_fit": "ownership-credit",
+      "numbers": [
+        ">=25% ownership penalty"
+      ],
+      "notes": "not preregistered primary outcome"
+    },
+    {
+      "id": "DH-25",
+      "type": "finding",
+      "statement": "Most evaluators judge AI-assisted story writing ethical and still a creative act, while favoring disclosure and credit.",
+      "quote": "Most evaluators also indicated that disclosure of the use of AI or the underlying text from AI should be part of publications that used such tools. Overall, however, most evaluators found the use of AI in writing stories to be ethical and still a “creative act.”",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 6
+      },
+      "status": "measured",
+      "scope": "exploratory post-experiment ethics items; S5",
+      "theme_fit": "ownership-credit",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "DH-26",
+      "type": "assumption",
+      "statement": "Nearly nine-in-ten take-up lets ITT estimates of GenAI-condition assignment support causal interpretation despite opt-in.",
+      "quote": "nearly 9 of 10 people in the generative AI conditions choose to receive at least one generative AI when offered, bolstering our confidence that our results—based on our conservative intention-to-treat analysis … allow for a causal interpretation.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 6
+      },
+      "status": "asserted",
+      "scope": "design justification for opt-in within GenAI arms",
+      "theme_fit": "framing/co-writing",
+      "numbers": [
+        "88.4% ≥1 GenAI call"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-27",
+      "type": "gap",
+      "statement": "Effects may not generalize beyond eight-sentence writing, fixed prompts, no interactivity, and this usefulness adaptation.",
+      "quote": "the creative task is constrained in its length (i.e., eight sentences), medium (i.e., writing), and type of output (i.e., short story), and there is no interactiveness with the LLM or variation in prompts. These constraints limit the generalizability",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 6
+      },
+      "status": "asserted",
+      "scope": "authors’ stated external-validity limits",
+      "theme_fit": "framing/co-writing",
+      "numbers": [
+        "exactly eight sentences"
+      ],
+      "notes": null
+    },
+    {
+      "id": "DH-28",
+      "type": "gap",
+      "statement": "Tight controls likely yield a lower bound; customization and real-time LLM interaction remain untested here.",
+      "quote": "We do not allow writers to customize the call to the generative AI engine, nor do we allow for repeated interactions between writers and generative AI … our estimates are likely a lower bound of the potential that generative AI could offer",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 6
+      },
+      "status": "suggested",
+      "scope": "author speculation about stronger interactive designs",
+      "theme_fit": "framing/co-writing",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "DH-29",
+      "type": "gap",
+      "statement": "Writers who would benefit most are not more likely to use GenAI; self-assessment accuracy is poor.",
+      "quote": "we generally do not self-assess accurately. Furthermore, we do not find any correlation between participants who self-assess their stories to be less creative and their use of generative AI, suggesting that participants who would benefit from the technology the most are not more likely to use it.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 6
+      },
+      "status": "measured",
+      "scope": "self-selection into GenAI within this sample",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": "miscalibration + non-optimal selection as open problem"
+    },
+    {
+      "id": "DH-30",
+      "type": "gap",
+      "statement": "Professional writers and unusually creative populations remain understudied relative to typical online participants.",
+      "quote": "we do not study professional writers or unusually creative individuals. These individuals remain an important but understudied population segment, for which the effects of generative AI could be transformative in other ways",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 7
+      },
+      "status": "asserted",
+      "scope": "population external validity",
+      "theme_fit": "orphan",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "DH-31",
+      "type": "interpretation",
+      "statement": "Widespread GenAI-inspired publishing could make stories less unique in aggregate—a social-dilemma dynamic.",
+      "quote": "If individual writers find out that their generative AI-inspired writing is evaluated as more creative, they have an incentive to use generative AI more in the future, but by doing so, the collective novelty of stories may be reduced further.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 7
+      },
+      "status": "suggested",
+      "scope": "general-equilibrium speculation beyond experiment",
+      "theme_fit": "collective-social-dilemma",
+      "numbers": [],
+      "notes": "Hardin commons parallel cited"
+    },
+    {
+      "id": "DH-32",
+      "type": "framing",
+      "statement": "The paper prioritizes AI–human complementarities in creative production over automation or human–AI idea races.",
+      "quote": "Much has been written about the potential replacement of human labor by AI (e.g., automation) … or a “horse race” between human and AI-generated ideas … We focus on the potential complementarities of AI on human creative production.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 6
+      },
+      "status": "asserted",
+      "scope": "authors’ research stance",
+      "theme_fit": "framing/co-writing",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "DH-33",
+      "type": "lever",
+      "statement": "Authors propose future levers: open-ended LLM interaction, varied prompts, longer/other genres, and novelty incentives.",
+      "quote": "A future study could also systematically vary the prompts provided to the LLM, including one experimental condition that allows for more open-ended interaction … a future study may introduce financial or ranking incentives for specific outcomes, such as being completely novel.",
+      "anchor": {
+        "paper": "doshi-hauser-2024",
+        "file": "doshi-hauser-2024.md",
+        "approx_page": 6
+      },
+      "status": "suggested",
+      "scope": "proposed, not tested, follow-on designs",
+      "theme_fit": "framing/co-writing",
+      "numbers": [],
+      "notes": "proposed levers only"
+    },
+    {
+      "id": "KB-01",
+      "type": "framing",
+      "statement": "Prior LLM-detection work needs labeled human/LLM corpora and cannot historically compare LLM lexical shifts to earlier scholarly vocabulary shocks.",
+      "quote": "All of these approaches share one common limitation: They require a ground-truth training set of LLM- and human-written texts… none has attempted to systematically compare or relate LLM-induced changes… to previous shifts",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 1
+      },
+      "status": "asserted",
+      "scope": "Prior detector/mixture/marker studies cited in intro",
+      "theme_fit": "lexical shift",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KB-02",
+      "type": "critique",
+      "statement": "Ground-truth LLM corpora introduce bias via assumptions about which models scientists use and how they prompt them.",
+      "quote": "This setup can introduce biases (16), as it requires assumptions on which models scientists use for their LLM-assisted writing, and how exactly they prompt them.",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 1
+      },
+      "status": "asserted",
+      "scope": "Detector and mixture-model LLM-usage estimators",
+      "theme_fit": "stylometry",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KB-03",
+      "type": "framing",
+      "statement": "Excess word usage after ChatGPT-like LLMs, adapted from excess-mortality analysis, tracks LLM fingerprints without labeled human-vs-LLM texts.",
+      "quote": "Here, we suggest a data-driven approach to track LLM usage without requiring a labeled corpus… inspired by studies of excess mortality… adapt this idea to LLM-induced changes in word usage",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 1
+      },
+      "status": "asserted",
+      "scope": "PubMed biomedical abstracts design rationale",
+      "theme_fit": "lexical shift",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KB-04",
+      "type": "metric",
+      "statement": "Counterfactual expected frequency q for year Y is a one-sided linear extrapolation from frequencies in Y−3 and Y−2, never decreasing below p_{Y−2}.",
+      "quote": "q = p_{-2} + 2 · max{p_{-2} − p_{-3}, 0}. This way, q was always at least as large as p_{-2}… resulting in conservative estimates of r = p/q and δ = p − q.",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 6
+      },
+      "status": "measured",
+      "scope": "Per-word yearly PubMed abstract occurrence frequencies",
+      "theme_fit": "lexical shift",
+      "numbers": [],
+      "notes": "For 2024 analysis, base years are 2021–2022; 2023 unused as possibly LLM-affected."
+    },
+    {
+      "id": "KB-05",
+      "type": "metric",
+      "statement": "Excess frequency gap δ = p − q and excess frequency ratio r = p/q jointly flag excess usage of common and rare words.",
+      "quote": "Comparing the empirical 2024 frequency p with the expected 2024 frequency q, we obtained the excess frequency gap δ = p − q and the excess frequency ratio r = p/q as two measures of excess usage.",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 2
+      },
+      "status": "measured",
+      "scope": "26,657 words with p > 10^{-4} in 2023 and 2024",
+      "theme_fit": "lexical shift",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KB-06",
+      "type": "metric",
+      "statement": "A word is an excess word if δ > 0.01 or log10 r exceeds a log-frequency-dependent threshold calibrated so most pre-COVID years stay below it.",
+      "quote": "we defined as excess words all words with δ > 0.01 or log_{10} r > (log_{10} 2)/4 log_{10} p where p is the frequency in 2024… thresholds were chosen such that most words in pre-COVID years were well below",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 2
+      },
+      "status": "measured",
+      "scope": "Yearly excess-word inventories 2013–2024",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "δ > 0.01"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-07",
+      "type": "finding",
+      "statement": "From 2013 to 2019, no word ever exceeded excess frequency gap δ > 0.01 under this definition.",
+      "quote": "from 2013 until 2019, no single word has ever shown excess frequency gap δ > 0.01.",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 2
+      },
+      "status": "measured",
+      "scope": "PubMed English abstracts; annual excess analysis",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "δ > 0.01 never in 2013–2019"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-08",
+      "type": "finding",
+      "statement": "COVID years produced large excess of content words (e.g. coronavirus, covid), peaking at 190 excess words / 180 unique lemmas in 2021.",
+      "quote": "In 2020-2022, words like coronavirus, covid, lockdown, and pandemic showed very large excess usages… The number of excess words showed a marked rise during the COVID pandemic (up to 190 words in 2021)",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 2
+      },
+      "status": "measured",
+      "scope": "PubMed abstracts 2020–2022 vs pre-COVID baseline",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "190 excess words in 2021",
+        "180 unique lemmas in 2021"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-09",
+      "type": "finding",
+      "statement": "2024 excess-word count (454 words; 343 unique lemmas) exceeds the COVID peak and arises roughly one year after ChatGPT’s release.",
+      "quote": "followed by an even larger rise (to 454) in 2024… Counting only unique word lemmas still put 2024 on a clear first place: 343 unique lemmas in 2024 versus 180 in 2021",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 2
+      },
+      "status": "measured",
+      "scope": "PubMed English abstracts through 2024",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "454 excess words in 2024",
+        "343 unique lemmas in 2024"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-10",
+      "type": "finding",
+      "statement": "COVID excess vocabulary was almost entirely content nouns, whereas 2024 excess vocabulary was almost entirely style words, mostly verbs and adjectives.",
+      "quote": "the excess vocabulary during the COVID pandemic consisted almost entirely of content words… whereas the excess vocabulary in 2024 consisted almost entirely of style words… of all 379 excess style words in 2024, 66% were verbs, and 14% were adjectives",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 3
+      },
+      "status": "measured",
+      "scope": "Manually annotated excess words 2013–2024",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "379 excess style words in 2024",
+        "66% verbs",
+        "14% adjectives",
+        "content words 51.3% overall; style 45.2%"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-11",
+      "type": "metric",
+      "statement": "For marker set G, frequency gap Δ_G = P_G − Q_G is the excess fraction of abstracts containing ≥1 marker and is interpreted as a lower bound on LLM usage.",
+      "quote": "For a given set of marker words G, we computed its frequency gap Δ_G = P_G − Q_G where P_G and Q_G are the observed and the expected fractions of abstracts containing at least one of the words from G. As above, we interpret Δ_G as a lower bound on the LLM usage.",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 3
+      },
+      "status": "measured",
+      "scope": "Union of excess style markers in 2024 PubMed abstracts",
+      "theme_fit": "lexical shift",
+      "numbers": [],
+      "notes": "Does not assume independence among markers in G."
+    },
+    {
+      "id": "KB-12",
+      "type": "finding",
+      "statement": "A rare excess-style set (291 words with p < 0.02) yields Δ_rare = 0.136 as an automatic lower bound on 2024 LLM-processed abstracts.",
+      "quote": "We obtained the highest Δ_rare value with T = 0.02, resulting in a set of 291 words… The frequency gap was Δ_rare = 0.136, putting the lower bound on the LLM usage in 2024 at 13.6%",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 3
+      },
+      "status": "measured",
+      "scope": "All 2024 PubMed English abstracts in corpus",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "Δ_rare = 0.136",
+        "T = 0.02",
+        "291 words"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-13",
+      "type": "finding",
+      "statement": "A manually curated common 10-word style set yields nearly identical Δ_common = 0.134.",
+      "quote": "This led to the following set of 10 words: across, additionally, comprehensive, crucial, enhancing, exhibited, insights, notably, particularly, and within. This set yielded… Δ_common = 0.134",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "All 2024 PubMed English abstracts in corpus",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "Δ_common = 0.134",
+        "10 common style markers"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-14",
+      "type": "finding",
+      "statement": "Averaging rare and common estimates gives a 13.5% lower bound on 2024 PubMed abstracts processed with LLMs.",
+      "quote": "Averaging the two estimates, we obtained Δ = (Δ_common + Δ_rare)/2 = 0.135 as our final estimate of the lower bound of LLM usage (13.5%).",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "15.1M PubMed English abstracts 2010–2024; 2024 cohort",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "13.5%",
+        "Δ = 0.135",
+        "~200,000 papers/year implied"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-15",
+      "type": "finding",
+      "statement": "The 2024 LLM style-marker gap (~0.135) is at least about twice the 2021 COVID content-word peak gap (Δ = 0.069).",
+      "quote": "using the set of four excess content words from 2021, covid, pandemic, coronavirus, and sars… yielded frequency gap Δ = 0.069. This shows that the LLM usage in 2024 was at least two times higher than the size of COVID-related literature at its peak in 2021.",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "Same excess-gap method; COVID markers vs LLM style markers",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "COVID Δ = 0.069",
+        "LLM Δ ≈ 0.135",
+        "≥2×"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-16",
+      "type": "finding",
+      "statement": "Computational biomedical fields show higher LLM lower bounds (Δ ≈ 0.20) than many other fields under the same marker sets.",
+      "quote": "Computational fields like computation and bioinformatics showed Δ ≈ 0.20 (Fig. 5B).",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "Journal-name-based field subgroups; fixed marker sets",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "Δ ≈ 0.20"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-17",
+      "type": "finding",
+      "statement": "Country lower bounds differ sharply: UK/Australia ≈ 0.05 versus China, South Korea, and Taiwan ≈ 0.20.",
+      "quote": "some English-speaking countries like United Kingdom and Australia showed Δ ≈ 0.05, while countries like China, South Korea, and Taiwan showed Δ ≈ 0.20",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "First-author first-affiliation country; top-50 countries",
+      "theme_fit": "bias/equity",
+      "numbers": [
+        "UK/Australia Δ ≈ 0.05",
+        "China/SK/Taiwan Δ ≈ 0.20"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-18",
+      "type": "finding",
+      "statement": "Open-access/fast-turnaround venues show high Δ (MDPI 0.21, Frontiers 0.20, Sensors 0.25) while Nature/Science/Cell show much lower Δ (0.07).",
+      "quote": "0.25 for Sensors… high Δ for MDPI (0.21) and Frontiers (0.20) journals. For very selective high-prestige journals like Nature, Science, and Cell… Δ was much lower (0.07…)",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "Top journals and pooled publisher groups in PubMed 2024",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "Sensors 0.25",
+        "MDPI 0.21",
+        "Frontiers 0.20",
+        "Nature/Science/Cell 0.07",
+        "Nature family 0.10"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-19",
+      "type": "finding",
+      "statement": "Intersected subcorpora reach still higher lower bounds (e.g. South Korea×Sensors 0.34; China×computation 0.41; some local clusters ≈ 0.50).",
+      "quote": "Δ = 0.34 for papers from South Korea published in Sensors and Δ = 0.41 for computation papers from China… some areas with local Δ ≈ 0.50",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "Country×journal/field intersections; t-SNE local neighborhoods",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "0.34",
+        "0.41",
+        "local Δ ≈ 0.50"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-20",
+      "type": "finding",
+      "statement": "Inferred first/last-author gender differences in Δ are minor (~0.11 male vs ~0.10 female).",
+      "quote": "The difference between inferred genders was minor (0.11 for male and 0.10 for female, both for the first and the last authors).",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "Gender package on first names; ~55% of authors inferred",
+      "theme_fit": "bias/equity",
+      "numbers": [
+        "0.11 male",
+        "0.10 female",
+        "55% inferred"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-21",
+      "type": "interpretation",
+      "statement": "Detectable LLM usage appears negatively correlated with perceived journal prestige.",
+      "quote": "For very selective high-prestige journals like Nature, Science, and Cell… Δ was much lower… suggesting that easily detectable LLM usage was negatively correlated with perceived prestige.",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 4
+      },
+      "status": "suggested",
+      "scope": "Journal-prestige contrast within PubMed 2024",
+      "theme_fit": "lexical shift",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KB-22",
+      "type": "interpretation",
+      "statement": "Country/field/journal heterogeneity may reflect adoption rates, native-speaker censoring of LLM style words, and/or shorter publication timelines—not adoption alone.",
+      "quote": "heterogeneity could correspond to actual differences in LLM adoption… could also point to other factors… discrepancies in how authors of different linguistic backgrounds censor suggestions… publication timelines in computational fields are often shorter",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 4
+      },
+      "status": "suggested",
+      "scope": "Interpretation of subgroup Δ heterogeneity",
+      "theme_fit": "bias/equity",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KB-23",
+      "type": "interpretation",
+      "statement": "True biomedical LLM usage may be closer to the highest observed lower bounds (>30%) than to the corpus-wide 13.5% floor.",
+      "quote": "we argue that the true LLM usage in biomedical publishing may be closer to the highest lower bounds we observed… These estimates are above 30%, which is in line with recent surveys",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 5
+      },
+      "status": "suggested",
+      "scope": "Reading of subcorpus peaks vs global average",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        ">30%",
+        "global lower bound 13.5%"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KB-24",
+      "type": "mechanism",
+      "statement": "ChatGPT-like LLMs preferentially insert style verbs/adjectives, producing corpus-level excess of non-content style vocabulary after late 2022.",
+      "quote": "Hundreds of words have abruptly increased their frequency after ChatGPT-like LLMs became available… the 2023–2024 excess words were not content-related nouns but rather style-affecting verbs and adjectives that LLMs prefer.",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 4
+      },
+      "status": "suggested",
+      "scope": "Causal story for 2024 style-word excess",
+      "theme_fit": "lexical shift",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KB-25",
+      "type": "gap",
+      "statement": "The method cannot identify which individual abstracts were LLM-processed.",
+      "quote": "Our analysis is performed on the corpus level and cannot identify individual abstracts that may have been processed by an LLM.",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 4
+      },
+      "status": "asserted",
+      "scope": "Excess-vocabulary estimator",
+      "theme_fit": "stylometry",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KB-26",
+      "type": "gap",
+      "statement": "Δ is only a lower bound because LLM-processed abstracts without selected marker words do not contribute to the estimate.",
+      "quote": "This is only a lower bound: Abstracts not using any of the LLM marker words are not contributing to our estimates, so the true fraction of LLM-processed abstracts is likely higher.",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 4
+      },
+      "status": "asserted",
+      "scope": "Rare/common style-marker unions",
+      "theme_fit": "lexical shift",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KB-27",
+      "type": "gap",
+      "statement": "Unexpected lexical change cannot separate direct LLM usage from humans adopting LLM-preferred words, nor distinguish different LLMs or multiple topical causes.",
+      "quote": "our approach cannot distinguish word frequency increase due to direct LLM usage from word frequency increase due to people adopting LLM-preferred words… Similarly, we cannot distinguish the influence of different LLMs.",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 5
+      },
+      "status": "asserted",
+      "scope": "Causal attribution of excess style words",
+      "theme_fit": "lexical shift",
+      "numbers": [],
+      "notes": "Authors hypothesize human adoption effect is smaller and slower (citing Yakura speech evidence)."
+    },
+    {
+      "id": "KB-28",
+      "type": "assumption",
+      "statement": "Linear extrapolation from 2021–2022 frequencies is a valid conservative counterfactual for 2024 word frequencies absent LLMs.",
+      "quote": "we calculated counterfactual expected frequency in 2024 based on the linear extrapolation of word frequencies in 2021 and 2022… we did not use 2023 frequencies… because they could already have been affected by LLM usage.",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 2
+      },
+      "status": "asserted",
+      "scope": "Main 2024 excess analysis",
+      "theme_fit": "lexical shift",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KB-29",
+      "type": "lever",
+      "statement": "Excess-word monitoring can track future LLM usage and help assess whether publisher/funder LLM policies are adhered to in practice.",
+      "quote": "Data-driven and unbiased analyses like ours can be helpful to monitor whether such policies are ignored or adhered to in practice… Our excess word approach could help to track future LLM usage, including scientific (grant applications and peer review) and nonscientific… use cases.",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 5
+      },
+      "status": "suggested",
+      "scope": "Proposed reuse beyond PubMed abstracts; not experimentally tested here",
+      "theme_fit": "framing/co-writing",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KB-30",
+      "type": "framing",
+      "statement": "LLM-generated scholarly prose is less diverse/novel than human writing and can homogenize introductions and citations.",
+      "quote": "This makes LLM outputs less diverse and novel than human-written text (43, 44). Such homogenization can degrade the quality of scientific writing… all LLM-generated introductions on a certain topic might sound the same",
+      "anchor": {
+        "paper": "kobak-biomed-2025",
+        "file": "kobak-biomed-2025.md",
+        "approx_page": 5
+      },
+      "status": "inherited",
+      "scope": "Cited Padmakumar & He / Alvero et al.; policy discussion",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": "Citations 43–44; not re-measured in this paper."
+    },
+    {
+      "id": "JK-01",
+      "type": "definition",
+      "statement": "Latent persuasion by language models is influence that arises when models produce some opinions more often than others, shifting what users write and think.",
+      "quote": "We call this new paradigm of influence latent persuasion by language models",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 1
+      },
+      "status": "asserted",
+      "scope": "Framing term introduced in this paper",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "JK-02",
+      "type": "framing",
+      "statement": "Opinion preferences built into language models may be opaque to users, policymakers, and even developers, unlike visible choice architectures.",
+      "quote": "choice architectures are visible, but opinion preferences built into language models may be opaque to users, policymakers, and even system developers",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 1
+      },
+      "status": "asserted",
+      "scope": "Conceptual contrast with nudges/choice architecture",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "JK-03",
+      "type": "gap",
+      "statement": "Prior co-writing work showed biased assistants can affect reviews, but effects on users' opinions on public issues remained open.",
+      "quote": "whether co-writing with large language models affect users' opinions on public issues remains an open and urgent question",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 2
+      },
+      "status": "asserted",
+      "scope": "Pre-study literature gap claimed by authors",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": "Cites Arnold et al. and Bhat et al. on movie/restaurant reviews"
+    },
+    {
+      "id": "JK-04",
+      "type": "lever",
+      "statement": "Three-arm design: no assistant (control) vs GPT-3 assistant prompted to argue social media is good vs bad for society.",
+      "quote": "We randomly assigned participants to three different treatment groups: (1) Control group... (2) Techno-optimist... (3) Techno-pessimist",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 5
+      },
+      "status": "measured",
+      "scope": "Simulated Reddit-style reply; Prolific US adults N=1,506",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "N=1,506",
+        "control=507",
+        "optimist=508",
+        "pessimist=491"
+      ],
+      "notes": null
+    },
+    {
+      "id": "JK-05",
+      "type": "lever",
+      "statement": "Strong opinionation is induced via invisible prefix and infix prompt engineering on frozen GPT-3, not fine-tuning.",
+      "quote": "we inserted the prefix \"Is social media good for society? Explain why social media is good/bad for society:\"... We inserted the snippet (\"One sentence continuing the essay explaining why social media is good/bad:\")",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 6
+      },
+      "status": "measured",
+      "scope": "text-davinci-002; temp 0.85; prompts hidden from UI",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "175B",
+        "temperature=0.85"
+      ],
+      "notes": "Fine-tuning tried but did not consistently produce intended opinion"
+    },
+    {
+      "id": "JK-06",
+      "type": "lever",
+      "statement": "Assistant UI suggests multi-sentence completions after a 750ms pause; users accept word-by-word via tab or button.",
+      "quote": "The client sent a generation request to the server whenever a participant paused their writing for a certain amount of time (750ms)... Participants could accept each suggested word by pressing the tab key",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 5
+      },
+      "status": "measured",
+      "scope": "Custom Quill.js editor; ~1.5s suggestion latency",
+      "theme_fit": "framing/co-writing",
+      "numbers": [
+        "750ms pause",
+        "~1.5s latency"
+      ],
+      "notes": null
+    },
+    {
+      "id": "JK-07",
+      "type": "metric",
+      "statement": "Written opinion is operationalized as crowd labels of each sentence as social-media-good, bad, both, or neither.",
+      "quote": "we split participants' written texts into sentences and asked crowd workers to evaluate the opinion expressed in each sentence",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 6
+      },
+      "status": "measured",
+      "scope": "N_J=500 judges; inter-rater agreement 84.1%, κ=0.76",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "κ=0.76",
+        "84.1% agreement",
+        "N_S=9,223 sentences"
+      ],
+      "notes": null
+    },
+    {
+      "id": "JK-08",
+      "type": "metric",
+      "statement": "Attitude outcome is the post-task item asking whether social media is good for society, plus secondary Likert items.",
+      "quote": "The central question, \"Overall, would you say social media is good for society?\" was designed to assess shifts in participants' attitude",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 7
+      },
+      "status": "measured",
+      "scope": "Shown after writing; not immediately to reduce demand effects",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "JK-09",
+      "type": "finding",
+      "statement": "Optimist-model users are about twice as likely as controls to write sentences arguing social media is good for society.",
+      "quote": "Participants who received suggestions from a language model supportive of social media... were 2.04 times more likely than control group participants (p<0.0001, 95% CI [1.83, 2.30]) to argue that social media is good",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 9
+      },
+      "status": "measured",
+      "scope": "Sentence-level labels; GPT-3 co-writing on social-media topic",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "OR≈2.04",
+        "p<0.0001",
+        "95% CI [1.83, 2.30]",
+        "good sentences: 45% vs 28% control"
+      ],
+      "notes": null
+    },
+    {
+      "id": "JK-10",
+      "type": "finding",
+      "statement": "Pessimist-model users are about twice as likely as controls to write sentences arguing social media is bad for society.",
+      "quote": "participants who received suggestions from a language model that criticized social media... were 2.0 times more likely (p<0.0001, 95% CI [1.79, 2.24]) to argue that social media is bad",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 9
+      },
+      "status": "measured",
+      "scope": "Sentence-level labels; GPT-3 co-writing on social-media topic",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "OR≈2.0",
+        "p<0.0001",
+        "95% CI [1.79, 2.24]",
+        "bad sentences: 53% vs 36–38% control"
+      ],
+      "notes": "Fig.3 header says 36% control bad; body text says 38%"
+    },
+    {
+      "id": "JK-11",
+      "type": "finding",
+      "statement": "Most assisted writing is still self-authored: on average 63% of sentences are fully self-written and only 11.5% fully accepted from the model.",
+      "quote": "On average, participants wrote 63% of their sentences themselves without accepting suggestions from the model... Only 11.5% of sentences were fully accepted from the model",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 9
+      },
+      "status": "measured",
+      "scope": "Treatment participants; keystroke/suggestion logs",
+      "theme_fit": "framing/co-writing",
+      "numbers": [
+        "63% self-written",
+        "~25% co-written",
+        "11.5% fully accepted"
+      ],
+      "notes": null
+    },
+    {
+      "id": "JK-12",
+      "type": "finding",
+      "statement": "Participants accept fewer suggestions when the model contradicts their likely pre-task opinion than when it aligns.",
+      "quote": "Participants whose personal views were likely aligned with the model were more likely to accept suggestions, while participants with opposing views accepted fewer suggestions",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 9
+      },
+      "status": "measured",
+      "scope": "N_S=6,142 sentences by N_P=1,000 treatment participants",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "fully accepted: 15% aligned vs 8% contradicted",
+        "self-written: 59% vs 72%"
+      ],
+      "notes": null
+    },
+    {
+      "id": "JK-13",
+      "type": "finding",
+      "statement": "Mean written-opinion difference versus control is large overall (d≈0.5) and remains significant for writers taking four to six minutes (d≈0.34).",
+      "quote": "mean opinion difference of about 0.29 (p<0.001... corresponding to a large effect size of d=0.5)... even for participants who took four to six minutes... (0.20, p<0.001... d=0.34)",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 10
+      },
+      "status": "measured",
+      "scope": "Interval-coded sentence opinions; writing-time strata",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "Δ≈0.29 overall",
+        "d=0.5",
+        "Δ≈0.20 at 4–6 min",
+        "d=0.34",
+        "Δ≈0.38 if <160s"
+      ],
+      "notes": null
+    },
+    {
+      "id": "JK-14",
+      "type": "interpretation",
+      "statement": "Convenience-driven acceptance contributes to written-opinion differences but does not fully explain the model's influence.",
+      "quote": "accepting suggestions out of convenience has contributed to the differences in the written opinion. However, even for participants who took four to six minutes... we observed significant differences",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 10
+      },
+      "status": "suggested",
+      "scope": "Secondary analysis by task time as proxy for consideration",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "JK-15",
+      "type": "finding",
+      "statement": "Post-task survey attitudes shift toward the model's stance: supportive model d=0.22; critical model d=0.19 versus control.",
+      "quote": "45% of participants who interacted with a language model supportive of social media... answered that social media is good... effect size of d=0.22 (p<0.001)... language model critical of social media... more likely to say that social media was bad... (d=0.19, p<0.005)",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 11
+      },
+      "status": "measured",
+      "scope": "N=1,506 post-task attitude survey after writing",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "d=0.22 optimist",
+        "d=0.19 pessimist",
+        "yes: 45% vs 35% control",
+        "no: 41% vs 33% control"
+      ],
+      "notes": null
+    },
+    {
+      "id": "JK-16",
+      "type": "finding",
+      "statement": "Model-aligned written opinion appears from the first sentence onward rather than only after gradual accumulation of arguments.",
+      "quote": "Participants interacting with a model that evaluated social media positively... consistently evaluated social media more favorably throughout their entire statement... starting with their first sentence",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 11
+      },
+      "status": "measured",
+      "scope": "Sentence position quintiles across N_S=9,223",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "JK-17",
+      "type": "finding",
+      "statement": "Most treatment participants attribute expertise to the assistant even when it contradicts their views; only 15% deny expertise when contradicted.",
+      "quote": "84% of participants said that the assistant was knowledgeable and had expertise when the language model supported their opinion. When the model contradicted their opinion, only 15% of participants said that it was not knowledgeable or lacked expertise",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 12
+      },
+      "status": "measured",
+      "scope": "N_P=1,000 treatment post-UX survey",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "84% expertise when aligned",
+        "15% deny expertise when contradicted"
+      ],
+      "notes": null
+    },
+    {
+      "id": "JK-18",
+      "type": "finding",
+      "statement": "Participants often fail to notice model skew: even when contradicted, over half still call suggestions balanced and reasonable.",
+      "quote": "When the model contradicted participants' opinions, they were more likely (30%) to notice its skew, but still, more than half agreed that the model's suggestions were balanced and reasonable",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 13
+      },
+      "status": "measured",
+      "scope": "N_P=1,000; awareness item on balanced/reasonable suggestions",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "aligned: 80% agree balanced, 10% disagree",
+        "contradicted: 52% agree, 30% disagree"
+      ],
+      "notes": null
+    },
+    {
+      "id": "JK-19",
+      "type": "finding",
+      "statement": "Most participants do not report that the assistant inspired or changed their argument; awareness is higher when the model aligns with them.",
+      "quote": "Participants using a model aligned with their view... were slightly more aware of the model's effect (34%...)... only about 20% of the participants who did not share the model's opinion believed that the model influenced them",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 13
+      },
+      "status": "measured",
+      "scope": "N_P=1,000 self-reported influence awareness",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "34% agree influence if aligned",
+        "20% if contradicted",
+        "59% disagree if contradicted"
+      ],
+      "notes": null
+    },
+    {
+      "id": "JK-20",
+      "type": "finding",
+      "statement": "Prompt configuration successfully biases full-sentence suggestions: 86% labeled as supporting the intended view (62% for partial completions).",
+      "quote": "of the full sentences suggested by the model, 86% were labeled as supporting the intended view... For partially suggested sentences... the ratio... dropped to 62%",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 14
+      },
+      "status": "measured",
+      "scope": "Sampled model suggestions labeled by crowd judges",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "86% full-sentence intended",
+        "62% partial-sentence intended",
+        "8% balanced full"
+      ],
+      "notes": null
+    },
+    {
+      "id": "JK-21",
+      "type": "finding",
+      "statement": "Demand effects are unlikely to explain results: only about 14% guessed the study concerned assistants' effects on opinions.",
+      "quote": "Only about 14% mentioned that we might be studying the assistants' effect on people's opinions... most participants were not aware of the model's opinion and believed that the model did not affect their argument",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 14
+      },
+      "status": "measured",
+      "scope": "Open-ended purpose probe after task",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "~14% guessed opinion-effect purpose"
+      ],
+      "notes": null
+    },
+    {
+      "id": "JK-22",
+      "type": "interpretation",
+      "statement": "Written and survey shifts together indicate latent persuasion by language models, not merely temporary textual accommodation.",
+      "quote": "The opinion shifts in the survey suggest that the differences in written opinion were associated with a shift in personal attitudes. We attribute the shifts... to... latent persuasion by language models",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 14
+      },
+      "status": "suggested",
+      "scope": "Authors' reading of writing + survey results jointly",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "JK-23",
+      "type": "mechanism",
+      "statement": "Informational influence (new arguments) is unlikely to fully explain shifts because effects appear immediately and awareness of skew is low.",
+      "quote": "Had the language models influenced participants' views through convincing arguments, one would expect a gradual or incremental change of opinion... The lack of awareness of the models' influence supports the idea that the model's influence was not only through conscious processing of new information",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 15
+      },
+      "status": "suggested",
+      "scope": "Secondary theoretical interpretation; not causally identified",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "JK-24",
+      "type": "mechanism",
+      "statement": "Normative influence via treating the assistant as a social actor may contribute, supported by high attributed expertise, but design did not personify the tool.",
+      "quote": "The normative influence explanation is supported by the finding that participants... attributed a high degree of expertise to the assistant... our experimental design presented the language model as a support tool and did not personify the assistant",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 15
+      },
+      "status": "suggested",
+      "scope": "Theoretical vector; ad-hoc comments suggest limited obligation to comply",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "JK-25",
+      "type": "mechanism",
+      "statement": "Behavioral influence: accepting or considering suggested views changes opinion formation via self-perception and induced counter-attitudinal expression.",
+      "quote": "Similar to nudges, the suggestions changed participants' behavior, prompting participants to consider the models' view and even accept it in their writing. According to self-perception theory... such changes in behavior may lead to changes in opinion",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 15
+      },
+      "status": "suggested",
+      "scope": "Authors' preferred partial account; UI mediates when opinions appear",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "JK-26",
+      "type": "assumption",
+      "statement": "A strongly opinionated manipulation is appropriate to test whether language models can shift views, including potential abuse.",
+      "quote": "We chose a strong manipulation as we wanted to explore the potential of language models to affect users' opinions and understand whether they could be used or abused to shift people's views",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 6
+      },
+      "status": "asserted",
+      "scope": "Design rationale for prompt strength",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "JK-27",
+      "type": "critique",
+      "statement": "Risk literature emphasizes stereotypes, bias, and misinformation but under-attends opinion/attitude/cultural shifts from generative-model deployment.",
+      "quote": "Comparatively little research has considered widespread shifts in opinion, attitude, and culture that may result from a comprehensive deployment of generative language models",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 4
+      },
+      "status": "asserted",
+      "scope": "Related-work positioning vs LLM risk taxonomies",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "JK-28",
+      "type": "gap",
+      "statement": "Generalization to other topics—especially ones with strong entrenched opinions—is untested; only one issue was studied.",
+      "quote": "We only tested whether a language model affected participants' views on a single topic... Whether our findings generalize to other topics, particularly where people hold strong entrenched opinions, needs to be explored",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 16
+      },
+      "status": "asserted",
+      "scope": "Explicit limitation; social-media-good-for-society only",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "JK-29",
+      "type": "gap",
+      "statement": "Results are tied to one GPT-3 writing-assistant interaction pattern; other UIs (single-word predictive keyboards, full email assistants) may differ.",
+      "quote": "we only looked at one specific implementation of a writing assistant powered by GPT-3. Interacting with different language models through other applications... may lead to different influence outcomes",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 16
+      },
+      "status": "asserted",
+      "scope": "Product/UI external validity",
+      "theme_fit": "framing/co-writing",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "JK-30",
+      "type": "gap",
+      "statement": "Magnitude relative to other influence channels and persistence over time remain unknown.",
+      "quote": "How large is this influence compared to other types of influence, and to what extent effects persist over time, will need to be explored in future studies",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 16
+      },
+      "status": "asserted",
+      "scope": "Temporal durability and comparative effect size",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "JK-31",
+      "type": "gap",
+      "statement": "Single-shot strong opinionation underestimates cumulative real-world exposure and feedback into future training data.",
+      "quote": "participants only interacted with the model once. In contrast, people will regularly interact with deployed models over an extended period... when language models insert their preferred views into people's writing, they increase the prevalence of their opinion in future training data",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 17
+      },
+      "status": "suggested",
+      "scope": "Authors' extrapolation beyond measured one-shot design",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": "Also notes deployed opinions are usually weaker than experimental manipulation"
+    },
+    {
+      "id": "JK-32",
+      "type": "lever",
+      "statement": "Authors propose monitoring and carefully engineering the opinions built into AI language technologies as a response to latent persuasion risk.",
+      "quote": "we argue that the opinions built into AI language technologies need to be monitored and engineered more carefully... We have no comparable tools for monitoring the opinions built into large language models",
+      "anchor": {
+        "paper": "jakesch-2023",
+        "file": "jakesch-2023.md",
+        "approx_page": 16
+      },
+      "status": "asserted",
+      "scope": "Policy/industry implication; not empirically tested here",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "WC-01",
+      "type": "framing",
+      "statement": "Subtle AI autocomplete suggestions may influence users' attitudes more covertly than explicit AI persuasion studied previously.",
+      "quote": "a critical gap remains in our understanding of the more subtle and indirect ways that AI can influence human cognition.",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 1
+      },
+      "status": "asserted",
+      "scope": "AIMC autocomplete vs overt AI persuasion literature",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "WC-02",
+      "type": "definition",
+      "statement": "Attitudes are evaluations people form toward objects such as societal issues and policy decisions.",
+      "quote": "\"attitudes\" refers to the evaluations people form toward \"objects\" such as societal issues and policy decisions",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 1
+      },
+      "status": "asserted",
+      "scope": "paper's operational attitude construct",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "WC-03",
+      "type": "mechanism",
+      "statement": "Biased autocomplete inspires AI-aligned viewpoints and makes elaborating them easier, so cowriting can shift attitudes via behavior-to-attitude pathways.",
+      "quote": "When biased AI autocomplete suggestions inspire people to think of certain viewpoints—and make it easier for people to elaborate on those viewpoints than on others—cowriting with a biased AI writing assistant may powerfully shift people's attitudes",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 1
+      },
+      "status": "suggested",
+      "scope": "autocomplete cowriting; behavior-influences-attitude paradigm",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": "Cites biased scanning, dissonance, self-perception (39–41); design cannot identify which."
+    },
+    {
+      "id": "WC-04",
+      "type": "gap",
+      "statement": "Prior attitude-shift evidence for AI writing assistants was limited to one non-politically charged issue and did not test alternative explanations or awareness interventions.",
+      "quote": "It only relied on a single experiment using one issue that was not politically charged; it did not rule out other potential explanations; and it did not test whether the influence can be undone by making people more aware of the bias",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 2
+      },
+      "status": "asserted",
+      "scope": "critique of initial study (ref 8 / Jakesch lineage)",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": "Motivates Exp1–2 robustness and safeguard arms."
+    },
+    {
+      "id": "WC-05",
+      "type": "assumption",
+      "statement": "People's behaviors can shift their attitudes, not only the reverse.",
+      "quote": "it is also known that people's behaviors can shift their attitudes (39–41).",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 1
+      },
+      "status": "inherited",
+      "scope": "social-psych behavior→attitude literature",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "WC-06",
+      "type": "metric",
+      "statement": "Posttask (and Exp2 pretask) attitude is a 5-point Likert from No to Yes, scored as alignment with the AI's biased position.",
+      "quote": "using a Likert scale to measure their attitudes numerically... 1: No   2: Probably no   3: Not sure   4: Probably yes   5: Yes",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 2
+      },
+      "status": "measured",
+      "scope": "both experiments; felons voting reverse-coded",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "1–5 Likert"
+      ],
+      "notes": null
+    },
+    {
+      "id": "WC-07",
+      "type": "metric",
+      "statement": "Bias awareness is agreement that suggestions were reasonable and balanced; influence awareness is agreement that the assistant inspired or changed thinking and argument.",
+      "quote": "rate their agreement with the statement that \"the suggestions were reasonable and balanced.\"... \"the writing assistant inspired or changed my thinking and argument.\"",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 10
+      },
+      "status": "measured",
+      "scope": "AI-suggestion conditions only",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": "Agreement interpreted as lesser awareness because suggestions were programmed one-sided."
+    },
+    {
+      "id": "WC-08",
+      "type": "finding",
+      "statement": "In experiment 1, biased AI autocomplete shifts posttask attitudes 0.44 scale points toward the AI versus control.",
+      "quote": "seeing biased AI suggestions (N = 487) increased the alignment of participants' attitudes with the AI's position by 0.44 scale point on a scale from 1 to 5... Cohen's d = 0.24",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "Exp1 Prolific; standardized tests; GPT-3.5; N=1485",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "N=1485",
+        "AI N=487",
+        "Control N=499",
+        "+0.44",
+        "d=0.24",
+        "p<0.001"
+      ],
+      "notes": "Includes participants who accepted no suggestions."
+    },
+    {
+      "id": "WC-09",
+      "type": "finding",
+      "statement": "In experiment 2, normal AI treatment posttask attitudes are 0.41 scale points more AI-aligned than control across four societal issues.",
+      "quote": "participants in the normal AI Treatment (N = 219) expressing attitudes in the posttask survey that were 0.41 scale point more aligned with the AI's biased position than Control participants' attitudes (N = 312)... Cohen's d = 0.19",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "Exp2; four issues; liberal/conservative AI bias; GPT-4; N=1097",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "N=1097",
+        "AI N=219",
+        "Control N=312",
+        "+0.41",
+        "d=0.19",
+        "p=0.015"
+      ],
+      "notes": null
+    },
+    {
+      "id": "WC-10",
+      "type": "finding",
+      "statement": "Experiment 2 within-subject shift toward the AI is 0.37 for AI treatment versus nonsignificant 0.06 for control.",
+      "quote": "In the AI Treatment condition, participants shifted... toward the AI's position by Δ_post-pre = 0.37... Control group... Δ_post-pre = 0.06... P = 0.377",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "Exp2 repeated measures; mean 34.44 days pre→main",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "Δ=0.37 AI",
+        "Δ=0.06 Control",
+        "d=0.27 AI",
+        "interaction p=0.005"
+      ],
+      "notes": "Between-condition difference in shifts Δ=0.31, d=0.25 after Bonferroni."
+    },
+    {
+      "id": "WC-11",
+      "type": "finding",
+      "statement": "The attitude-shift treatment effect increases with the number of words participants accept from AI suggestions.",
+      "quote": "In both experiments, the treatment effect increased with the number of words participants accepted from the AI suggestions",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "both experiments; dose–response in Supplementary Text",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": "Supports behavior→attitude reading."
+    },
+    {
+      "id": "WC-12",
+      "type": "finding",
+      "statement": "Most treated participants fail to notice suggestion bias: only 19% (Exp1) and 14% (Exp2) disagree that suggestions were balanced.",
+      "quote": "only 19% of participants in experiment 1 and 14% of participants in experiment 2 disagreed with the statement that the suggestions were balanced.",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "AI Treatment groups both experiments",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "19% Exp1 disagree balanced",
+        "14% Exp2"
+      ],
+      "notes": null
+    },
+    {
+      "id": "WC-13",
+      "type": "finding",
+      "statement": "Participants whose attitudes shift toward the AI are less likely to notice bias than other treated participants.",
+      "quote": "73% of treated participants whose attitude shifted toward the AI agreed that the AI suggestions were balanced and only 4% disagreed... 63 and 19%, respectively, for treated participants whose attitudes did not shift... odds ratio = 0.18",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "Exp2 AI Treatment N=219",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "73% vs 63% agree balanced",
+        "4% vs 19% disagree",
+        "OR=0.18",
+        "χ² p=0.008"
+      ],
+      "notes": null
+    },
+    {
+      "id": "WC-14",
+      "type": "finding",
+      "statement": "A majority deny that the assistant influenced their thinking; actually shifted participants are no more likely to report influence.",
+      "quote": "53% disagreed and 31% agreed that the assistant influenced their thinking... experiment 1; in experiment 2, 51% disagreed and 34% agreed... Participants who were truly influenced... were no more likely to agree that they had been influenced",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 4
+      },
+      "status": "measured",
+      "scope": "AI Treatment; Exp2 awareness×shift χ² ns",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "53%/51% disagreed influence",
+        "OR=1.20 ns"
+      ],
+      "notes": null
+    },
+    {
+      "id": "WC-15",
+      "type": "lever",
+      "statement": "Static Text presents the same biased arguments as a bullet list in instructions instead of realtime autocomplete.",
+      "quote": "Static Text condition (N = 499)... prominently showed a bulleted list of arguments biased in the same direction as the AI suggestions, instead of providing the information as autocomplete suggestions",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 7
+      },
+      "status": "measured",
+      "scope": "Exp1 information-accessibility control; N=499",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "N=499"
+      ],
+      "notes": "Themes covered 76% of live AI suggestions."
+    },
+    {
+      "id": "WC-16",
+      "type": "finding",
+      "statement": "Autocomplete influence exceeds Static Text by 0.24 points; Static Text does not reliably beat Control after Tukey adjustment.",
+      "quote": "Participants who received AI suggestions reported attitudes that were 0.24 scale point closer to the AI's position than participants who merely saw the arguments presented as static text... Static Text... did not report attitudes that were significantly different than those of participants in the Control after Tukey adjustment",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 7
+      },
+      "status": "measured",
+      "scope": "Exp1 AI vs Static vs Control",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "AI−Static +0.24",
+        "d=0.13",
+        "Static−Control +0.20 ns p=0.091"
+      ],
+      "notes": null
+    },
+    {
+      "id": "WC-17",
+      "type": "interpretation",
+      "statement": "Attitude shift from AI writing assistants is not fully explained by increased accessibility of biased information alone.",
+      "quote": "the influence of biased AI suggestions on people's attitudes and writing is not simply due to these suggestions providing new information.",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 7
+      },
+      "status": "suggested",
+      "scope": "reading of Exp1 Static Text contrast",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "WC-18",
+      "type": "lever",
+      "statement": "Write-in-Favor overtly instructs participants to write supporting the same predetermined position as the AI bias while still showing biased suggestions.",
+      "quote": "Write-in-Favor condition (N = 207), in which we explicitly asked participants to express an opinion in their writing... regardless of their own opinion on the topic.",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 7
+      },
+      "status": "measured",
+      "scope": "Exp2 maximal overt behavioral manipulation benchmark",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "N=207"
+      ],
+      "notes": null
+    },
+    {
+      "id": "WC-19",
+      "type": "finding",
+      "statement": "Covert AI Treatment shift (0.37) is statistically indistinguishable from Write-in-Favor shift (0.43).",
+      "quote": "Write-in-Favor condition shifted toward the AI's position by 0.43 scale point... this shift was not statistically different from the shift caused by the default (no-awareness) AI Treatment [difference in shifts = 0.055... P = 1.00]",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 7
+      },
+      "status": "measured",
+      "scope": "Exp2 AI Treatment vs Write-in-Favor",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "Write-in-Favor Δ=0.43",
+        "d=0.30",
+        "diff vs AI=0.055 ns"
+      ],
+      "notes": "Overt condition raised reported bias/influence awareness relative to default AI."
+    },
+    {
+      "id": "WC-20",
+      "type": "lever",
+      "statement": "Warning (prebunk) tells participants before writing that AI suggestions might support a different view and may bias their writing.",
+      "quote": "the instructions beforehand included the phrase \"Note that the AI-generated suggestions might support a different view than your own. When this happens, it may bias your writing.\"",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 3
+      },
+      "status": "measured",
+      "scope": "Exp2 Warning N=200 after exclusion; inspired by inoculation/prebunking",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "N=200"
+      ],
+      "notes": "Fails as mitigation — pair with WC-22."
+    },
+    {
+      "id": "WC-21",
+      "type": "lever",
+      "statement": "Debrief (debunk) after writing warns that suggestions may have biased writing and influenced thinking before the attitude measure.",
+      "quote": "afterward, they were shown a statement... \"Note that the AI-generated suggestions might have supported a different view than your own. As a result, they may have biased your writing and influenced your thinking.\"",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 3
+      },
+      "status": "measured",
+      "scope": "Exp2 Debrief N=159 after exclusion",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "N=159"
+      ],
+      "notes": "Fails as mitigation — pair with WC-23."
+    },
+    {
+      "id": "WC-22",
+      "type": "finding",
+      "statement": "Pre-task Warning does not significantly reduce attitude shift relative to default AI Treatment.",
+      "quote": "neither of these treatments significantly reduced the attitude shift compared to the normal AI Treatment baseline... difference in shifts between Warning and AI Treatment = 0.105 scale point... P = 1.000",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 7
+      },
+      "status": "measured",
+      "scope": "Exp2 Warning vs AI Treatment; Warning still shifts +0.27 vs baseline",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "Warning Δ=+0.27",
+        "d=0.19",
+        "vs AI Δdiff=0.105 ns"
+      ],
+      "notes": "Equivalence tests: Warning may have tiny underpowered reduction; still insufficient to undo main effect."
+    },
+    {
+      "id": "WC-23",
+      "type": "finding",
+      "statement": "Post-task Debrief does not significantly reduce attitude shift relative to default AI Treatment.",
+      "quote": "participants who were debriefed after exposure reported attitudes that were 0.35 scale point closer to the AI's position... difference in shifts between Debrief and AI Treatment = 0.018 scale point... P = 1.000",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 7
+      },
+      "status": "measured",
+      "scope": "Exp2 Debrief vs AI Treatment",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "Debrief Δ=+0.35",
+        "d=0.22",
+        "vs AI Δdiff=0.018 ns"
+      ],
+      "notes": null
+    },
+    {
+      "id": "WC-24",
+      "type": "finding",
+      "statement": "Warning and Debrief also fail to raise awareness of suggestion bias or of influence on thinking versus default AI Treatment.",
+      "quote": "these interventions did not appear to reduce the attitude shift caused by the biased AI suggestions, nor did they make people more aware of being influenced.",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 7
+      },
+      "status": "measured",
+      "scope": "Exp2 Warning/Debrief awareness χ² vs AI Treatment all ns",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "WC-25",
+      "type": "interpretation",
+      "statement": "Covert AI suggestion influence without user awareness constitutes a form of manipulation that can threaten freedom of thought.",
+      "quote": "This influence constitutes a form of manipulation, defined by Susser et al. as the steering of an individual's decision without their awareness (53).",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 7
+      },
+      "status": "suggested",
+      "scope": "normative reading of covert attitude shift",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "WC-26",
+      "type": "critique",
+      "statement": "Brief real-world AI disclaimers (e.g., ChatGPT mistake warnings) are analogous to the tested Warning/Debrief texts and are not substantially reducing influence.",
+      "quote": "AI tools such as ChatGPT show brief and general statements about AI's propensity to hallucinate false information... similar to the messages used in our interventions... brief disclaimers used in real-world AI applications are not substantially reducing these tools' influence on users.",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 8
+      },
+      "status": "suggested",
+      "scope": "boundary condition for brief awareness interventions",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": "Authors note more detailed inoculation messages may work better (untested here)."
+    },
+    {
+      "id": "WC-27",
+      "type": "finding",
+      "statement": "Attitude shift occurs across issues with both liberal- and conservative-leaning AI suggestion biases.",
+      "quote": "the impact of AI suggestions is not limited to one political direction, as attitudes shifted with AI bias leaning (across issues) either conservative or liberal.",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 9
+      },
+      "status": "measured",
+      "scope": "Exp2 four issues balanced partisan direction",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": "Did not test both directions within each single issue."
+    },
+    {
+      "id": "WC-28",
+      "type": "finding",
+      "statement": "Users who initially disagreed with the AI's position still accepted substantial portions of its suggestions.",
+      "quote": "users who initially disagreed with the AI's position still accepted substantial portions of its suggestions (see Supplementary Text)",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 8
+      },
+      "status": "measured",
+      "scope": "Exp2; detail in Supplementary Text",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "WC-29",
+      "type": "gap",
+      "statement": "The experiments cannot identify which behavior-to-attitude mechanism (biased scanning, dissonance, or self-perception) causes the shift.",
+      "quote": "Our experiments' design does not allow us to pinpoint which of these is the causal factor, and more than one of these mechanisms... could be contributing",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 8
+      },
+      "status": "asserted",
+      "scope": "mechanism identification limitation",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "WC-30",
+      "type": "gap",
+      "statement": "Only short-term attitude effects are measured; persistence over time under repeated AI exposure is unknown.",
+      "quote": "our study also only examines short-term effects of AI-generated suggestions, and it remains unclear to what extent the observed effects persist over time.",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 9
+      },
+      "status": "asserted",
+      "scope": "longitudinal durability not tested",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "WC-31",
+      "type": "gap",
+      "statement": "Prolific crowdworker demographics skew the sample and limit detailed comparison of effects on conservative versus liberal participants.",
+      "quote": "our sample was typical of recruitment from online crowdwork sites like Prolific and thus skewed on certain demographic dimensions (60). This skew limited our ability to compare in more detail the effect on conservative versus liberal-leaning participants.",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 9
+      },
+      "status": "asserted",
+      "scope": "sample generalizability",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "WC-32",
+      "type": "gap",
+      "statement": "More detailed, theory-informed awareness interventions remain untested; brief Warning/Debrief may be too thin to internalize.",
+      "quote": "One possible reason for the lack of substantial effects is that the intervention text was not sufficiently detailed... Future research... should test more detailed interventions informed by theory",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 8
+      },
+      "status": "asserted",
+      "scope": "mitigation design space beyond brief disclaimers",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "WC-33",
+      "type": "interpretation",
+      "statement": "Suggestions in the study were longer and deliberately biased versus typical product autocomplete, yet everyday repeated exposure could compound short-term shifts.",
+      "quote": "The suggestions in our study were longer than current applications' norms and were biased by design. At the same time... the short-term influence of AI suggestions is likely to be compounded by repeated exposure",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 8
+      },
+      "status": "suggested",
+      "scope": "ecological validity / compounding risk",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "~24 words / 30 tokens per suggestion"
+      ],
+      "notes": "Methods: GPT-3.5 Exp1, GPT-4 Exp2; appear ~1.5s after pause."
+    },
+    {
+      "id": "WC-34",
+      "type": "finding",
+      "statement": "Total analyzed sample across two preregistered experiments is N=2582 writers exposed to biased autocomplete or controls.",
+      "quote": "In two large-scale preregistered experiments (N = 2582), we exposed participants writing about important societal issues to an AI writing assistant that provided biased autocomplete suggestions.",
+      "anchor": {
+        "paper": "williams-ceci-2026",
+        "file": "williams-ceci-2026.md",
+        "approx_page": 1
+      },
+      "status": "measured",
+      "scope": "combined Exp1+Exp2 after exclusions as reported",
+      "theme_fit": "persuasion",
+      "numbers": [
+        "N=2582",
+        "Exp1 N=1485",
+        "Exp2 N=1097"
+      ],
+      "notes": "Headline N; cell Ns after exclusion vary (esp. Exp2 AI N=219)."
+    },
+    {
+      "id": "KS-01",
+      "type": "framing",
+      "statement": "The study treats essay writing with an LLM as a setting for measuring cognitive cost in educational use of AI assistants.",
+      "quote": "This study focuses on finding out the cognitive cost of using an LLM in the educational context of writing an essay.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 2
+      },
+      "status": "asserted",
+      "scope": "essay writing; educational LLM use; ChatGPT",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-02",
+      "type": "definition",
+      "statement": "Cognitive debt is repeated LLM reliance that replaces effortful independent thinking, deferring short-term mental effort at long-term cost.",
+      "quote": "This pattern reflects the accumulation of cognitive debt, a condition in which repeated reliance on external systems like LLMs replaces the effortful cognitive processes required for independent thinking. Cognitive debt defers mental effort in the short term but results in long-term costs, such as diminished critical inquiry, increased vulnerability to manipulation, decreased creativity.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 151
+      },
+      "status": "asserted",
+      "scope": "authors' interpretive construct from Session 4 LLM-to-Brain pattern",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": "Title concept; defined late in Discussion, not as a formal metric."
+    },
+    {
+      "id": "KS-03",
+      "type": "assumption",
+      "statement": "Essay writing is a cognitively complex educational task that engages working memory at both macro and micro levels.",
+      "quote": "We chose essay writing as it is a cognitively complex task that engages multiple mental processes... Essay writing places significant demands on working memory, requiring simultaneous management of multiple cognitive processes.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 10
+      },
+      "status": "asserted",
+      "scope": "SAT-style essay prompts; lab writing task",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-04",
+      "type": "finding",
+      "statement": "Prior work links extensive AI tool use to reduced critical thinking via cognitive offloading.",
+      "quote": "Studies indicate that while these systems reduce immediate cognitive load, they may simultaneously diminish critical thinking capabilities... This cognitive offloading [113] phenomenon raises concerns about the long-term implications for human intellectual development and autonomy [5].",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 10
+      },
+      "status": "inherited",
+      "scope": "cited background; not re-tested as primary claim here",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": "merge: type was wrongly set to status label inherited; normalized to finding, status remains inherited"
+    },
+    {
+      "id": "KS-05",
+      "type": "lever",
+      "statement": "Three between-subjects tool conditions—ChatGPT-only, search-without-LLM, and brain-only—are the primary experimental lever.",
+      "quote": "Participants were randomly assigned across the three following groups... LLM Group... restricted to using OpenAI's ChatGPT... Search Engine Group... ChatGPT or any other LLM was explicitly prohibited... Brain-only Group... forbidden from using both LLM and any online websites.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 23
+      },
+      "status": "measured",
+      "scope": "N=54; ages 18–39; Boston-area universities; 20-min essays",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "N=54 for sessions 1–3",
+        "3 groups × ~18"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KS-06",
+      "type": "lever",
+      "statement": "Session 4 crosses prior LLM users to unaided writing (LLM-to-Brain) and prior brain-only users to LLM (Brain-to-LLM).",
+      "quote": "In the 4th session we asked LLM group participants to use no tools (we refer to them as LLM-to-Brain), and the Brain-only group participants were asked to use LLM (Brain-to-LLM). ... 18 participants among them completed session 4.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 2
+      },
+      "status": "measured",
+      "scope": "optional Session 4; N=18; personalized prior prompts",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "N=18 Session 4"
+      ],
+      "notes": "No Session 4 for Search Engine group."
+    },
+    {
+      "id": "KS-07",
+      "type": "metric",
+      "statement": "EEG cognitive engagement is operationalized via dynamic Directed Transfer Function (dDTF) connectivity across frequency bands.",
+      "quote": "We used electroencephalography (EEG) to record participants' brain activity in order to assess their cognitive engagement and cognitive load... Figure 1. The dynamic Direct Transfer Function (dDTF) EEG analysis of Alpha Band...",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 1
+      },
+      "status": "measured",
+      "scope": "Enobio 32; 500 Hz; alpha/beta/theta/delta bands",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "32 electrodes"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KS-08",
+      "type": "metric",
+      "statement": "Essay ownership is measured by post-session interview self-report of full, partial, or absent ownership.",
+      "quote": "Question 5. Essay ownership... LLM group either indicated full ownership of the essay for half of the participants (9/18), or no ownership at all (3/18), or 'partial ownership'...",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 32
+      },
+      "status": "measured",
+      "scope": "post-assessment interview after each session",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-09",
+      "type": "metric",
+      "statement": "Memory for own writing is measured by ability and correctness of quoting the just-written essay without looking.",
+      "quote": "Can you quote any sentence from your essay without looking at it?... Quoting accuracy was significantly different across experimental conditions... the LLM group performed significantly worse...",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 31
+      },
+      "status": "measured",
+      "scope": "interview Q3/Q4; sessions 1–4",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-10",
+      "type": "finding",
+      "statement": "Brain connectivity systematically decreases as external writing support increases: Brain-only strongest, Search intermediate, LLM weakest.",
+      "quote": "Brain connectivity systematically scaled down with the amount of external support: the Brain‑only group exhibited the strongest, widest‑ranging networks, Search Engine group showed intermediate engagement, and LLM assistance elicited the weakest overall coupling.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 2
+      },
+      "status": "measured",
+      "scope": "sessions 1–3; three tool conditions; dDTF",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "Search ~34–48% lower total connectivity vs Brain-only",
+        "LLM up to ~55% reduced dDTF vs Brain-only in low-frequency networks"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KS-11",
+      "type": "finding",
+      "statement": "LLM, Search, and Brain-only conditions produce significantly different neural connectivity patterns, indicating divergent cognitive strategies.",
+      "quote": "EEG analysis presented robust evidence that LLM, Search Engine and Brain-only groups had significantly different neural connectivity patterns, reflecting divergent cognitive strategies.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 2
+      },
+      "status": "measured",
+      "scope": "sessions 1–3 aggregate EEG",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-12",
+      "type": "interpretation",
+      "statement": "Unaided writing recruits high-load executive and creative networks; LLM writing lowers connectivity and shifts flow toward top-down tool integration.",
+      "quote": "writing without assistance increased brain network interactions across multiple frequency bands, engaging higher cognitive load, stronger executive control, and deeper creative processing. Writing with AI assistance, in contrast, reduces overall neural connectivity, and shifts the dynamics of information flow.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 97
+      },
+      "status": "suggested",
+      "scope": "LLM vs Brain-only EEG summary",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-13",
+      "type": "mechanism",
+      "statement": "LLM assistance offloads planning and content generation, reducing frontal theta/executive demand during writing.",
+      "quote": "The significantly lower frontal theta connectivity in the LLM group possibly indicates that their working memory and executive demands were lighter, presumably because the bot provided external cognitive support... some of the 'human thinking' and planning was offloaded...",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 96
+      },
+      "status": "suggested",
+      "scope": "LLM vs Brain-only; cognitive-load reading of dDTF",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-14",
+      "type": "finding",
+      "statement": "Search-engine writing shows elevated occipital/visual-executive connectivity relative to LLM writing, consistent with visual search and selection.",
+      "quote": "the Search Engine group exhibited increased activity in the occipital and visual cortices, particularly in alpha and high alpha sub-bands... In contrast, despite also using a digital interface, the LLM group did not exhibit comparable levels of visual cortical activation.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 146
+      },
+      "status": "measured",
+      "scope": "Search vs LLM EEG; sessions 1–3",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-15",
+      "type": "finding",
+      "statement": "LLM-group essays are statistically more homogeneous within topics than Brain-only essays, which show high approach variability.",
+      "quote": "We found that the Brain-only group exhibited strong variability in how participants approached essay writing across most topics. In contrast, the LLM group produced statistically homogeneous essays within each topic, showing significantly less deviation compared to the other groups.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 143
+      },
+      "status": "measured",
+      "scope": "NLP across SAT topics; sessions 1–3",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": "Abstract also claims homogeneity across NERs, n-grams, topic ontology within groups."
+    },
+    {
+      "id": "KS-16",
+      "type": "finding",
+      "statement": "LLM essays use the most named entities; Search uses roughly half as many; Brain-only about 60% fewer than LLM.",
+      "quote": "the LLM group used the most of the specific named entities (NERs)... while the Search Engine group used at least two times less NERs, and the Brain-only group used 60% less of NERs compared to the LLM group.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 143
+      },
+      "status": "measured",
+      "scope": "NER pipeline across groups/topics",
+      "theme_fit": "lexical shift",
+      "numbers": [
+        "Search ≥2× fewer NERs than LLM",
+        "Brain-only ~60% fewer NERs than LLM"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KS-17",
+      "type": "finding",
+      "statement": "Ontology analysis shows LLM and Search essays correlate with each other and barely intersect Brain-only essays on the same topics.",
+      "quote": "The ontology... analysis demonstrated significant correlation between the LLM group and the Search Engine group, with almost no intersection with the essays written by the Brain-only group within the same topics as well as between all topics.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 145
+      },
+      "status": "measured",
+      "scope": "agent ontology analysis of essays",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-18",
+      "type": "finding",
+      "statement": "In Session 1, no LLM participant produced a correct quote from their essay, unlike Search and Brain-only peers.",
+      "quote": "None of the participants in the LLM group (0/18) produced a correct quote, whereas only three participants in the Search Engine group (3/18) and two in the Brain-only group (2/18) failed to do so. ... the LLM group performed significantly worse than both the Search Engine group (p < .001), and the Brain-only group (p < .001)",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 32
+      },
+      "status": "measured",
+      "scope": "Session 1; N=18 per group",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "0/18 correct quotes LLM",
+        "p < .001 vs Search and Brain-only"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KS-19",
+      "type": "finding",
+      "statement": "LLM users' quoting impairment persists across sessions, though attenuated; Search and Brain-only approach near-perfect quoting by Session 3.",
+      "quote": "LLM users significantly underperformed... with 83% of participants (15/18) reporting difficulty quoting in Session 1, and none providing correct quotes. This impairment persisted albeit attenuated... with 6 out of 18 participants still failing to quote correctly by Session 3. ... By Session 3, 100% of both [Search and Brain-only] groups' participants reported the ability to quote their essays",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 147
+      },
+      "status": "measured",
+      "scope": "sessions 1–3 interview quoting",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "15/18 difficulty Session 1",
+        "6/18 still incorrect Session 3"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KS-20",
+      "type": "mechanism",
+      "statement": "Poor quoting under LLM use reflects bypassed episodic/semantic encoding when users transcribe tool output without internalizing it.",
+      "quote": "The reduced dDTF strength in frontal and temporal nodes among LLM users likely reflected a bypass of deep memory encoding processes, whereby participants read, selected, and transcribed tool-generated suggestions without integrating them into episodic memory networks.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 147
+      },
+      "status": "suggested",
+      "scope": "linking quoting behavior to theta/alpha dDTF",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-21",
+      "type": "finding",
+      "statement": "Perceived essay ownership is lowest and most fragmented in the LLM group and highest in the Brain-only group.",
+      "quote": "The reported ownership of LLM group's essays in the interviews was low. The Search Engine group had strong ownership, but lesser than the Brain-only group. ... Brain-only group claimed full ownership of their texts almost unanimously (16/18 in Session 1, rising to 17/18 by Session 3), LLM Group presented a fragmented and conflicted sense of authorship",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 148
+      },
+      "status": "measured",
+      "scope": "interview ownership; sessions 1–3",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "Brain-only full ownership 16/18→17/18",
+        "Session 1 LLM: 9/18 full, 3/18 none"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KS-22",
+      "type": "interpretation",
+      "statement": "Fragmented LLM authorship reflects diminished cognitive agency when content generation is delegated to the model.",
+      "quote": "These responses suggest a diminished sense of cognitive agency. ... In the LLM group, the delegation of content generation to external systems appeared to have disrupted these metacognitive loops, resulting in a psychological dissociation from the written output.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 148
+      },
+      "status": "suggested",
+      "scope": "ownership interview + frontal connectivity reading",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-23",
+      "type": "finding",
+      "statement": "Human teachers detect LLM-group stylistic homogeneity and score uniqueness more skeptically than an AI judge that scores higher.",
+      "quote": "Human teachers were... much more sceptical about uniqueness and content structure, whereas the AI judge consistently scored essays higher in the uniqueness and quality metrics. ... human teachers were able to recognize a distinctive writing style associated with the LLM group",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 145
+      },
+      "status": "measured",
+      "scope": "blind human teachers vs multi-shot AI judge",
+      "theme_fit": "stylometry",
+      "numbers": [],
+      "notes": "Conclusions also: teachers closed the loop by detecting LLM essays via conventional structure/homogeneity."
+    },
+    {
+      "id": "KS-24",
+      "type": "finding",
+      "statement": "After prior LLM use, unaided Session 4 (LLM-to-Brain) shows weaker alpha/beta engagement than practiced Brain-only sessions and does not reach Session 3 connectivity peaks.",
+      "quote": "LLM-to-Brain participants showed weaker neural connectivity and under-engagement of alpha and beta networks... Session 4's brain connectivity did not simply reset to a novice (Session 1) pattern, but it also did not reach the levels of a fully practiced Session 3... Session 4 connectivity was significantly lower than the peaks observed in Sessions 2-3 (alpha)... or Session 3 (beta), yet remained above the Session 1",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 118
+      },
+      "status": "measured",
+      "scope": "Session 4 LLM-to-Brain; N=18 total Session 4",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "Session 4 N=18"
+      ],
+      "notes": "Authors flag as preliminary needing larger sample."
+    },
+    {
+      "id": "KS-25",
+      "type": "finding",
+      "statement": "Session 4 LLM-to-Brain participants still show impaired quoting versus Brain-to-LLM reassigned peers.",
+      "quote": "Quoting performance remained significantly impaired among reassigned participants in LLM group during Session 4, where 7 of 9 participants failed to reproduce a quote, whereas only 1 of 9 reassigned participants in Brain-only group had a similar difficulty. ... Only one participant in reassigned LLM group (1/9) produced an accurate quote, whereas 7/9 participants in reassigned Brain-only group did so.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 46
+      },
+      "status": "measured",
+      "scope": "Session 4 crossover; 9 per arm",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "7/9 LLM-to-Brain failed any quote",
+        "1/9 LLM-to-Brain correct quote",
+        "7/9 Brain-to-LLM correct"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KS-26",
+      "type": "finding",
+      "statement": "Brain-to-LLM participants show higher memory recall and re-engage occipito-parietal and prefrontal networks resembling search-like visual processing.",
+      "quote": "the Brain-to-LLM participants demonstrated higher memory recall, and re‑engagement of widespread occipito-parietal and prefrontal nodes, likely supporting the visual processing, similar to the one frequently perceived in the Search Engine group.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 2
+      },
+      "status": "measured",
+      "scope": "Session 4 Brain-to-LLM arm",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-27",
+      "type": "interpretation",
+      "statement": "Prior unaided practice enables more strategic later LLM use, yielding stronger performance and more cohesive neural signatures than LLM-first trajectories.",
+      "quote": "The LLM-to-Brain group's early dependence on LLM tools appeared to have impaired long-term semantic retention and contextual memory... In contrast, Brain-to-LLM participants could leverage tools more strategically, resulting in stronger performance and more cohesive neural signatures.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 150
+      },
+      "status": "suggested",
+      "scope": "Session 4 crossover comparison",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-28",
+      "type": "finding",
+      "statement": "LLM-to-Brain writers repeatedly focus on a narrower idea set in n-grams, taken as evidence of shallow critical engagement with LLM material.",
+      "quote": "participants in the LLM-to-Brain group repeatedly focused on a narrower set of ideas, as evidenced by n-gram analysis... This repetition suggests that many participants may not have engaged deeply with the topics or critically examined the material provided by the LLM.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 151
+      },
+      "status": "measured",
+      "scope": "Session 4 LLM-to-Brain; selected topics; flagged preliminary",
+      "theme_fit": "homogenization",
+      "numbers": [],
+      "notes": "Authors say larger sample needed."
+    },
+    {
+      "id": "KS-29",
+      "type": "lever",
+      "statement": "Authors propose delaying AI integration until learners first engage in sufficient self-driven cognitive effort.",
+      "quote": "Taken together, these findings support an educational model that delays AI integration until learners have engaged in sufficient self-driven cognitive effort. Such an approach may promote both immediate tool efficacy and lasting cognitive autonomy.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 151
+      },
+      "status": "suggested",
+      "scope": "educational design implication from Session 4",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": "Proposed lever, not a separately randomized curriculum trial."
+    },
+    {
+      "id": "KS-30",
+      "type": "interpretation",
+      "statement": "Across four sessions, LLM participants fare worse than Brain-only counterparts at neural, linguistic, and scoring levels despite initial convenience benefits.",
+      "quote": "the LLM group's participants performed worse than their counterparts in the Brain-only group at all levels: neural, linguistic, scoring. ... While these tools offer unprecedented opportunities... this convenience came at a cognitive cost, diminishing users' inclination to critically evaluate the LLM's output",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 2
+      },
+      "status": "suggested",
+      "scope": "authors' overall reading of 4-month, 4-session study",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "4 sessions over ~4 months"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KS-31",
+      "type": "gap",
+      "statement": "Sample is small, geographically narrow, and not gender-balanced enough for strong generalization.",
+      "quote": "In this study we had a limited number of participants recruited from a specific geographical area, several large academic institutions, located very close to each other. For future work it will be important to include a larger number of participants coming with diverse backgrounds... as well as ensuring that the study is more gender balanced.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 151
+      },
+      "status": "asserted",
+      "scope": "Boston-area university sample; N=54 / Session4 N=18",
+      "theme_fit": "orphan",
+      "numbers": [
+        "N=54",
+        "Session 4 N=18"
+      ],
+      "notes": null
+    },
+    {
+      "id": "KS-32",
+      "type": "gap",
+      "statement": "Results are ChatGPT-specific and may not generalize to other LLMs or modalities.",
+      "quote": "This study was performed using ChatGPT... we cannot directly generalize the obtained results to other LLM models. Thus, for future work it will be important to include several LLMs... Future work may also include the use of LLMs with other modalities beyond the text, like audio modality.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 151
+      },
+      "status": "asserted",
+      "scope": "OpenAI ChatGPT only; text essay task",
+      "theme_fit": "orphan",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-33",
+      "type": "gap",
+      "statement": "The writing task was not segmented into substages such as ideation versus drafting, limiting process-stage inference.",
+      "quote": "We did not divide our essay writing task into subtasks like idea generation, writing, and so on, which is often done in prior work [76, 115]. This labeling can be useful to understand what happens at each stage of essay writing and have more in-depth analysis.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 151
+      },
+      "status": "asserted",
+      "scope": "whole-session EEG/NLP aggregates",
+      "theme_fit": "orphan",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-34",
+      "type": "gap",
+      "statement": "EEG analysis reports connectivity without spectral power and has limited spatial resolution for deep structures; findings are essay-task specific.",
+      "quote": "In our current EEG analysis we focused on reporting connectivity patterns without examining spectral power changes... EEG's spatial resolution limits precise localization of deep cortical or subcortical contributors... Our findings are context-dependent and are focused on writing an essay in an educational setting and may not generalize across tasks.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 152
+      },
+      "status": "asserted",
+      "scope": "EEG methods; educational essay writing",
+      "theme_fit": "orphan",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-35",
+      "type": "critique",
+      "statement": "LLM convenience intensifies an echo-chamber risk by discouraging critical evaluation of algorithmically curated 'opinions.'",
+      "quote": "The LLM undeniably reduced the friction involved in answering participants' questions compared to the Search Engine. However, this convenience came at a cognitive cost, diminishing users' inclination to critically evaluate the LLM's output or 'opinions'... This highlights a concerning evolution of the 'echo chamber' effect",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 153
+      },
+      "status": "suggested",
+      "scope": "conclusions; educational information seeking",
+      "theme_fit": "persuasion",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "KS-36",
+      "type": "finding",
+      "statement": "Under time pressure, LLM and Search users often reuse tool output rather than integrating original thoughts.",
+      "quote": "Participants in the LLM and Search Engine groups were more inclined to focus on the output of the tools they were using because of the added pressure of limited time (20 minutes). Most of them focused on reusing the tools' output, therefore staying focused on copying and pasting content, rather than incorporating their own original thoughts",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 144
+      },
+      "status": "suggested",
+      "scope": "20-minute essay constraint; LLM and Search groups",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "20 minutes"
+      ],
+      "notes": "Interview/observational reading in Discussion."
+    },
+    {
+      "id": "KS-37",
+      "type": "framing",
+      "statement": "Material/environmental energy cost of LLM queries is an additional concern alongside cognitive cost.",
+      "quote": "Though the focus of our paper is the cognitive 'cost' of using LLM/Search Engine... the cognitive debt one might start to accumulate when using an LLM, we actually argue that the cognitive cost is not the only concern, material and environmental cost is as high. According to a 2023 study [120] LLM query consumes around 10 times more energy than a search query.",
+      "anchor": {
+        "paper": "kosmyna-2025",
+        "file": "kosmyna-2025.md",
+        "approx_page": 152
+      },
+      "status": "inherited",
+      "scope": "energy estimates cited from prior study; approx group totals",
+      "theme_fit": "orphan",
+      "numbers": [
+        "~10× energy LLM vs search query",
+        "approx 180 Wh vs 18 Wh table estimate"
+      ],
+      "notes": "Orphan relative to README cognitive/authorship theme."
+    },
+    {
+      "id": "ST-01",
+      "type": "framing",
+      "statement": "Kosmyna et al. (2025) results on LLM-assisted essay writing warrant more conservative interpretation before peer-reviewed publication.",
+      "quote": "We aim to provide constructive comments that may improve the manuscript's readiness for peer-reviewed publication, as some results by Kosmyna et al. (2025) could be interpreted more conservatively.",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 1
+      },
+      "status": "asserted",
+      "scope": "Commentary on Kosmyna 2025 LLM essay-writing EEG study",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-02",
+      "type": "critique",
+      "statement": "Kosmyna’s sample (N≈54; 18/group) is underpowered relative to the comparisons performed; adequate power would require roughly N=159.",
+      "quote": "A basic a priori power analysis using G*Power ... indicates that approximately N = 159 participants would be required for adequate power. Thus, the power of the reported study is likely lower...",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 2
+      },
+      "status": "contested",
+      "scope": "Kosmyna Sessions 1–3 between-subjects; especially Session 4 and topic analyses",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "N≈54 (18/group)",
+        "N≈159 required",
+        "f=0.25",
+        "α=.05",
+        "power=.95",
+        "3 groups",
+        "4 measurements"
+      ],
+      "notes": "Power calculation is Stanković’s counterfactual, not Kosmyna’s reported a priori plan."
+    },
+    {
+      "id": "ST-03",
+      "type": "critique",
+      "statement": "Topic-specific linguistic/NLP patterns in Kosmyna rest on too-small subsamples (sometimes 2–4 essays per group) for stable inference.",
+      "quote": "several topic-specific figures were interpreted based on extremely small subsamples (sometimes only 2–4 essays per group), which is insufficient for identifying stable patterns—particularly in linguistic and NLP-based analyses...",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 2
+      },
+      "status": "contested",
+      "scope": "Kosmyna topic-stratified essay/NLP figures",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "2–4 essays per group"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ST-04",
+      "type": "critique",
+      "statement": "Kosmyna’s manuscript contains material reporting inconsistencies that undermine interpretability and raise selective-reporting concerns.",
+      "quote": "a metric is reported for groups that do not seem to align with the rest of the manuscript (e.g., “Brain-only-to-Search-Engine” group)... On page 37, the authors report higher quoting correctness for the LLM-to-Brain-only group... whereas in the discussion, the results are described in the opposite direction.",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 3
+      },
+      "status": "contested",
+      "scope": "Kosmyna Figure 12 (p.42) and Session 4 interview reporting vs discussion",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": "Bundles two named inconsistencies (group labels; quoting-correctness direction flip)."
+    },
+    {
+      "id": "ST-05",
+      "type": "critique",
+      "statement": "Kosmyna’s analytic reproducibility is hard to assess because exclusion criteria, multiple-comparison policy, F-statistics, and “significant connection” definitions are underspecified.",
+      "quote": "the authors state that 55 participants completed all experiments, yet only 54 participants are reported... it is not specified whether each comparison was analyzed separately or if corrections for multiple comparisons were applied. F-statistics are often omitted... The criteria for defining “significant connections” in the EEG analyses are also ambiguous...",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 3
+      },
+      "status": "contested",
+      "scope": "Kosmyna preprint methods/reporting for ANOVA and EEG connectivity",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "55 completed vs 54 analyzed"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ST-06",
+      "type": "critique",
+      "statement": "Kosmyna’s EEG pipeline (≤1000 electrode-pair ANOVAs plus post-hocs) lacks clear selection criteria, unreported ANOVA results, and unclear FDR application.",
+      "quote": "the authors limited the number of ANOVAs to 1000, without clearly specifying the criteria used to select these analyses. Additionally, the results of these ANOVAs are not reported... The authors neither stated the FDR level used nor reported whether p-values of single connections were compared to a predetermined significance threshold.",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 4
+      },
+      "status": "contested",
+      "scope": "Kosmyna EEG connectivity statistical pipeline",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "≤1000 ANOVAs",
+        "α=0.05"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ST-07",
+      "type": "critique",
+      "statement": "Fewer between-group “significant connections” should not be read as weaker absolute neural activity or engagement.",
+      "quote": "a “significant connection” was defined as a directed statistical coupling between two electrodes that was significantly stronger in one group than in another. Therefore, no direct conclusions could be drawn regarding the absolute strength of the connections. Thus, a group with fewer significant connections should not necessarily be interpreted as exhibiting weaker overall neural activity.",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 4
+      },
+      "status": "contested",
+      "scope": "Kosmyna between-group EEG connectivity interpretations",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-08",
+      "type": "critique",
+      "statement": "Kosmyna’s interview operationalizes perceived authorship, not cognitive agency or essay “value,” so agency/value claims are unsupported.",
+      "quote": "Conceptual claims—such as a “diminished sense of cognitive agency” or reduced “value” of LLM-assisted essays—are not adequately supported by the study’s operationalizations. Specifically, the interview questions assessed perceived authorship rather than cognitive agency or the intrinsic value of the work.",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 4
+      },
+      "status": "contested",
+      "scope": "Kosmyna interview measures of ownership/agency",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": "Also notes interview data reported only for a subset without justification."
+    },
+    {
+      "id": "ST-09",
+      "type": "critique",
+      "statement": "Kosmyna selectively emphasizes hypothesis-aligned findings while underplaying counter-pattern results such as Brain-only satisfaction and band-specific LLM connectivity.",
+      "quote": "the LLM group demonstrated stronger connectivity than the Web-Engine group in certain frequency bands... Notably, in Session 1, satisfaction ratings in the Brain-only group were lower than in other groups... However, the discussion states that “participants who were in the Brain-only group reported higher satisfaction” (p. 143), which does not fully align with the reported data.",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 5
+      },
+      "status": "contested",
+      "scope": "Kosmyna narrative vs reported satisfaction and connectivity patterns",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-10",
+      "type": "critique",
+      "statement": "“Correct quoting” is a weak marker of decreased cognitive engagement: matching is underspecified, sentence complexity confounds, and argumentation inquiry results are unreported.",
+      "quote": "confounding variables such as sentence complexity, which could be higher in LLM-generated content, should be considered. Finally, it is questionable whether reciting a single statement from the essays shows learning and memory encoding processes of interest... Consequently, the “correct quoting” metric, as presented by the authors, does not strongly support the claim of decreased cognitive engagement...",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 5
+      },
+      "status": "contested",
+      "scope": "Kosmyna behavioral “correct quoting” / recall operationalization",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-11",
+      "type": "gap",
+      "statement": "Session 4 crossover effects may be confounded by repeated exposure to the same prompts (familiarity/practice), which Kosmyna does not adequately control.",
+      "quote": "Session 4 effects should be interpreted cautiously, as repeated exposure to the same prompts may introduce familiarity or practice effects, potentially confounding neural or behavioral outcomes.",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 5
+      },
+      "status": "suggested",
+      "scope": "Kosmyna Session 4 LLM↔Brain tool switch on familiar prompts",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-12",
+      "type": "lever",
+      "statement": "Within-subjects designs plus systematic teacher-and-AI essay-quality scoring would yield more reliable estimates of how LLMs affect writing cognition and performance.",
+      "quote": "given substantial individual differences in writing ability, within-subjects designs may offer more reliable estimates of how LLMs influence cognitive processes. A more systematic comparison of essay quality—using both teacher and AI scoring—would help clarify whether LLM use improves, impairs, or simply alters writing performance.",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 6
+      },
+      "status": "suggested",
+      "scope": "Proposed redesign for LLM essay-writing cognitive studies",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": "Proposed, not tested in this commentary."
+    },
+    {
+      "id": "ST-13",
+      "type": "gap",
+      "statement": "Time-constrained lab essays may inflate overreliance on external tools and distort naturalistic LLM usage patterns.",
+      "quote": "interpretations regarding actual usage patterns of LLMs could benefit from a more natural setting, allowing participants sufficient time to complete the essay. In the current study, participants reported time constraints, which may have led to overreliance on external tools...",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 6
+      },
+      "status": "suggested",
+      "scope": "Kosmyna timed essay-writing protocol vs naturalistic AI use",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-14",
+      "type": "interpretation",
+      "statement": "Kosmyna’s results better reflect attention-oriented differences than impaired learning ability, and do not strongly show that LLM use harms writing performance itself.",
+      "quote": "the results presented in the commented paper appear to reflect attention-oriented differences rather than meaningful variability in learning ability within either behavioral or, especially, EEG outcomes... However, there is no strong evidence that the LLM use negatively affects performance itself.",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 6
+      },
+      "status": "suggested",
+      "scope": "Re-reading of Kosmyna behavioral and EEG outcomes",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-15",
+      "type": "critique",
+      "statement": "A null Search-Engine vs Brain-only quoting contrast (p=1) undercuts Kosmyna’s claim that greater task delegation produces graded “cognitive debt.”",
+      "quote": "in the “ability to quote” task, the LLM-group performed significantly worse than the other two groups. Yet, the comparison between the Search-Engine and Brain-Only groups was non-significant (p = 1)... These results contrast with the authors’ interpretation that higher task delegation increases “cognitive debt,” as the Search Engine group—despite relying on an external tool—showed no impairment.",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 6
+      },
+      "status": "contested",
+      "scope": "Kosmyna quoting-ability contrasts across LLM / Search / Brain-only",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [
+        "p = 1 (Search vs Brain-only quoting)"
+      ],
+      "notes": null
+    },
+    {
+      "id": "ST-16",
+      "type": "critique",
+      "statement": "Lower EEG connectivity need not imply reduced cognitive engagement under Kosmyna’s own definition (attention, emotion, persistence).",
+      "quote": "lower connectivity does not necessarily indicate reduced cognitive engagement. Variability in connectivity (in theta and alpha bands) may indicate differences in attention shifts, changes in strategy, or simply lower motivation... Although focused attention was considered, emotional involvement and task persistence received limited discussion...",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 6
+      },
+      "status": "contested",
+      "scope": "Kosmyna connectivity→engagement inference; theta/alpha bands",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-17",
+      "type": "interpretation",
+      "statement": "Many of Kosmyna’s tool-usage conclusions remain speculative without further control experiments confirming the hypothesized mechanisms.",
+      "quote": "Although the authors provided a compelling and intriguingly consistent narrative regarding tool usage, many of their conclusions remain speculative, lacking further control experiments to confirm these hypotheses.",
+      "anchor": {
+        "paper": "stankovic-2026",
+        "file": "stankovic-2026.md",
+        "approx_page": 7
+      },
+      "status": "suggested",
+      "scope": "Overall Kosmyna causal narrative on LLM cognitive effects",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    }
+  ],
+  "merge_log": [
+    {
+      "action": "normalize_type",
+      "ids": [
+        "KS-04"
+      ],
+      "note": "type inherited is a status label, not a SPEC v0 type; remapped to finding (status remains inherited). Only type drift in batch 1."
+    },
+    {
+      "action": "keep",
+      "ids": [
+        "PH-11",
+        "PH-17",
+        "PH-16",
+        "PH-28"
+      ],
+      "note": "Within-paper related findings (homogenization / key-point diversity / n-grams / compressibility) — distinct operationalizations; keep all."
+    },
+    {
+      "action": "keep",
+      "ids": [
+        "DH-01",
+        "DH-31"
+      ],
+      "note": "Within-paper framing vs interpretation of collective social dilemma; same claim family but different epistemic roles — keep both."
+    },
+    {
+      "action": "keep",
+      "ids": [
+        "KB-12",
+        "KB-13",
+        "KB-14"
+      ],
+      "note": "Rare Δ, common Δ, and averaged 13.5% lower bound — sequential estimates; keep all."
+    },
+    {
+      "action": "keep",
+      "ids": [
+        "JK-09",
+        "JK-10"
+      ],
+      "note": "Symmetric optimist/pessimist writing-shift findings; keep both."
+    },
+    {
+      "action": "keep",
+      "ids": [
+        "WC-08",
+        "WC-09",
+        "WC-10"
+      ],
+      "note": "Exp1 between, Exp2 between, Exp2 within-subject attitude shifts — related family, distinct designs; keep all."
+    },
+    {
+      "action": "keep",
+      "ids": [
+        "WC-22",
+        "WC-23",
+        "WC-24"
+      ],
+      "note": "Warning fail / Debrief fail / awareness fail — paired safeguard results; keep all."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "ST-07",
+        "ST-16"
+      ],
+      "note": "Near-duplicate critiques: fewer/lower connectivity should not be read as weaker engagement. Propose keep ST-07 (ops definition) + ST-16 (engagement construct) as linked same_as, or collapse into one critique node at connect."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "PH-24",
+        "PH-34"
+      ],
+      "note": "Within-paper: single-interaction feedback-loop optimism (interpretation) and repeated-interaction gap. Not identical; propose same_as edge family tagged feedback-dynamics rather than node collapse."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "PH-03",
+        "JK-09",
+        "JK-10",
+        "JK-15"
+      ],
+      "note": "Cross-paper: PH-03 is inherited citation of Jakesch opinion bias; JK nodes are the measured source. Propose same_as / depends_on from PH-03→JK cluster; do not dual-count as independent corroboration."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "JK-15",
+        "WC-08",
+        "WC-09"
+      ],
+      "note": "Cross-paper near-duplicate: AI writing assistants shift post-task attitudes. WC is preregistered extension/robustification of JK lineage (WC-04 critiques prior). Propose extends not same_as; keep all nodes."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "JK-18",
+        "WC-12"
+      ],
+      "note": "Cross-paper: most users fail to notice suggestion bias / call suggestions balanced. Near-duplicate unawareness finding; propose same_as or replicated edge at connect."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "JK-19",
+        "WC-14"
+      ],
+      "note": "Cross-paper: majority deny assistant influenced thinking; shifted users no more aware. Near-duplicate influence-unawareness; propose same_as/replicated."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "JK-25",
+        "WC-03",
+        "WC-05"
+      ],
+      "note": "Cross-paper: behavior→attitude / self-perception mechanism for suggestion influence. Propose same_as mechanism family."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "PH-11",
+        "DH-20",
+        "KS-15"
+      ],
+      "note": "Cross-paper homogenization family: InstructGPT essay homogenization (PH), GenAI story within-condition similarity (DH), LLM essay within-topic homogeneity (KS). Same claim family, different domains/metrics — propose extends cluster, not collapse."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "PH-01",
+        "PH-02",
+        "DH-01",
+        "DH-31",
+        "KB-30"
+      ],
+      "note": "Cross-paper monoculture / collective diversity-loss framing. KB-30 explicitly inherits Padmakumar & He. Propose same_as/extends framing cluster; KB-30 must not count as independent evidence."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "DH-24",
+        "KS-21"
+      ],
+      "note": "Thematic ownership neighbors but NOT same proposition: DH = evaluator ownership/credit penalty after disclosure; KS = writer self-reported essay ownership. Keep separate; flag for connect as related not same_as."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "PH-34",
+        "JK-31",
+        "WC-30"
+      ],
+      "note": "Cross-paper gap cluster: single-shot / short-term designs leave repeated exposure and persistence untested. Propose same_as gap family on longitudinal dynamics."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "KS-02",
+        "ST-15",
+        "ST-14"
+      ],
+      "note": "Cross-paper tension (not merge-to-one): KS cognitive-debt construct vs ST null Search-vs-Brain quoting undercutting debt gradient and attention-not-learning re-reading. Record as contradiction cluster for Phase 4; keep all."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "KS-10",
+        "KS-12",
+        "ST-07",
+        "ST-16"
+      ],
+      "note": "Cross-paper: KS connectivity-down-with-support finding/interpretation vs ST critique that connection counts ≠ engagement. Keep all; Phase 4 contradicts/critiques edges."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "KS-22",
+        "ST-08"
+      ],
+      "note": "Cross-paper: KS agency interpretation vs ST critique that interview measures authorship not agency. Keep both; critiques edge."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "KS-18",
+        "KS-19",
+        "KS-09",
+        "ST-10"
+      ],
+      "note": "Cross-paper: KS quoting impairment findings/metric vs ST critique of quoting as engagement marker. Keep all."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "KS-36",
+        "ST-13"
+      ],
+      "note": "Cross-paper: KS time-pressure copy-paste observation and ST gap that timed labs inflate tool overreliance — complementary; propose supports/same_family."
+    },
+    {
+      "action": "propose_merge",
+      "ids": [
+        "WC-34"
+      ],
+      "note": "Within-paper: headline N=2582 is meta-summary of WC-08/WC-09 samples, not an independent finding. Propose demote or fold into notes of WC-08/WC-09 at connect; keep for now."
+    },
+    {
+      "action": "keep",
+      "ids": [
+        "DH-24",
+        "DH-25"
+      ],
+      "note": "New theme_fit ownership-credit retained as stable orphan-adjacent label (per DH extractor); not remapped to cognitive/authorship."
+    },
+    {
+      "action": "keep",
+      "ids": [
+        "DH-31"
+      ],
+      "note": "New theme_fit collective-social-dilemma retained; related to homogenization but strategic/equilibrium framing is distinct discovery signal."
+    },
+    {
+      "action": "keep",
+      "ids": [
+        "KS-01",
+        "KS-02",
+        "KS-03",
+        "KS-04",
+        "KS-05",
+        "KS-06",
+        "KS-07",
+        "KS-08",
+        "KS-09",
+        "KS-10",
+        "KS-11",
+        "KS-12",
+        "KS-13",
+        "KS-14",
+        "KS-15",
+        "KS-16",
+        "KS-17",
+        "KS-18",
+        "KS-19",
+        "KS-20",
+        "KS-21",
+        "KS-22",
+        "KS-23",
+        "KS-24",
+        "KS-25",
+        "KS-26",
+        "KS-27",
+        "KS-28",
+        "KS-29",
+        "KS-30",
+        "KS-31",
+        "KS-32",
+        "KS-33",
+        "KS-34",
+        "KS-35",
+        "KS-36",
+        "KS-37"
+      ],
+      "note": "extractionFlags partial_ocr carried on paper meta; all KS nodes retained despite partial OCR coverage."
+    }
+  ]
+}

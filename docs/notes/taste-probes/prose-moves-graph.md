@@ -208,13 +208,29 @@ model families. (Aside: gpt-sol put a formula `f(θ*)=e*−2t` in the intro; hum
 verbal — a difference, but not a coded move.) Still one *concept* (Morris–Shin); test on FF/NS
 content before generalizing.
 
-**Direct skill implication (to confront):** gpt-sol flagged that `SKILL.md` *bans* the
-big-question / rhetorical-question opener — yet the rhetorical-question pivot is one of the few
-human-only moves in this probe. The skill may be banning a taste signal. Do not act until
-corroborated + reconciled by a non-generating reviewer.
+## FF/NS content corroboration (2026-07-22)
+
+Independent coding: `2026-07-22_ff-ns-move-coding.md` (coder ≠ drafter). Probes:
+`2026-07-22_fama-french-taste-probe.md`, `2026-07-22_nakamura-steinsson-taste-probe.md`.
+
+| Move | MS human/AI | FF human/AI | NS human/AI | Discriminator status |
+|---|---|---|---|---|
+| `enumerated-gaps` | human ✓ / AI · | human ✓ / AI · (0/3) | human · / AI · | **Replicates on FF** — strongest signal |
+| `rhetorical-question-pivot` | human ✓ / AI · | human · / AI · | human · / AI · | Still **MS-only**; FF/NS cannot test “AI miss of human move” |
+| `concede-own-limitation-early` | — | — | human ✓ / AI ✓ (3/3) | **Not** a discriminator — AI reproduces |
+| `big-question-opener` | — | — | human ✓ / AI 1/3 | Unstable; not a clean AI miss |
+
+**Caveat:** FF/NS probes are three voice-variants in one session, not three vendor CLIs (weaker than MS on model-family generalization).
+
+**Skill implication (still deferred):** do not promote rhetorical-question pivot to a hard positive rule; `enumerated-gaps` is the better candidate anti-collapse / human-texture check for econ intros. S8 mandate tension unchanged — needs independent reviewer after author taste picks.
 
 **Still open: the weak-human axis** (placeholder node in the graph). Needs an external SSRN /
 lower-tier pull; deferred.
+
+**Direct skill implication (to confront):** gpt-sol flagged that `SKILL.md` *bans* the
+big-question / rhetorical-question opener — yet the rhetorical-question pivot is one of the few
+human-only moves in the **MS** probe. FF/NS did not unlock that pivot. Do not act until
+independent reviewer + author taste picks.
 
 ## Open moves (decide with author)
 

@@ -1,0 +1,336 @@
+{
+  "paper": "stankovic-2026",
+  "prefix": "ST",
+  "extractor_notes": "Short arXiv commentary (~2.5k words) on Kosmyna et al. 2025; no original experiment. Nodes are mostly critique/gap/interpretation of Kosmyna design, EEG stats, reporting, and cognitive-debt claims. Inherited Kosmyna findings summarized only where needed as critique targets. Quote+anchor on all finding/critique/gap/lever nodes.",
+  "extractionFlags": [],
+  "nodes": [
+    {
+      "id": "ST-01",
+      "type": "framing",
+      "statement": "Kosmyna et al. (2025) results on LLM-assisted essay writing warrant more conservative interpretation before peer-reviewed publication.",
+      "quote": "We aim to provide constructive comments that may improve the manuscript's readiness for peer-reviewed publication, as some results by Kosmyna et al. (2025) could be interpreted more conservatively.",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 1},
+      "status": "asserted",
+      "scope": "Commentary on Kosmyna 2025 LLM essay-writing EEG study",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-02",
+      "type": "critique",
+      "statement": "Kosmyna’s sample (N≈54; 18/group) is underpowered relative to the comparisons performed; adequate power would require roughly N=159.",
+      "quote": "A basic a priori power analysis using G*Power ... indicates that approximately N = 159 participants would be required for adequate power. Thus, the power of the reported study is likely lower...",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 2},
+      "status": "contested",
+      "scope": "Kosmyna Sessions 1–3 between-subjects; especially Session 4 and topic analyses",
+      "theme_fit": "cognitive/authorship",
+      "numbers": ["N≈54 (18/group)", "N≈159 required", "f=0.25", "α=.05", "power=.95", "3 groups", "4 measurements"],
+      "notes": "Power calculation is Stanković’s counterfactual, not Kosmyna’s reported a priori plan."
+    },
+    {
+      "id": "ST-03",
+      "type": "critique",
+      "statement": "Topic-specific linguistic/NLP patterns in Kosmyna rest on too-small subsamples (sometimes 2–4 essays per group) for stable inference.",
+      "quote": "several topic-specific figures were interpreted based on extremely small subsamples (sometimes only 2–4 essays per group), which is insufficient for identifying stable patterns—particularly in linguistic and NLP-based analyses...",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 2},
+      "status": "contested",
+      "scope": "Kosmyna topic-stratified essay/NLP figures",
+      "theme_fit": "cognitive/authorship",
+      "numbers": ["2–4 essays per group"],
+      "notes": null
+    },
+    {
+      "id": "ST-04",
+      "type": "critique",
+      "statement": "Kosmyna’s manuscript contains material reporting inconsistencies that undermine interpretability and raise selective-reporting concerns.",
+      "quote": "a metric is reported for groups that do not seem to align with the rest of the manuscript (e.g., “Brain-only-to-Search-Engine” group)... On page 37, the authors report higher quoting correctness for the LLM-to-Brain-only group... whereas in the discussion, the results are described in the opposite direction.",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 3},
+      "status": "contested",
+      "scope": "Kosmyna Figure 12 (p.42) and Session 4 interview reporting vs discussion",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": "Bundles two named inconsistencies (group labels; quoting-correctness direction flip)."
+    },
+    {
+      "id": "ST-05",
+      "type": "critique",
+      "statement": "Kosmyna’s analytic reproducibility is hard to assess because exclusion criteria, multiple-comparison policy, F-statistics, and “significant connection” definitions are underspecified.",
+      "quote": "the authors state that 55 participants completed all experiments, yet only 54 participants are reported... it is not specified whether each comparison was analyzed separately or if corrections for multiple comparisons were applied. F-statistics are often omitted... The criteria for defining “significant connections” in the EEG analyses are also ambiguous...",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 3},
+      "status": "contested",
+      "scope": "Kosmyna preprint methods/reporting for ANOVA and EEG connectivity",
+      "theme_fit": "cognitive/authorship",
+      "numbers": ["55 completed vs 54 analyzed"],
+      "notes": null
+    },
+    {
+      "id": "ST-06",
+      "type": "critique",
+      "statement": "Kosmyna’s EEG pipeline (≤1000 electrode-pair ANOVAs plus post-hocs) lacks clear selection criteria, unreported ANOVA results, and unclear FDR application.",
+      "quote": "the authors limited the number of ANOVAs to 1000, without clearly specifying the criteria used to select these analyses. Additionally, the results of these ANOVAs are not reported... The authors neither stated the FDR level used nor reported whether p-values of single connections were compared to a predetermined significance threshold.",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 4},
+      "status": "contested",
+      "scope": "Kosmyna EEG connectivity statistical pipeline",
+      "theme_fit": "cognitive/authorship",
+      "numbers": ["≤1000 ANOVAs", "α=0.05"],
+      "notes": null
+    },
+    {
+      "id": "ST-07",
+      "type": "critique",
+      "statement": "Fewer between-group “significant connections” should not be read as weaker absolute neural activity or engagement.",
+      "quote": "a “significant connection” was defined as a directed statistical coupling between two electrodes that was significantly stronger in one group than in another. Therefore, no direct conclusions could be drawn regarding the absolute strength of the connections. Thus, a group with fewer significant connections should not necessarily be interpreted as exhibiting weaker overall neural activity.",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 4},
+      "status": "contested",
+      "scope": "Kosmyna between-group EEG connectivity interpretations",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-08",
+      "type": "critique",
+      "statement": "Kosmyna’s interview operationalizes perceived authorship, not cognitive agency or essay “value,” so agency/value claims are unsupported.",
+      "quote": "Conceptual claims—such as a “diminished sense of cognitive agency” or reduced “value” of LLM-assisted essays—are not adequately supported by the study’s operationalizations. Specifically, the interview questions assessed perceived authorship rather than cognitive agency or the intrinsic value of the work.",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 4},
+      "status": "contested",
+      "scope": "Kosmyna interview measures of ownership/agency",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": "Also notes interview data reported only for a subset without justification."
+    },
+    {
+      "id": "ST-09",
+      "type": "critique",
+      "statement": "Kosmyna selectively emphasizes hypothesis-aligned findings while underplaying counter-pattern results such as Brain-only satisfaction and band-specific LLM connectivity.",
+      "quote": "the LLM group demonstrated stronger connectivity than the Web-Engine group in certain frequency bands... Notably, in Session 1, satisfaction ratings in the Brain-only group were lower than in other groups... However, the discussion states that “participants who were in the Brain-only group reported higher satisfaction” (p. 143), which does not fully align with the reported data.",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 5},
+      "status": "contested",
+      "scope": "Kosmyna narrative vs reported satisfaction and connectivity patterns",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-10",
+      "type": "critique",
+      "statement": "“Correct quoting” is a weak marker of decreased cognitive engagement: matching is underspecified, sentence complexity confounds, and argumentation inquiry results are unreported.",
+      "quote": "confounding variables such as sentence complexity, which could be higher in LLM-generated content, should be considered. Finally, it is questionable whether reciting a single statement from the essays shows learning and memory encoding processes of interest... Consequently, the “correct quoting” metric, as presented by the authors, does not strongly support the claim of decreased cognitive engagement...",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 5},
+      "status": "contested",
+      "scope": "Kosmyna behavioral “correct quoting” / recall operationalization",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-11",
+      "type": "gap",
+      "statement": "Session 4 crossover effects may be confounded by repeated exposure to the same prompts (familiarity/practice), which Kosmyna does not adequately control.",
+      "quote": "Session 4 effects should be interpreted cautiously, as repeated exposure to the same prompts may introduce familiarity or practice effects, potentially confounding neural or behavioral outcomes.",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 5},
+      "status": "suggested",
+      "scope": "Kosmyna Session 4 LLM↔Brain tool switch on familiar prompts",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-12",
+      "type": "lever",
+      "statement": "Within-subjects designs plus systematic teacher-and-AI essay-quality scoring would yield more reliable estimates of how LLMs affect writing cognition and performance.",
+      "quote": "given substantial individual differences in writing ability, within-subjects designs may offer more reliable estimates of how LLMs influence cognitive processes. A more systematic comparison of essay quality—using both teacher and AI scoring—would help clarify whether LLM use improves, impairs, or simply alters writing performance.",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 6},
+      "status": "suggested",
+      "scope": "Proposed redesign for LLM essay-writing cognitive studies",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": "Proposed, not tested in this commentary."
+    },
+    {
+      "id": "ST-13",
+      "type": "gap",
+      "statement": "Time-constrained lab essays may inflate overreliance on external tools and distort naturalistic LLM usage patterns.",
+      "quote": "interpretations regarding actual usage patterns of LLMs could benefit from a more natural setting, allowing participants sufficient time to complete the essay. In the current study, participants reported time constraints, which may have led to overreliance on external tools...",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 6},
+      "status": "suggested",
+      "scope": "Kosmyna timed essay-writing protocol vs naturalistic AI use",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-14",
+      "type": "interpretation",
+      "statement": "Kosmyna’s results better reflect attention-oriented differences than impaired learning ability, and do not strongly show that LLM use harms writing performance itself.",
+      "quote": "the results presented in the commented paper appear to reflect attention-oriented differences rather than meaningful variability in learning ability within either behavioral or, especially, EEG outcomes... However, there is no strong evidence that the LLM use negatively affects performance itself.",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 6},
+      "status": "suggested",
+      "scope": "Re-reading of Kosmyna behavioral and EEG outcomes",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-15",
+      "type": "critique",
+      "statement": "A null Search-Engine vs Brain-only quoting contrast (p=1) undercuts Kosmyna’s claim that greater task delegation produces graded “cognitive debt.”",
+      "quote": "in the “ability to quote” task, the LLM-group performed significantly worse than the other two groups. Yet, the comparison between the Search-Engine and Brain-Only groups was non-significant (p = 1)... These results contrast with the authors’ interpretation that higher task delegation increases “cognitive debt,” as the Search Engine group—despite relying on an external tool—showed no impairment.",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 6},
+      "status": "contested",
+      "scope": "Kosmyna quoting-ability contrasts across LLM / Search / Brain-only",
+      "theme_fit": "cognitive/authorship",
+      "numbers": ["p = 1 (Search vs Brain-only quoting)"],
+      "notes": null
+    },
+    {
+      "id": "ST-16",
+      "type": "critique",
+      "statement": "Lower EEG connectivity need not imply reduced cognitive engagement under Kosmyna’s own definition (attention, emotion, persistence).",
+      "quote": "lower connectivity does not necessarily indicate reduced cognitive engagement. Variability in connectivity (in theta and alpha bands) may indicate differences in attention shifts, changes in strategy, or simply lower motivation... Although focused attention was considered, emotional involvement and task persistence received limited discussion...",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 6},
+      "status": "contested",
+      "scope": "Kosmyna connectivity→engagement inference; theta/alpha bands",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    },
+    {
+      "id": "ST-17",
+      "type": "interpretation",
+      "statement": "Many of Kosmyna’s tool-usage conclusions remain speculative without further control experiments confirming the hypothesized mechanisms.",
+      "quote": "Although the authors provided a compelling and intriguingly consistent narrative regarding tool usage, many of their conclusions remain speculative, lacking further control experiments to confirm these hypotheses.",
+      "anchor": {"paper": "stankovic-2026", "file": "stankovic-2026.md", "approx_page": 7},
+      "status": "suggested",
+      "scope": "Overall Kosmyna causal narrative on LLM cognitive effects",
+      "theme_fit": "cognitive/authorship",
+      "numbers": [],
+      "notes": null
+    }
+  ],
+  "edges": [
+    {"from": "ST-01", "to": "ST-02", "type": "motivates", "note": "Conservative reading driven by power limits"},
+    {"from": "ST-01", "to": "ST-04", "type": "motivates", "note": "Conservative reading driven by report bugs"},
+    {"from": "ST-02", "to": "ST-03", "type": "extends", "note": "Power problem worse in topic cells"},
+    {"from": "ST-05", "to": "ST-06", "type": "extends", "note": "General opacity → EEG-specific opacity"},
+    {"from": "ST-06", "to": "ST-07", "type": "supports", "note": "Bad connectivity ops → overread risk"},
+    {"from": "ST-07", "to": "ST-16", "type": "supports", "note": "Connection counts ≠ engagement"},
+    {"from": "ST-08", "to": "ST-01", "type": "supports", "note": "Agency overclaim fuels caution"},
+    {"from": "ST-09", "to": "ST-01", "type": "supports", "note": "Selective narrative fuels caution"},
+    {"from": "ST-10", "to": "ST-14", "type": "supports", "note": "Weak quoting metric → attention reading"},
+    {"from": "ST-10", "to": "ST-15", "type": "supports", "note": "Quoting issues undercut debt claim"},
+    {"from": "ST-11", "to": "ST-12", "type": "motivates", "note": "Crossover confounds → redesign levers"},
+    {"from": "ST-13", "to": "ST-12", "type": "motivates", "note": "Lab time pressure → better designs"},
+    {"from": "ST-15", "to": "ST-14", "type": "supports", "note": "Null Search contrast → not learning harm"},
+    {"from": "ST-16", "to": "ST-14", "type": "supports", "note": "Connectivity reinterpretation"},
+    {"from": "ST-02", "to": "ST-17", "type": "supports", "note": "Underpowered → speculative conclusions"},
+    {"from": "ST-06", "to": "ST-17", "type": "supports", "note": "EEG stats gaps → speculative conclusions"},
+    {"from": "ST-14", "to": "ST-17", "type": "supports", "note": "Attention reading implies overclaim"},
+    {"from": "ST-04", "to": "ST-17", "type": "supports", "note": "Inconsistencies weaken conclusions"}
+  ],
+  "cross_paper_candidates": [
+    {
+      "from_node": "ST-01",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "critiques",
+      "note": "Overall framing: interpret Kosmyna more conservatively"
+    },
+    {
+      "from_node": "ST-02",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "critiques",
+      "note": "Attacks Kosmyna sample size / power for claimed effects"
+    },
+    {
+      "from_node": "ST-03",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "critiques",
+      "note": "Topic-stratified NLP/linguistic figures too sparse"
+    },
+    {
+      "from_node": "ST-04",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "critiques",
+      "note": "Figure 12 group labels; Session 4 quoting direction flip"
+    },
+    {
+      "from_node": "ST-05",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "critiques",
+      "note": "Exclusion, multiplicity, F-stats, connection definition"
+    },
+    {
+      "from_node": "ST-06",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "critiques",
+      "note": "EEG ANOVA/FDR pipeline validity"
+    },
+    {
+      "from_node": "ST-07",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "critiques",
+      "note": "Fewer sig. connections ≠ weaker neural activity claim"
+    },
+    {
+      "from_node": "ST-08",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "critiques",
+      "note": "Authorship interview ≠ cognitive agency / essay value"
+    },
+    {
+      "from_node": "ST-09",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "critiques",
+      "note": "Selective emphasis; satisfaction discussion vs data"
+    },
+    {
+      "from_node": "ST-10",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "critiques",
+      "note": "Correct-quoting metric weak for engagement/memory"
+    },
+    {
+      "from_node": "ST-11",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "critiques",
+      "note": "Session 4 practice/familiarity confound"
+    },
+    {
+      "from_node": "ST-13",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "critiques",
+      "note": "Timed protocol may inflate tool overreliance"
+    },
+    {
+      "from_node": "ST-14",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "contradicts",
+      "note": "Attention differences vs impaired learning/performance"
+    },
+    {
+      "from_node": "ST-15",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "contradicts",
+      "note": "Search vs Brain-only null undercuts cognitive-debt gradient"
+    },
+    {
+      "from_node": "ST-16",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "critiques",
+      "note": "Lower connectivity ≠ reduced engagement by their definition"
+    },
+    {
+      "from_node": "ST-17",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "critiques",
+      "note": "Narrative speculative without control experiments"
+    },
+    {
+      "from_node": "ST-12",
+      "to_paper": "kosmyna-2025",
+      "suggested_type": "extends",
+      "note": "Design levers responding to Kosmyna limitations"
+    }
+  ]
+}

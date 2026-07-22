@@ -5,18 +5,20 @@
     {"id": "FF", "label": "Fama–French 1997", "band": "published", "subfield": "empirical AP"},
     {"id": "NS", "label": "Nakamura–Steinsson 2018", "band": "published", "subfield": "empirical macro"},
     {"id": "AI_MS", "label": "AI probes · Morris–Shin (3/3)", "band": "control", "ptype": "ai", "subfield": "grok · gpt-sol · ollama — identical move set"},
+    {"id": "AI_FF", "label": "AI probes · Fama–French (3/3)", "band": "control", "ptype": "ai", "subfield": "gpt/grok/terse voices — 2026-07-22"},
+    {"id": "AI_NS", "label": "AI probes · Nakamura–Steinsson (3/3)", "band": "control", "ptype": "ai", "subfield": "gpt/grok/terse voices — 2026-07-22"},
     {"id": "WEAK", "label": "weak / lower-tier human", "band": "control", "ptype": "placeholder", "subfield": "external pull TODO"}
   ],
   "moves": [
-    {"id": "incumbent→defect→our-fix", "papers": ["MS", "FF", "NS", "AI_MS"]},
+    {"id": "incumbent→defect→our-fix", "papers": ["MS", "FF", "NS", "AI_MS", "AI_FF", "AI_NS"]},
     {"id": "thesis-in-first-sentence", "papers": ["MS", "FF"]},
     {"id": "enumerated-gaps", "papers": ["MS", "FF"]},
-    {"id": "concrete-episode-as-evidence", "papers": ["MS", "NS", "AI_MS"]},
-    {"id": "plain-mechanism-before-math", "papers": ["MS", "NS", "AI_MS"]},
+    {"id": "concrete-episode-as-evidence", "papers": ["MS", "NS", "AI_MS", "AI_NS"]},
+    {"id": "plain-mechanism-before-math", "papers": ["MS", "NS", "AI_MS", "AI_NS"]},
     {"id": "concede-then-claim", "papers": ["MS", "AI_MS"]},
-    {"id": "big-question-opener", "papers": ["NS"]},
-    {"id": "named-models-as-landscape", "papers": ["FF"]},
-    {"id": "concede-own-limitation-early", "papers": ["NS"]},
+    {"id": "big-question-opener", "papers": ["NS", "AI_NS"]},
+    {"id": "named-models-as-landscape", "papers": ["FF", "AI_FF"]},
+    {"id": "concede-own-limitation-early", "papers": ["NS", "AI_NS"]},
     {"id": "rhetorical-question-pivot", "papers": ["MS"]}
   ]
 }

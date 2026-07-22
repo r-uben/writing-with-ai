@@ -17,7 +17,9 @@
 |------|------|
 | `2026-07-19_morris-shin-taste-probe.md` | Primary AI option + vendor variants + paper-lookup notes |
 | `2026-07-19_taste-principles-proposal.md` | Recommended Q3–Q5 + draft P3–P5 (AI — not author) |
-| `2026-07-21_w2-ff-ns-corroborate.md` | W2 go/no-go: keep pivot provisional; FF/NS do not overturn W1 |
+| `2026-07-22_fama-french-taste-probe.md` | AI FF intros (3 voices) from outline |
+| `2026-07-22_nakamura-steinsson-taste-probe.md` | AI NS intros (3 voices) from outline |
+| `2026-07-22_ff-ns-move-coding.md` | Independent coding: `enumerated-gaps` replicates on FF; RQP still MS-only |
 
 ## Provenance
 

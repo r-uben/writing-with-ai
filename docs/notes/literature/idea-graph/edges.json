@@ -1,0 +1,2408 @@
+{
+  "version": 1,
+  "phase": "connect-draft",
+  "edges": [
+    {
+      "from": "PH-01",
+      "to": "PH-02",
+      "type": "motivates",
+      "note": "Monoculture risk → voice hypothesis"
+    },
+    {
+      "from": "PH-03",
+      "to": "PH-02",
+      "type": "supports",
+      "note": "Opinion bias motivates diversity worry"
+    },
+    {
+      "from": "PH-04",
+      "to": "PH-05",
+      "type": "motivates",
+      "note": "Entropy drop → split model arms"
+    },
+    {
+      "from": "PH-02",
+      "to": "PH-05",
+      "type": "motivates",
+      "note": "Hypothesis drives experiment"
+    },
+    {
+      "from": "PH-05",
+      "to": "PH-07",
+      "type": "tests",
+      "note": "Design yields engagement stats"
+    },
+    {
+      "from": "PH-06",
+      "to": "PH-07",
+      "type": "measures",
+      "note": "Char fraction operationalizes help"
+    },
+    {
+      "from": "PH-08",
+      "to": "PH-09",
+      "type": "measures",
+      "note": "Key-point attribution method"
+    },
+    {
+      "from": "PH-07",
+      "to": "PH-11",
+      "type": "supports",
+      "note": "Similar use rules out engagement confound"
+    },
+    {
+      "from": "PH-09",
+      "to": "PH-11",
+      "type": "supports",
+      "note": "Substantial key-point contribution"
+    },
+    {
+      "from": "PH-10",
+      "to": "PH-11",
+      "type": "measures",
+      "note": "Homogenization metric on results"
+    },
+    {
+      "from": "PH-10",
+      "to": "PH-12",
+      "type": "measures",
+      "note": "Same metric; GPT3 null"
+    },
+    {
+      "from": "PH-11",
+      "to": "PH-13",
+      "type": "interprets",
+      "note": "Quality–diversity tradeoff reading"
+    },
+    {
+      "from": "PH-12",
+      "to": "PH-13",
+      "type": "supports",
+      "note": "Base LM lacks homogenization cost"
+    },
+    {
+      "from": "PH-11",
+      "to": "PH-17",
+      "type": "supports",
+      "note": "Homogenization implies diversity loss"
+    },
+    {
+      "from": "PH-14",
+      "to": "PH-16",
+      "type": "measures",
+      "note": "Type-token on n-grams"
+    },
+    {
+      "from": "PH-15",
+      "to": "PH-17",
+      "type": "measures",
+      "note": "Clustering uniqueness metric"
+    },
+    {
+      "from": "PH-16",
+      "to": "PH-18",
+      "type": "supports",
+      "note": "Lexical drop via 5-gram heads"
+    },
+    {
+      "from": "PH-19",
+      "to": "PH-20",
+      "type": "tests",
+      "note": "Tests model-diversity pathway"
+    },
+    {
+      "from": "PH-19",
+      "to": "PH-21",
+      "type": "tests",
+      "note": "Tests user-change pathway"
+    },
+    {
+      "from": "PH-19",
+      "to": "PH-22",
+      "type": "tests",
+      "note": "Tests key-point authorship path"
+    },
+    {
+      "from": "PH-20",
+      "to": "PH-23",
+      "type": "supports",
+      "note": "Less diverse suggestions"
+    },
+    {
+      "from": "PH-21",
+      "to": "PH-23",
+      "type": "supports",
+      "note": "User text unchanged"
+    },
+    {
+      "from": "PH-22",
+      "to": "PH-23",
+      "type": "supports",
+      "note": "Model key points drive similarity"
+    },
+    {
+      "from": "PH-23",
+      "to": "PH-24",
+      "type": "interprets",
+      "note": "Optimistic feedback-loop reading"
+    },
+    {
+      "from": "PH-24",
+      "to": "PH-34",
+      "type": "depends_on",
+      "note": "Optimism assumes single interaction"
+    },
+    {
+      "from": "PH-11",
+      "to": "PH-25",
+      "type": "supports",
+      "note": "Empirics motivate eval axis"
+    },
+    {
+      "from": "PH-17",
+      "to": "PH-25",
+      "type": "supports",
+      "note": "Diversity drop motivates eval"
+    },
+    {
+      "from": "PH-25",
+      "to": "PH-26",
+      "type": "motivates",
+      "note": "Eval gap → personalization lever"
+    },
+    {
+      "from": "PH-27",
+      "to": "PH-28",
+      "type": "measures",
+      "note": "Compression operationalizes diversity"
+    },
+    {
+      "from": "PH-16",
+      "to": "PH-28",
+      "type": "supports",
+      "note": "Lexical loss correlates compressibility"
+    },
+    {
+      "from": "PH-30",
+      "to": "PH-11",
+      "type": "supports",
+      "note": "Quality not confounder"
+    },
+    {
+      "from": "PH-30",
+      "to": "PH-17",
+      "type": "supports",
+      "note": "Quality not confounder"
+    },
+    {
+      "from": "PH-31",
+      "to": "PH-05",
+      "type": "critiques",
+      "note": "Interface limits design"
+    },
+    {
+      "from": "PH-32",
+      "to": "PH-05",
+      "type": "critiques",
+      "note": "Population scope wall"
+    },
+    {
+      "from": "PH-33",
+      "to": "PH-05",
+      "type": "critiques",
+      "note": "Model-family scope wall"
+    },
+    {
+      "from": "PH-35",
+      "to": "PH-10",
+      "type": "motivates",
+      "note": "Eval gap → new metrics"
+    },
+    {
+      "from": "PH-35",
+      "to": "PH-14",
+      "type": "motivates",
+      "note": "Eval gap → diversity metrics"
+    },
+    {
+      "from": "DH-01",
+      "to": "DH-09",
+      "type": "motivates",
+      "note": "dilemma motivates experimental GenAI access"
+    },
+    {
+      "from": "DH-02",
+      "to": "DH-06",
+      "type": "depends_on",
+      "note": "creativity definition needs novelty metric"
+    },
+    {
+      "from": "DH-02",
+      "to": "DH-07",
+      "type": "depends_on",
+      "note": "creativity definition needs usefulness metric"
+    },
+    {
+      "from": "DH-03",
+      "to": "DH-07",
+      "type": "extends",
+      "note": "publishability adaptation shapes usefulness"
+    },
+    {
+      "from": "DH-04",
+      "to": "DH-09",
+      "type": "motivates",
+      "note": "springboard story motivates idea lever"
+    },
+    {
+      "from": "DH-05",
+      "to": "DH-19",
+      "type": "motivates",
+      "note": "anchoring worry motivates similarity metric"
+    },
+    {
+      "from": "DH-09",
+      "to": "DH-04",
+      "type": "tests",
+      "note": "idea access tests enhancement pathway"
+    },
+    {
+      "from": "DH-09",
+      "to": "DH-05",
+      "type": "tests",
+      "note": "idea access tests hampering pathway"
+    },
+    {
+      "from": "DH-06",
+      "to": "DH-10",
+      "type": "measures",
+      "note": "novelty index operationalizes finding"
+    },
+    {
+      "from": "DH-07",
+      "to": "DH-11",
+      "type": "measures",
+      "note": "usefulness index operationalizes finding"
+    },
+    {
+      "from": "DH-10",
+      "to": "DH-04",
+      "type": "supports",
+      "note": "novelty gains support springboard claim"
+    },
+    {
+      "from": "DH-11",
+      "to": "DH-04",
+      "type": "supports",
+      "note": "usefulness gains support enhancement"
+    },
+    {
+      "from": "DH-10",
+      "to": "DH-01",
+      "type": "supports",
+      "note": "individual creativity side of dilemma"
+    },
+    {
+      "from": "DH-11",
+      "to": "DH-01",
+      "type": "supports",
+      "note": "individual creativity side of dilemma"
+    },
+    {
+      "from": "DH-13",
+      "to": "DH-22",
+      "type": "supports",
+      "note": "enjoyment/twists feed professionalization"
+    },
+    {
+      "from": "DH-14",
+      "to": "DH-22",
+      "type": "supports",
+      "note": "craft gains feed professionalization"
+    },
+    {
+      "from": "DH-10",
+      "to": "DH-22",
+      "type": "supports",
+      "note": "novelty gains feed professionalization"
+    },
+    {
+      "from": "DH-11",
+      "to": "DH-22",
+      "type": "supports",
+      "note": "usefulness gains feed professionalization"
+    },
+    {
+      "from": "DH-12",
+      "to": "DH-29",
+      "type": "supports",
+      "note": "null self-ratings feed miscalibration gap"
+    },
+    {
+      "from": "DH-08",
+      "to": "DH-17",
+      "type": "measures",
+      "note": "DAT operationalizes high-creativity split"
+    },
+    {
+      "from": "DH-08",
+      "to": "DH-18",
+      "type": "measures",
+      "note": "DAT operationalizes low-creativity split"
+    },
+    {
+      "from": "DH-16",
+      "to": "DH-18",
+      "type": "supports",
+      "note": "equal take-up; gains not from more use"
+    },
+    {
+      "from": "DH-17",
+      "to": "DH-23",
+      "type": "supports",
+      "note": "flat high-DAT effects bound upper claim"
+    },
+    {
+      "from": "DH-18",
+      "to": "DH-22",
+      "type": "supports",
+      "note": "low-DAT uplift drives average gains"
+    },
+    {
+      "from": "DH-19",
+      "to": "DH-20",
+      "type": "measures",
+      "note": "within-condition similarity operationalized"
+    },
+    {
+      "from": "DH-20",
+      "to": "DH-01",
+      "type": "supports",
+      "note": "collective diversity loss evidence"
+    },
+    {
+      "from": "DH-20",
+      "to": "DH-05",
+      "type": "supports",
+      "note": "homogenization supports hampering path"
+    },
+    {
+      "from": "DH-21",
+      "to": "DH-05",
+      "type": "supports",
+      "note": "idea similarity evidences anchoring"
+    },
+    {
+      "from": "DH-21",
+      "to": "DH-20",
+      "type": "supports",
+      "note": "anchoring helps explain homogenization"
+    },
+    {
+      "from": "DH-20",
+      "to": "DH-31",
+      "type": "supports",
+      "note": "similarity finding grounds dilemma reading"
+    },
+    {
+      "from": "DH-26",
+      "to": "DH-10",
+      "type": "supports",
+      "note": "ITT take-up justifies causal novelty claim"
+    },
+    {
+      "from": "DH-26",
+      "to": "DH-11",
+      "type": "supports",
+      "note": "ITT take-up justifies causal usefulness"
+    },
+    {
+      "from": "DH-27",
+      "to": "DH-33",
+      "type": "motivates",
+      "note": "scope limits motivate future levers"
+    },
+    {
+      "from": "DH-28",
+      "to": "DH-33",
+      "type": "motivates",
+      "note": "lower-bound claim motivates interaction"
+    },
+    {
+      "from": "DH-29",
+      "to": "DH-33",
+      "type": "motivates",
+      "note": "selection miscalibration motivates designs"
+    },
+    {
+      "from": "DH-32",
+      "to": "DH-09",
+      "type": "motivates",
+      "note": "complementarity stance shapes lever"
+    },
+    {
+      "from": "DH-15",
+      "to": "DH-22",
+      "type": "contradicts",
+      "note": "funny null vs broad quality uplift"
+    },
+    {
+      "from": "DH-24",
+      "to": "DH-25",
+      "type": "extends",
+      "note": "ownership penalty alongside ethics support"
+    },
+    {
+      "from": "KB-01",
+      "to": "KB-03",
+      "type": "motivates",
+      "note": "Labeled-corpus limits motivate excess method"
+    },
+    {
+      "from": "KB-02",
+      "to": "KB-03",
+      "type": "motivates",
+      "note": "Prompt/model bias motivates unlabeled design"
+    },
+    {
+      "from": "KB-03",
+      "to": "KB-04",
+      "type": "depends_on",
+      "note": "Excess method needs counterfactual q"
+    },
+    {
+      "from": "KB-04",
+      "to": "KB-05",
+      "type": "supports",
+      "note": "q enables δ and r"
+    },
+    {
+      "from": "KB-05",
+      "to": "KB-06",
+      "type": "depends_on",
+      "note": "Thresholds use δ and r"
+    },
+    {
+      "from": "KB-28",
+      "to": "KB-04",
+      "type": "supports",
+      "note": "Extrapolation assumption underwrites q"
+    },
+    {
+      "from": "KB-06",
+      "to": "KB-07",
+      "type": "measures",
+      "note": "Threshold defines pre-COVID null"
+    },
+    {
+      "from": "KB-06",
+      "to": "KB-08",
+      "type": "measures",
+      "note": "Threshold counts COVID excess"
+    },
+    {
+      "from": "KB-06",
+      "to": "KB-09",
+      "type": "measures",
+      "note": "Threshold counts 2024 excess"
+    },
+    {
+      "from": "KB-09",
+      "to": "KB-10",
+      "type": "supports",
+      "note": "2024 peak is style not content"
+    },
+    {
+      "from": "KB-08",
+      "to": "KB-10",
+      "type": "supports",
+      "note": "COVID contrast is content nouns"
+    },
+    {
+      "from": "KB-10",
+      "to": "KB-24",
+      "type": "supports",
+      "note": "Style POS pattern backs LLM mechanism"
+    },
+    {
+      "from": "KB-11",
+      "to": "KB-12",
+      "type": "measures",
+      "note": "Δ_G applied to rare set"
+    },
+    {
+      "from": "KB-11",
+      "to": "KB-13",
+      "type": "measures",
+      "note": "Δ_G applied to common set"
+    },
+    {
+      "from": "KB-12",
+      "to": "KB-14",
+      "type": "supports",
+      "note": "Rare estimate enters average"
+    },
+    {
+      "from": "KB-13",
+      "to": "KB-14",
+      "type": "supports",
+      "note": "Common estimate enters average"
+    },
+    {
+      "from": "KB-14",
+      "to": "KB-15",
+      "type": "supports",
+      "note": "LLM floor vs COVID gap"
+    },
+    {
+      "from": "KB-15",
+      "to": "KB-24",
+      "type": "supports",
+      "note": "Magnitude backs unprecedented LLM effect"
+    },
+    {
+      "from": "KB-11",
+      "to": "KB-16",
+      "type": "measures",
+      "note": "Same markers across fields"
+    },
+    {
+      "from": "KB-11",
+      "to": "KB-17",
+      "type": "measures",
+      "note": "Same markers across countries"
+    },
+    {
+      "from": "KB-11",
+      "to": "KB-18",
+      "type": "measures",
+      "note": "Same markers across journals"
+    },
+    {
+      "from": "KB-16",
+      "to": "KB-22",
+      "type": "supports",
+      "note": "Field hetero feeds interpretation"
+    },
+    {
+      "from": "KB-17",
+      "to": "KB-22",
+      "type": "supports",
+      "note": "Country hetero feeds interpretation"
+    },
+    {
+      "from": "KB-18",
+      "to": "KB-21",
+      "type": "supports",
+      "note": "Prestige contrast feeds reading"
+    },
+    {
+      "from": "KB-18",
+      "to": "KB-22",
+      "type": "supports",
+      "note": "Venue hetero feeds interpretation"
+    },
+    {
+      "from": "KB-19",
+      "to": "KB-23",
+      "type": "supports",
+      "note": "Peak subcorpora motivate >30% reading"
+    },
+    {
+      "from": "KB-14",
+      "to": "KB-26",
+      "type": "depends_on",
+      "note": "13.5% claim is lower-bound only"
+    },
+    {
+      "from": "KB-26",
+      "to": "KB-23",
+      "type": "supports",
+      "note": "Under-count argues true rate higher"
+    },
+    {
+      "from": "KB-24",
+      "to": "KB-27",
+      "type": "critiques",
+      "note": "Mechanism not uniquely identified"
+    },
+    {
+      "from": "KB-14",
+      "to": "KB-29",
+      "type": "motivates",
+      "note": "Measured rise motivates monitoring"
+    },
+    {
+      "from": "KB-30",
+      "to": "KB-29",
+      "type": "motivates",
+      "note": "Homogenization risk motivates policy tracking"
+    },
+    {
+      "from": "JK-03",
+      "to": "JK-04",
+      "type": "motivates",
+      "note": "Public-issue gap motivates experiment"
+    },
+    {
+      "from": "JK-01",
+      "to": "JK-04",
+      "type": "motivates",
+      "note": "Latent-persuasion framing drives design"
+    },
+    {
+      "from": "JK-02",
+      "to": "JK-01",
+      "type": "supports",
+      "note": "Opacity grounds latent framing"
+    },
+    {
+      "from": "JK-26",
+      "to": "JK-05",
+      "type": "supports",
+      "note": "Strong-manipulation rationale"
+    },
+    {
+      "from": "JK-05",
+      "to": "JK-04",
+      "type": "depends_on",
+      "note": "Treatments need opinionated prompts"
+    },
+    {
+      "from": "JK-06",
+      "to": "JK-04",
+      "type": "depends_on",
+      "note": "UI delivers assistant treatments"
+    },
+    {
+      "from": "JK-07",
+      "to": "JK-09",
+      "type": "measures",
+      "note": "Sentence labels → writing finding"
+    },
+    {
+      "from": "JK-07",
+      "to": "JK-10",
+      "type": "measures",
+      "note": "Sentence labels → writing finding"
+    },
+    {
+      "from": "JK-07",
+      "to": "JK-13",
+      "type": "measures",
+      "note": "Interval coding of labels"
+    },
+    {
+      "from": "JK-08",
+      "to": "JK-15",
+      "type": "measures",
+      "note": "Survey item → attitude finding"
+    },
+    {
+      "from": "JK-04",
+      "to": "JK-09",
+      "type": "tests",
+      "note": "Optimist arm vs control"
+    },
+    {
+      "from": "JK-04",
+      "to": "JK-10",
+      "type": "tests",
+      "note": "Pessimist arm vs control"
+    },
+    {
+      "from": "JK-04",
+      "to": "JK-15",
+      "type": "tests",
+      "note": "Arms vs post-task attitude"
+    },
+    {
+      "from": "JK-20",
+      "to": "JK-05",
+      "type": "supports",
+      "note": "Manipulation check validates prompts"
+    },
+    {
+      "from": "JK-11",
+      "to": "JK-14",
+      "type": "supports",
+      "note": "Low full-accept rates"
+    },
+    {
+      "from": "JK-13",
+      "to": "JK-14",
+      "type": "supports",
+      "note": "Effect persists in slow writers"
+    },
+    {
+      "from": "JK-14",
+      "to": "JK-22",
+      "type": "supports",
+      "note": "Not mere convenience"
+    },
+    {
+      "from": "JK-09",
+      "to": "JK-22",
+      "type": "supports",
+      "note": "Writing shift evidence"
+    },
+    {
+      "from": "JK-10",
+      "to": "JK-22",
+      "type": "supports",
+      "note": "Writing shift evidence"
+    },
+    {
+      "from": "JK-15",
+      "to": "JK-22",
+      "type": "supports",
+      "note": "Attitude shift evidence"
+    },
+    {
+      "from": "JK-22",
+      "to": "JK-01",
+      "type": "supports",
+      "note": "Results instantiate definition"
+    },
+    {
+      "from": "JK-16",
+      "to": "JK-23",
+      "type": "supports",
+      "note": "Immediate shift vs gradual info"
+    },
+    {
+      "from": "JK-18",
+      "to": "JK-23",
+      "type": "supports",
+      "note": "Low skew awareness"
+    },
+    {
+      "from": "JK-19",
+      "to": "JK-23",
+      "type": "supports",
+      "note": "Low influence awareness"
+    },
+    {
+      "from": "JK-17",
+      "to": "JK-24",
+      "type": "supports",
+      "note": "Expertise attribution"
+    },
+    {
+      "from": "JK-12",
+      "to": "JK-25",
+      "type": "supports",
+      "note": "Acceptance mediates influence"
+    },
+    {
+      "from": "JK-25",
+      "to": "JK-06",
+      "type": "depends_on",
+      "note": "UI shapes behavioral route"
+    },
+    {
+      "from": "JK-21",
+      "to": "JK-15",
+      "type": "supports",
+      "note": "Demand unlikely for attitude"
+    },
+    {
+      "from": "JK-27",
+      "to": "JK-03",
+      "type": "motivates",
+      "note": "Risk-gap motivates study"
+    },
+    {
+      "from": "JK-22",
+      "to": "JK-32",
+      "type": "motivates",
+      "note": "Finding motivates monitoring"
+    },
+    {
+      "from": "JK-28",
+      "to": "JK-15",
+      "type": "critiques",
+      "note": "Single-topic scope wall"
+    },
+    {
+      "from": "JK-29",
+      "to": "JK-06",
+      "type": "critiques",
+      "note": "UI-specific external validity"
+    },
+    {
+      "from": "JK-30",
+      "to": "JK-15",
+      "type": "critiques",
+      "note": "Persistence unknown"
+    },
+    {
+      "from": "JK-31",
+      "to": "JK-26",
+      "type": "extends",
+      "note": "One-shot underestimates exposure"
+    },
+    {
+      "from": "WC-01",
+      "to": "WC-04",
+      "type": "motivates",
+      "note": "covert-influence gap drives study"
+    },
+    {
+      "from": "WC-04",
+      "to": "WC-08",
+      "type": "motivates",
+      "note": "prior limits → Exp1 design"
+    },
+    {
+      "from": "WC-04",
+      "to": "WC-09",
+      "type": "motivates",
+      "note": "prior limits → Exp2 multi-issue"
+    },
+    {
+      "from": "WC-05",
+      "to": "WC-03",
+      "type": "supports",
+      "note": "behavior→attitude grounds mechanism"
+    },
+    {
+      "from": "WC-03",
+      "to": "WC-11",
+      "type": "supports",
+      "note": "dose–response fits mechanism"
+    },
+    {
+      "from": "WC-06",
+      "to": "WC-08",
+      "type": "measures",
+      "note": "Likert alignment DV"
+    },
+    {
+      "from": "WC-06",
+      "to": "WC-09",
+      "type": "measures",
+      "note": "Likert alignment DV"
+    },
+    {
+      "from": "WC-06",
+      "to": "WC-10",
+      "type": "measures",
+      "note": "pre–post Likert"
+    },
+    {
+      "from": "WC-07",
+      "to": "WC-12",
+      "type": "measures",
+      "note": "balanced item"
+    },
+    {
+      "from": "WC-07",
+      "to": "WC-14",
+      "type": "measures",
+      "note": "influence item"
+    },
+    {
+      "from": "WC-08",
+      "to": "WC-03",
+      "type": "supports",
+      "note": "Exp1 shift evidence"
+    },
+    {
+      "from": "WC-09",
+      "to": "WC-03",
+      "type": "supports",
+      "note": "Exp2 shift evidence"
+    },
+    {
+      "from": "WC-10",
+      "to": "WC-03",
+      "type": "supports",
+      "note": "within-subject shift"
+    },
+    {
+      "from": "WC-11",
+      "to": "WC-03",
+      "type": "supports",
+      "note": "acceptance dose"
+    },
+    {
+      "from": "WC-12",
+      "to": "WC-25",
+      "type": "supports",
+      "note": "unawareness → manipulation"
+    },
+    {
+      "from": "WC-13",
+      "to": "WC-25",
+      "type": "supports",
+      "note": "shifted least aware"
+    },
+    {
+      "from": "WC-14",
+      "to": "WC-25",
+      "type": "supports",
+      "note": "deny influence"
+    },
+    {
+      "from": "WC-15",
+      "to": "WC-16",
+      "type": "tests",
+      "note": "Static Text probes info-only"
+    },
+    {
+      "from": "WC-16",
+      "to": "WC-17",
+      "type": "supports",
+      "note": "AI > Static → not info alone"
+    },
+    {
+      "from": "WC-17",
+      "to": "WC-03",
+      "type": "interprets",
+      "note": "favors writing modality"
+    },
+    {
+      "from": "WC-18",
+      "to": "WC-19",
+      "type": "tests",
+      "note": "overt vs covert benchmark"
+    },
+    {
+      "from": "WC-19",
+      "to": "WC-03",
+      "type": "supports",
+      "note": "covert ≈ overt writing"
+    },
+    {
+      "from": "WC-20",
+      "to": "WC-22",
+      "type": "tests",
+      "note": "prebunk safeguard trial"
+    },
+    {
+      "from": "WC-21",
+      "to": "WC-23",
+      "type": "tests",
+      "note": "debunk safeguard trial"
+    },
+    {
+      "from": "WC-22",
+      "to": "WC-20",
+      "type": "contradicts",
+      "note": "Warning fails to mitigate"
+    },
+    {
+      "from": "WC-23",
+      "to": "WC-21",
+      "type": "contradicts",
+      "note": "Debrief fails to mitigate"
+    },
+    {
+      "from": "WC-24",
+      "to": "WC-20",
+      "type": "contradicts",
+      "note": "Warning fails awareness"
+    },
+    {
+      "from": "WC-24",
+      "to": "WC-21",
+      "type": "contradicts",
+      "note": "Debrief fails awareness"
+    },
+    {
+      "from": "WC-22",
+      "to": "WC-26",
+      "type": "supports",
+      "note": "brief disclaimer critique"
+    },
+    {
+      "from": "WC-23",
+      "to": "WC-26",
+      "type": "supports",
+      "note": "brief disclaimer critique"
+    },
+    {
+      "from": "WC-32",
+      "to": "WC-26",
+      "type": "extends",
+      "note": "detail may still help"
+    },
+    {
+      "from": "WC-27",
+      "to": "WC-09",
+      "type": "extends",
+      "note": "partisan balance"
+    },
+    {
+      "from": "WC-28",
+      "to": "WC-09",
+      "type": "supports",
+      "note": "opponents still accept"
+    },
+    {
+      "from": "WC-29",
+      "to": "WC-03",
+      "type": "critiques",
+      "note": "mechanism underspecified"
+    },
+    {
+      "from": "WC-25",
+      "to": "WC-08",
+      "type": "interprets",
+      "note": "covert harm reading"
+    },
+    {
+      "from": "WC-33",
+      "to": "WC-30",
+      "type": "motivates",
+      "note": "compounding → longevity gap"
+    },
+    {
+      "from": "WC-34",
+      "to": "WC-08",
+      "type": "supports",
+      "note": "scale of evidence"
+    },
+    {
+      "from": "WC-34",
+      "to": "WC-09",
+      "type": "supports",
+      "note": "scale of evidence"
+    },
+    {
+      "from": "KS-01",
+      "to": "KS-05",
+      "type": "motivates",
+      "note": "cost framing motivates conditions"
+    },
+    {
+      "from": "KS-04",
+      "to": "KS-01",
+      "type": "supports",
+      "note": "offloading literature motivates study"
+    },
+    {
+      "from": "KS-03",
+      "to": "KS-05",
+      "type": "supports",
+      "note": "essay task justifies design"
+    },
+    {
+      "from": "KS-05",
+      "to": "KS-10",
+      "type": "tests",
+      "note": "conditions test support gradient"
+    },
+    {
+      "from": "KS-05",
+      "to": "KS-11",
+      "type": "tests",
+      "note": "conditions yield strategy differences"
+    },
+    {
+      "from": "KS-05",
+      "to": "KS-15",
+      "type": "tests",
+      "note": "conditions test essay diversity"
+    },
+    {
+      "from": "KS-05",
+      "to": "KS-18",
+      "type": "tests",
+      "note": "conditions test memory quoting"
+    },
+    {
+      "from": "KS-05",
+      "to": "KS-21",
+      "type": "tests",
+      "note": "conditions test ownership"
+    },
+    {
+      "from": "KS-06",
+      "to": "KS-24",
+      "type": "tests",
+      "note": "crossover tests aftereffects"
+    },
+    {
+      "from": "KS-06",
+      "to": "KS-25",
+      "type": "tests",
+      "note": "crossover tests quoting persistence"
+    },
+    {
+      "from": "KS-06",
+      "to": "KS-26",
+      "type": "tests",
+      "note": "crossover tests Brain-first path"
+    },
+    {
+      "from": "KS-07",
+      "to": "KS-10",
+      "type": "measures",
+      "note": "dDTF operationalizes connectivity"
+    },
+    {
+      "from": "KS-07",
+      "to": "KS-11",
+      "type": "measures",
+      "note": "dDTF compares strategies"
+    },
+    {
+      "from": "KS-07",
+      "to": "KS-14",
+      "type": "measures",
+      "note": "dDTF shows visual networks"
+    },
+    {
+      "from": "KS-07",
+      "to": "KS-24",
+      "type": "measures",
+      "note": "dDTF tracks Session 4"
+    },
+    {
+      "from": "KS-08",
+      "to": "KS-21",
+      "type": "measures",
+      "note": "interview ownership metric"
+    },
+    {
+      "from": "KS-09",
+      "to": "KS-18",
+      "type": "measures",
+      "note": "quoting metric Session 1"
+    },
+    {
+      "from": "KS-09",
+      "to": "KS-19",
+      "type": "measures",
+      "note": "quoting across sessions"
+    },
+    {
+      "from": "KS-09",
+      "to": "KS-25",
+      "type": "measures",
+      "note": "quoting Session 4"
+    },
+    {
+      "from": "KS-10",
+      "to": "KS-12",
+      "type": "supports",
+      "note": "gradient grounds load reading"
+    },
+    {
+      "from": "KS-10",
+      "to": "KS-13",
+      "type": "supports",
+      "note": "weak LLM coupling → offload"
+    },
+    {
+      "from": "KS-12",
+      "to": "KS-10",
+      "type": "interprets",
+      "note": "reads connectivity gradient"
+    },
+    {
+      "from": "KS-13",
+      "to": "KS-20",
+      "type": "extends",
+      "note": "offload to encoding bypass"
+    },
+    {
+      "from": "KS-18",
+      "to": "KS-20",
+      "type": "supports",
+      "note": "quote failure supports mechanism"
+    },
+    {
+      "from": "KS-19",
+      "to": "KS-20",
+      "type": "supports",
+      "note": "persistence supports encoding claim"
+    },
+    {
+      "from": "KS-10",
+      "to": "KS-21",
+      "type": "supports",
+      "note": "low coupling aligns ownership"
+    },
+    {
+      "from": "KS-21",
+      "to": "KS-22",
+      "type": "supports",
+      "note": "ownership → agency reading"
+    },
+    {
+      "from": "KS-22",
+      "to": "KS-21",
+      "type": "interprets",
+      "note": "agency interprets ownership"
+    },
+    {
+      "from": "KS-15",
+      "to": "KS-23",
+      "type": "supports",
+      "note": "homogeneity aids teacher detection"
+    },
+    {
+      "from": "KS-17",
+      "to": "KS-15",
+      "type": "supports",
+      "note": "ontology backs homogeneity"
+    },
+    {
+      "from": "KS-24",
+      "to": "KS-02",
+      "type": "supports",
+      "note": "aftereffect grounds debt construct"
+    },
+    {
+      "from": "KS-28",
+      "to": "KS-02",
+      "type": "supports",
+      "note": "narrow ideas exemplify debt"
+    },
+    {
+      "from": "KS-02",
+      "to": "KS-29",
+      "type": "motivates",
+      "note": "debt motivates delay-AI lever"
+    },
+    {
+      "from": "KS-27",
+      "to": "KS-29",
+      "type": "supports",
+      "note": "Brain-first advantage supports delay"
+    },
+    {
+      "from": "KS-26",
+      "to": "KS-27",
+      "type": "supports",
+      "note": "Brain-to-LLM data for reading"
+    },
+    {
+      "from": "KS-25",
+      "to": "KS-27",
+      "type": "supports",
+      "note": "quoting gap favors Brain-first"
+    },
+    {
+      "from": "KS-24",
+      "to": "KS-30",
+      "type": "supports",
+      "note": "Session 4 underpins overall claim"
+    },
+    {
+      "from": "KS-19",
+      "to": "KS-30",
+      "type": "supports",
+      "note": "memory gap in overall claim"
+    },
+    {
+      "from": "KS-21",
+      "to": "KS-30",
+      "type": "supports",
+      "note": "ownership in overall claim"
+    },
+    {
+      "from": "KS-15",
+      "to": "KS-30",
+      "type": "supports",
+      "note": "linguistic homogeneity in claim"
+    },
+    {
+      "from": "KS-36",
+      "to": "KS-20",
+      "type": "supports",
+      "note": "copy-paste under time pressure"
+    },
+    {
+      "from": "KS-36",
+      "to": "KS-15",
+      "type": "supports",
+      "note": "reuse drives homogeneity"
+    },
+    {
+      "from": "KS-30",
+      "to": "KS-35",
+      "type": "extends",
+      "note": "cost reading → echo chamber"
+    },
+    {
+      "from": "KS-31",
+      "to": "KS-30",
+      "type": "critiques",
+      "note": "sample limits overall claim"
+    },
+    {
+      "from": "KS-32",
+      "to": "KS-30",
+      "type": "critiques",
+      "note": "ChatGPT-only limits claim"
+    },
+    {
+      "from": "KS-34",
+      "to": "KS-10",
+      "type": "critiques",
+      "note": "EEG method bounds connectivity"
+    },
+    {
+      "from": "KS-33",
+      "to": "KS-13",
+      "type": "critiques",
+      "note": "no substages weaken process claim"
+    },
+    {
+      "from": "KS-01",
+      "to": "KS-37",
+      "type": "extends",
+      "note": "cognitive cost → energy cost"
+    },
+    {
+      "from": "KS-14",
+      "to": "KS-12",
+      "type": "supports",
+      "note": "Search visual mode distinct"
+    },
+    {
+      "from": "KS-16",
+      "to": "KS-15",
+      "type": "supports",
+      "note": "NER load marks LLM style"
+    },
+    {
+      "from": "ST-01",
+      "to": "ST-02",
+      "type": "motivates",
+      "note": "Conservative reading driven by power limits"
+    },
+    {
+      "from": "ST-01",
+      "to": "ST-04",
+      "type": "motivates",
+      "note": "Conservative reading driven by report bugs"
+    },
+    {
+      "from": "ST-02",
+      "to": "ST-03",
+      "type": "extends",
+      "note": "Power problem worse in topic cells"
+    },
+    {
+      "from": "ST-05",
+      "to": "ST-06",
+      "type": "extends",
+      "note": "General opacity → EEG-specific opacity"
+    },
+    {
+      "from": "ST-06",
+      "to": "ST-07",
+      "type": "supports",
+      "note": "Bad connectivity ops → overread risk"
+    },
+    {
+      "from": "ST-07",
+      "to": "ST-16",
+      "type": "supports",
+      "note": "Connection counts ≠ engagement"
+    },
+    {
+      "from": "ST-08",
+      "to": "ST-01",
+      "type": "supports",
+      "note": "Agency overclaim fuels caution"
+    },
+    {
+      "from": "ST-09",
+      "to": "ST-01",
+      "type": "supports",
+      "note": "Selective narrative fuels caution"
+    },
+    {
+      "from": "ST-10",
+      "to": "ST-14",
+      "type": "supports",
+      "note": "Weak quoting metric → attention reading"
+    },
+    {
+      "from": "ST-10",
+      "to": "ST-15",
+      "type": "supports",
+      "note": "Quoting issues undercut debt claim"
+    },
+    {
+      "from": "ST-11",
+      "to": "ST-12",
+      "type": "motivates",
+      "note": "Crossover confounds → redesign levers"
+    },
+    {
+      "from": "ST-13",
+      "to": "ST-12",
+      "type": "motivates",
+      "note": "Lab time pressure → better designs"
+    },
+    {
+      "from": "ST-15",
+      "to": "ST-14",
+      "type": "supports",
+      "note": "Null Search contrast → not learning harm"
+    },
+    {
+      "from": "ST-16",
+      "to": "ST-14",
+      "type": "supports",
+      "note": "Connectivity reinterpretation"
+    },
+    {
+      "from": "ST-02",
+      "to": "ST-17",
+      "type": "supports",
+      "note": "Underpowered → speculative conclusions"
+    },
+    {
+      "from": "ST-06",
+      "to": "ST-17",
+      "type": "supports",
+      "note": "EEG stats gaps → speculative conclusions"
+    },
+    {
+      "from": "ST-14",
+      "to": "ST-17",
+      "type": "supports",
+      "note": "Attention reading implies overclaim"
+    },
+    {
+      "from": "ST-04",
+      "to": "ST-17",
+      "type": "supports",
+      "note": "Inconsistencies weaken conclusions"
+    },
+    {
+      "from": "PH-03",
+      "to": "JK-15",
+      "type": "depends_on",
+      "note": "PH inherits Jakesch attitude-shift prior",
+      "cross_paper": true
+    },
+    {
+      "from": "PH-03",
+      "to": "JK-09",
+      "type": "depends_on",
+      "note": "PH inherits written-opinion bias prior",
+      "cross_paper": true
+    },
+    {
+      "from": "DH-20",
+      "to": "PH-11",
+      "type": "extends",
+      "note": "Story similarity extends essay homogenization",
+      "cross_paper": true
+    },
+    {
+      "from": "DH-01",
+      "to": "PH-01",
+      "type": "extends",
+      "note": "Adds individual-up vs collective-down split",
+      "cross_paper": true
+    },
+    {
+      "from": "DH-31",
+      "to": "PH-02",
+      "type": "extends",
+      "note": "Social-dilemma reading of diversity loss",
+      "cross_paper": true
+    },
+    {
+      "from": "KB-30",
+      "to": "PH-11",
+      "type": "depends_on",
+      "note": "KB framing cites PH; not independent evidence",
+      "cross_paper": true
+    },
+    {
+      "from": "KB-30",
+      "to": "PH-01",
+      "type": "depends_on",
+      "note": "Monoculture framing inherits PH lineage",
+      "cross_paper": true
+    },
+    {
+      "from": "WC-08",
+      "to": "JK-15",
+      "type": "extends",
+      "note": "Preregistered Exp1 robustifies attitude shift",
+      "cross_paper": true
+    },
+    {
+      "from": "WC-09",
+      "to": "JK-15",
+      "type": "extends",
+      "note": "Multi-issue Exp2 extends single-issue JK",
+      "cross_paper": true
+    },
+    {
+      "from": "WC-04",
+      "to": "JK-28",
+      "type": "critiques",
+      "note": "Prior limited to one nonpolitical issue",
+      "cross_paper": true
+    },
+    {
+      "from": "WC-12",
+      "to": "JK-18",
+      "type": "same_as",
+      "note": "Bias-unawareness near-duplicate",
+      "cross_paper": true
+    },
+    {
+      "from": "WC-14",
+      "to": "JK-19",
+      "type": "same_as",
+      "note": "Influence-unawareness near-duplicate",
+      "cross_paper": true
+    },
+    {
+      "from": "WC-03",
+      "to": "JK-25",
+      "type": "same_as",
+      "note": "Behavior-to-attitude mechanism family",
+      "cross_paper": true
+    },
+    {
+      "from": "WC-05",
+      "to": "JK-25",
+      "type": "depends_on",
+      "note": "WC inherits self-perception premise",
+      "cross_paper": true
+    },
+    {
+      "from": "KS-15",
+      "to": "PH-11",
+      "type": "extends",
+      "note": "Edu-essay homogeneity extends PH family",
+      "cross_paper": true
+    },
+    {
+      "from": "KS-15",
+      "to": "DH-20",
+      "type": "extends",
+      "note": "Within-topic LLM homogeneity ↔ story similarity",
+      "cross_paper": true
+    },
+    {
+      "from": "KS-35",
+      "to": "JK-01",
+      "type": "extends",
+      "note": "Echo-chamber risk extends latent persuasion",
+      "cross_paper": true
+    },
+    {
+      "from": "KS-35",
+      "to": "WC-25",
+      "type": "extends",
+      "note": "Uncritical uptake ↔ covert manipulation reading",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-01",
+      "to": "KS-30",
+      "type": "critiques",
+      "note": "Calls for conservative reading of KS summary",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-02",
+      "to": "KS-10",
+      "type": "critiques",
+      "note": "Underpowered for claimed connectivity effects",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-03",
+      "to": "KS-15",
+      "type": "critiques",
+      "note": "Topic-stratified NLP cells too sparse",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-04",
+      "to": "KS-19",
+      "type": "critiques",
+      "note": "Reporting inconsistencies (quoting/labels)",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-05",
+      "to": "KS-10",
+      "type": "critiques",
+      "note": "Exclusion/multiplicity/F-stats underspecified",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-06",
+      "to": "KS-07",
+      "type": "critiques",
+      "note": "EEG ANOVA/FDR pipeline validity",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-07",
+      "to": "KS-12",
+      "type": "critiques",
+      "note": "Fewer connections ≠ weaker engagement",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-08",
+      "to": "KS-22",
+      "type": "critiques",
+      "note": "Interview measures authorship not agency",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-08",
+      "to": "KS-21",
+      "type": "critiques",
+      "note": "Ownership self-report ≠ cognitive agency",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-09",
+      "to": "KS-30",
+      "type": "critiques",
+      "note": "Selective emphasis vs counter-patterns",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-10",
+      "to": "KS-09",
+      "type": "critiques",
+      "note": "Correct-quoting weak engagement marker",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-10",
+      "to": "KS-18",
+      "type": "critiques",
+      "note": "Quoting impairment overread as debt",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-11",
+      "to": "KS-24",
+      "type": "critiques",
+      "note": "Session-4 practice/familiarity confound",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-11",
+      "to": "KS-25",
+      "type": "critiques",
+      "note": "Crossover quoting may be practice artifact",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-13",
+      "to": "KS-36",
+      "type": "critiques",
+      "note": "Timed protocol may inflate tool reuse",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-14",
+      "to": "KS-30",
+      "type": "contradicts",
+      "note": "Attention diffs ≠ impaired learning claim",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-15",
+      "to": "KS-02",
+      "type": "contradicts",
+      "note": "Search=Brain quoting undercuts debt gradient",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-16",
+      "to": "KS-12",
+      "type": "critiques",
+      "note": "Lower connectivity ≠ reduced engagement",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-17",
+      "to": "KS-13",
+      "type": "critiques",
+      "note": "Offloading narrative needs control experiments",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-17",
+      "to": "KS-30",
+      "type": "critiques",
+      "note": "Tool-usage conclusions remain speculative",
+      "cross_paper": true
+    },
+    {
+      "from": "KS-31",
+      "to": "ST-12",
+      "type": "motivates",
+      "note": "KS sample/power gaps motivate ST redesign",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-12",
+      "to": "KS-05",
+      "type": "extends",
+      "note": "Within-subjects + teacher scoring redesign",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-07",
+      "to": "ST-16",
+      "type": "same_as",
+      "note": "Near-duplicate connectivity≠engagement critiques"
+    },
+    {
+      "from": "PH-34",
+      "to": "JK-31",
+      "type": "same_as",
+      "note": "Shared longitudinal/repeated-exposure gap",
+      "cross_paper": true
+    },
+    {
+      "from": "JK-31",
+      "to": "WC-30",
+      "type": "same_as",
+      "note": "Shared persistence-over-time gap",
+      "cross_paper": true
+    },
+    {
+      "from": "PH-34",
+      "to": "WC-30",
+      "type": "same_as",
+      "note": "Single-shot vs repeated dynamics gap",
+      "cross_paper": true
+    },
+    {
+      "from": "DH-22",
+      "to": "PH-13",
+      "type": "critiques",
+      "note": "Professionalization reading vs quality–diversity tradeoff",
+      "cross_paper": true
+    },
+    {
+      "from": "WC-22",
+      "to": "JK-32",
+      "type": "critiques",
+      "note": "Brief warnings fail; monitoring alone may not suffice",
+      "cross_paper": true
+    },
+    {
+      "from": "ST-02",
+      "to": "KS-31",
+      "type": "extends",
+      "note": "ST sharpens KS own sample-size gap",
+      "cross_paper": true
+    }
+  ],
+  "adjudication": {
+    "accepted": [
+      {
+        "from": "PH-03",
+        "to": "JK-15",
+        "type": "depends_on",
+        "note": "PH inherits Jakesch attitude-shift prior",
+        "cross_paper": true,
+        "from_candidate": 1
+      },
+      {
+        "from": "PH-03",
+        "to": "JK-09",
+        "type": "depends_on",
+        "note": "PH inherits written-opinion bias prior",
+        "cross_paper": true,
+        "from_candidate": 1
+      },
+      {
+        "from": "DH-20",
+        "to": "PH-11",
+        "type": "extends",
+        "note": "Story similarity extends essay homogenization",
+        "cross_paper": true,
+        "from_candidate": 2
+      },
+      {
+        "from": "DH-01",
+        "to": "PH-01",
+        "type": "extends",
+        "note": "Adds individual-up vs collective-down split",
+        "cross_paper": true,
+        "from_candidate": 7
+      },
+      {
+        "from": "DH-31",
+        "to": "PH-02",
+        "type": "extends",
+        "note": "Social-dilemma reading of diversity loss",
+        "cross_paper": true,
+        "from_candidate": 10
+      },
+      {
+        "from": "KB-30",
+        "to": "PH-11",
+        "type": "depends_on",
+        "note": "KB framing cites PH; not independent evidence",
+        "cross_paper": true,
+        "from_candidate": 12
+      },
+      {
+        "from": "KB-30",
+        "to": "PH-01",
+        "type": "depends_on",
+        "note": "Monoculture framing inherits PH lineage",
+        "cross_paper": true,
+        "from_candidate": 12
+      },
+      {
+        "from": "WC-08",
+        "to": "JK-15",
+        "type": "extends",
+        "note": "Preregistered Exp1 robustifies attitude shift",
+        "cross_paper": true,
+        "from_candidate": 18
+      },
+      {
+        "from": "WC-09",
+        "to": "JK-15",
+        "type": "extends",
+        "note": "Multi-issue Exp2 extends single-issue JK",
+        "cross_paper": true,
+        "from_candidate": 18
+      },
+      {
+        "from": "WC-04",
+        "to": "JK-28",
+        "type": "critiques",
+        "note": "Prior limited to one nonpolitical issue",
+        "cross_paper": true,
+        "from_candidate": 24
+      },
+      {
+        "from": "WC-12",
+        "to": "JK-18",
+        "type": "same_as",
+        "note": "Bias-unawareness near-duplicate",
+        "cross_paper": true,
+        "from_candidate": 18
+      },
+      {
+        "from": "WC-14",
+        "to": "JK-19",
+        "type": "same_as",
+        "note": "Influence-unawareness near-duplicate",
+        "cross_paper": true,
+        "from_candidate": 18
+      },
+      {
+        "from": "WC-03",
+        "to": "JK-25",
+        "type": "same_as",
+        "note": "Behavior-to-attitude mechanism family",
+        "cross_paper": true,
+        "from_candidate": 18
+      },
+      {
+        "from": "WC-05",
+        "to": "JK-25",
+        "type": "depends_on",
+        "note": "WC inherits self-perception premise",
+        "cross_paper": true,
+        "from_candidate": 18
+      },
+      {
+        "from": "KS-15",
+        "to": "PH-11",
+        "type": "extends",
+        "note": "Edu-essay homogeneity extends PH family",
+        "cross_paper": true,
+        "from_candidate": 27
+      },
+      {
+        "from": "KS-15",
+        "to": "DH-20",
+        "type": "extends",
+        "note": "Within-topic LLM homogeneity ↔ story similarity",
+        "cross_paper": true,
+        "from_candidate": 27
+      },
+      {
+        "from": "KS-35",
+        "to": "JK-01",
+        "type": "extends",
+        "note": "Echo-chamber risk extends latent persuasion",
+        "cross_paper": true,
+        "from_candidate": 31
+      },
+      {
+        "from": "KS-35",
+        "to": "WC-25",
+        "type": "extends",
+        "note": "Uncritical uptake ↔ covert manipulation reading",
+        "cross_paper": true,
+        "from_candidate": 31
+      },
+      {
+        "from": "ST-01",
+        "to": "KS-30",
+        "type": "critiques",
+        "note": "Calls for conservative reading of KS summary",
+        "cross_paper": true,
+        "from_candidate": 32
+      },
+      {
+        "from": "ST-02",
+        "to": "KS-10",
+        "type": "critiques",
+        "note": "Underpowered for claimed connectivity effects",
+        "cross_paper": true,
+        "from_candidate": 33
+      },
+      {
+        "from": "ST-03",
+        "to": "KS-15",
+        "type": "critiques",
+        "note": "Topic-stratified NLP cells too sparse",
+        "cross_paper": true,
+        "from_candidate": 34
+      },
+      {
+        "from": "ST-04",
+        "to": "KS-19",
+        "type": "critiques",
+        "note": "Reporting inconsistencies (quoting/labels)",
+        "cross_paper": true,
+        "from_candidate": 35
+      },
+      {
+        "from": "ST-05",
+        "to": "KS-10",
+        "type": "critiques",
+        "note": "Exclusion/multiplicity/F-stats underspecified",
+        "cross_paper": true,
+        "from_candidate": 36
+      },
+      {
+        "from": "ST-06",
+        "to": "KS-07",
+        "type": "critiques",
+        "note": "EEG ANOVA/FDR pipeline validity",
+        "cross_paper": true,
+        "from_candidate": 37
+      },
+      {
+        "from": "ST-07",
+        "to": "KS-12",
+        "type": "critiques",
+        "note": "Fewer connections ≠ weaker engagement",
+        "cross_paper": true,
+        "from_candidate": 38
+      },
+      {
+        "from": "ST-08",
+        "to": "KS-22",
+        "type": "critiques",
+        "note": "Interview measures authorship not agency",
+        "cross_paper": true,
+        "from_candidate": 39
+      },
+      {
+        "from": "ST-08",
+        "to": "KS-21",
+        "type": "critiques",
+        "note": "Ownership self-report ≠ cognitive agency",
+        "cross_paper": true,
+        "from_candidate": 28
+      },
+      {
+        "from": "ST-09",
+        "to": "KS-30",
+        "type": "critiques",
+        "note": "Selective emphasis vs counter-patterns",
+        "cross_paper": true,
+        "from_candidate": 40
+      },
+      {
+        "from": "ST-10",
+        "to": "KS-09",
+        "type": "critiques",
+        "note": "Correct-quoting weak engagement marker",
+        "cross_paper": true,
+        "from_candidate": 41
+      },
+      {
+        "from": "ST-10",
+        "to": "KS-18",
+        "type": "critiques",
+        "note": "Quoting impairment overread as debt",
+        "cross_paper": true,
+        "from_candidate": 41
+      },
+      {
+        "from": "ST-11",
+        "to": "KS-24",
+        "type": "critiques",
+        "note": "Session-4 practice/familiarity confound",
+        "cross_paper": true,
+        "from_candidate": 42
+      },
+      {
+        "from": "ST-11",
+        "to": "KS-25",
+        "type": "critiques",
+        "note": "Crossover quoting may be practice artifact",
+        "cross_paper": true,
+        "from_candidate": 43
+      },
+      {
+        "from": "ST-13",
+        "to": "KS-36",
+        "type": "critiques",
+        "note": "Timed protocol may inflate tool reuse",
+        "cross_paper": true,
+        "from_candidate": 43
+      },
+      {
+        "from": "ST-14",
+        "to": "KS-30",
+        "type": "contradicts",
+        "note": "Attention diffs ≠ impaired learning claim",
+        "cross_paper": true,
+        "from_candidate": 44
+      },
+      {
+        "from": "ST-15",
+        "to": "KS-02",
+        "type": "contradicts",
+        "note": "Search=Brain quoting undercuts debt gradient",
+        "cross_paper": true,
+        "from_candidate": 45
+      },
+      {
+        "from": "ST-16",
+        "to": "KS-12",
+        "type": "critiques",
+        "note": "Lower connectivity ≠ reduced engagement",
+        "cross_paper": true,
+        "from_candidate": 46
+      },
+      {
+        "from": "ST-17",
+        "to": "KS-13",
+        "type": "critiques",
+        "note": "Offloading narrative needs control experiments",
+        "cross_paper": true,
+        "from_candidate": 47
+      },
+      {
+        "from": "ST-17",
+        "to": "KS-30",
+        "type": "critiques",
+        "note": "Tool-usage conclusions remain speculative",
+        "cross_paper": true,
+        "from_candidate": 47
+      },
+      {
+        "from": "KS-31",
+        "to": "ST-12",
+        "type": "motivates",
+        "note": "KS sample/power gaps motivate ST redesign",
+        "cross_paper": true,
+        "from_candidate": 48
+      },
+      {
+        "from": "ST-12",
+        "to": "KS-05",
+        "type": "extends",
+        "note": "Within-subjects + teacher scoring redesign",
+        "cross_paper": true,
+        "from_candidate": 48
+      }
+    ],
+    "rejected": [
+      {
+        "candidate": {
+          "from": "PH-17",
+          "candidate_paper": "homogenizing-growthrate",
+          "relation": "metric_neighbor",
+          "note": "Alternate diversity operationalization (growth-rate) for same homogenization claim family.",
+          "source_paper": "padmakumar-he-2024"
+        },
+        "reason": "Target paper not in batch-1 node set (no HG nodes); cannot edge."
+      },
+      {
+        "candidate": {
+          "from": "PH-26",
+          "candidate_paper": "diverse-personas-2026",
+          "relation": "lever_neighbor",
+          "note": "Persona diversity as tested mitigation vs personalization proposed here.",
+          "source_paper": "padmakumar-he-2024"
+        },
+        "reason": "Target paper not extracted in batch 1; lever-neighbor only."
+      },
+      {
+        "candidate": {
+          "from": "PH-04",
+          "candidate_paper": null,
+          "relation": "inherited_mechanism",
+          "note": "Bai et al. 2022 / Song et al. 2023 RLHF entropy/reward-collapse — not in OCR prefix map.",
+          "source_paper": "padmakumar-he-2024"
+        },
+        "reason": "Cited works outside OCR/prefix map; no graph nodes."
+      },
+      {
+        "candidate": {
+          "from": "PH-29",
+          "candidate_paper": "munoz-ortiz-2024",
+          "relation": "structure_neighbor",
+          "note": "Shallower dependency trees under InstructGPT may connect to syntax-structure papers.",
+          "source_paper": "padmakumar-he-2024"
+        },
+        "reason": "munoz-ortiz not in batch-1 nodes; speculative structure neighbor."
+      },
+      {
+        "candidate": {
+          "claim_local": "DH-20 within-condition GenAI stories more similar",
+          "candidate_papers": [
+            "padmakumar-he-2024",
+            "homogenizing-growthrate",
+            "diverse-personas-2026"
+          ],
+          "relation_guess": "same_as / extends homogenization of co-written content",
+          "note": "individual quality up + collective diversity down is sharpest split vs pure diversity-loss papers",
+          "source_paper": "doshi-hauser-2024"
+        },
+        "reason": "PH arm accepted as DH-20→PH-11; HG/DP arms rejected — papers absent from node set."
+      },
+      {
+        "candidate": {
+          "claim_local": "DH-18 GenAI equalizes low-DAT with high-DAT writers",
+          "candidate_papers": [
+            "hellstrom-2024"
+          ],
+          "relation_guess": "extends productivity literature (Noy & Zhang; Brynjolfsson) cited in-paper to creativity",
+          "note": "paper itself cites Noy/Zhang and Brynjolfsson as parallel less-able-worker gains",
+          "source_paper": "doshi-hauser-2024"
+        },
+        "reason": "hellstrom / Noy-Zhang / Brynjolfsson not in batch-1 nodes."
+      },
+      {
+        "candidate": {
+          "claim_local": "DH-24/DH-25 ownership penalty with ethical acceptance",
+          "candidate_papers": [
+            "hallmark-2024",
+            "jakesch-2023"
+          ],
+          "relation_guess": "extends authorship/credit/disclosure cluster",
+          "note": "new theme_fit ownership-credit may merge with cognitive/authorship or provenance",
+          "source_paper": "doshi-hauser-2024"
+        },
+        "reason": "hallmark absent; JK measures attitude shift not evaluator credit penalty — thematic handwave (also ≠ KS-21 self-ownership)."
+      },
+      {
+        "candidate": {
+          "claim_local": "DH-08 DAT as inherent creativity",
+          "candidate_papers": [],
+          "relation_guess": "inherited from Olson et al. 2021; not in OCR map",
+          "note": "methodological spoke only",
+          "source_paper": "doshi-hauser-2024"
+        },
+        "reason": "Olson et al. outside OCR map; methodological spoke only."
+      },
+      {
+        "candidate": {
+          "from_local": "KB-27",
+          "candidate_paper": "yakura-podcasts-2024",
+          "relation": "related_human_adoption",
+          "note": "Kobak cites Yakura et al. for LLM influence on spoken language; distinguishes slower human borrowing.",
+          "source_paper": "kobak-biomed-2025"
+        },
+        "reason": "yakura not in batch-1 nodes."
+      },
+      {
+        "candidate": {
+          "from_local": "KB-14",
+          "candidate_paper": "arxiv-shifts-2025",
+          "relation": "independent_lexical_shift",
+          "note": "Preprint-corpus lexical shift; independent of Kobak (README).",
+          "source_paper": "kobak-biomed-2025"
+        },
+        "reason": "arxiv-shifts not in batch-1 nodes."
+      },
+      {
+        "candidate": {
+          "from_local": "KB-14",
+          "candidate_paper": "pubmed-medical-vocab",
+          "relation": "domain_corroboration",
+          "note": "Matsui PubMed vocab shift; corroborating domain evidence per README.",
+          "source_paper": "kobak-biomed-2025"
+        },
+        "reason": "pubmed-medical-vocab not in batch-1 nodes."
+      },
+      {
+        "candidate": {
+          "from_local": "KB-02",
+          "candidate_paper": "detection-review-2026",
+          "relation": "shared_detector_limits",
+          "note": "Critique of labeled-corpus/blackbox detectors may connect to detection-review claims.",
+          "source_paper": "kobak-biomed-2025"
+        },
+        "reason": "detection-review not in batch-1 nodes."
+      },
+      {
+        "candidate": {
+          "note": "Do NOT link kobak-academic-2024 as independent corroboration — same study as this fragment.",
+          "source_paper": "kobak-biomed-2025"
+        },
+        "reason": "Meta-instruction honored as non-edge; correctly blocks dual corroboration of the same study."
+      },
+      {
+        "candidate": {
+          "candidate_paper": "arnold-sentiment-bias (cited, not in OCR map)",
+          "relation": "inherited prior",
+          "note": "JK-03 cites Arnold et al. sentiment bias in predictive text; connect if OCR added later.",
+          "source_paper": "jakesch-2023"
+        },
+        "reason": "Arnold et al. not in OCR/prefix map."
+      },
+      {
+        "candidate": {
+          "candidate_paper": "hellstrom-2024",
+          "relation": "framing overlap",
+          "note": "Possible link of JK-01 latent persuasion to co-writing framing papers on agency/ownership.",
+          "source_paper": "jakesch-2023"
+        },
+        "reason": "hellstrom absent from batch-1 nodes; framing-overlap only."
+      },
+      {
+        "candidate": {
+          "candidate_paper": "hallmark-2024",
+          "relation": "transparency contrast",
+          "note": "JK-18/JK-19 low awareness may tension with provenance/transparency interventions.",
+          "source_paper": "jakesch-2023"
+        },
+        "reason": "hallmark absent; hypothetical tension with unextracted transparency levers."
+      },
+      {
+        "candidate": {
+          "candidate_paper": "kobak-biomed-2025 / arxiv-shifts-2025",
+          "relation": "complementary channel",
+          "note": "JK concerns opinion content shift in writers; lexical-shift papers concern corpus vocabulary—possible joint 'model imprint' family without equating claims.",
+          "source_paper": "jakesch-2023"
+        },
+        "reason": "Would equate opinion-shift with lexical excess without shared proposition; handwavy joint family."
+      },
+      {
+        "candidate": {
+          "candidate_paper": "johnson-gpt3-values (cited)",
+          "relation": "inherited",
+          "note": "JK cites Johnson et al. on GPT-3 values aligning with dominant US opinion; relevant to JK-32 monitoring gap.",
+          "source_paper": "jakesch-2023"
+        },
+        "reason": "Johnson et al. outside OCR map."
+      },
+      {
+        "candidate": {
+          "candidate_paper": "hallmark-2024",
+          "relation": "thematic neighbor",
+          "note": "Unawareness of bias/influence may connect to provenance/transparency themes; not tested as disclosure of AI authorship here.",
+          "source_paper": "williams-ceci-2026"
+        },
+        "reason": "hallmark absent; thematic neighbor only."
+      },
+      {
+        "candidate": {
+          "local_node": "KS-23",
+          "candidate_papers": [
+            "mdpi-prisma-2026",
+            "stroke-stylometry",
+            "detection-review-2026"
+          ],
+          "note": "Human teacher detection of LLM style vs stylometry/detection literature.",
+          "source_paper": "kosmyna-2025"
+        },
+        "reason": "Stylometry/detection papers not in batch-1 nodes."
+      },
+      {
+        "candidate": {
+          "local_node": "KS-29",
+          "candidate_papers": [
+            "stankovic-2026"
+          ],
+          "note": "Delay-AI educational lever may be challenged or reframed by commentary.",
+          "source_paper": "kosmyna-2025"
+        },
+        "reason": "ST does not specifically attack delay-AI; 'may be challenged' is handwavy."
+      }
+    ],
+    "new_edges_found": [
+      {
+        "from": "ST-07",
+        "to": "ST-16",
+        "type": "same_as",
+        "note": "Near-duplicate connectivity≠engagement critiques",
+        "cross_paper": false,
+        "hunt": "merge_log ST-07/ST-16"
+      },
+      {
+        "from": "PH-34",
+        "to": "JK-31",
+        "type": "same_as",
+        "note": "Shared longitudinal/repeated-exposure gap",
+        "cross_paper": true,
+        "hunt": "merge_log gap cluster"
+      },
+      {
+        "from": "JK-31",
+        "to": "WC-30",
+        "type": "same_as",
+        "note": "Shared persistence-over-time gap",
+        "cross_paper": true,
+        "hunt": "merge_log gap cluster"
+      },
+      {
+        "from": "PH-34",
+        "to": "WC-30",
+        "type": "same_as",
+        "note": "Single-shot vs repeated dynamics gap",
+        "cross_paper": true,
+        "hunt": "merge_log gap cluster"
+      },
+      {
+        "from": "DH-22",
+        "to": "PH-13",
+        "type": "critiques",
+        "note": "Professionalization reading vs quality–diversity tradeoff",
+        "cross_paper": true,
+        "hunt": "PH↔DH individual vs collective"
+      },
+      {
+        "from": "WC-22",
+        "to": "JK-32",
+        "type": "critiques",
+        "note": "Brief warnings fail; monitoring alone may not suffice",
+        "cross_paper": true,
+        "hunt": "safeguard failure vs JK lever"
+      },
+      {
+        "from": "ST-02",
+        "to": "KS-31",
+        "type": "extends",
+        "note": "ST sharpens KS own sample-size gap",
+        "cross_paper": true,
+        "hunt": "ST power vs KS-31 admission"
+      }
+    ]
+  }
+}

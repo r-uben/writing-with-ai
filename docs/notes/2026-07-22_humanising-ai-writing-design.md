@@ -82,9 +82,47 @@ detector-evasion are the same thing — contradicting the dual-track finding).
   "meaning changed."
 - **Generation ≠ evaluation** throughout: the model applying a lever never scores its own output.
 
+## Pilot 1 results — broad, 10 genres (2026-07-22)
+
+Runs `wf_b1f72340-05d` (ws09wbduc + resume wtojc5p1w). Drafter+humaniser = GPT (gpt-terra);
+blind A/B judges = **Kimi K3** and **Grok-fast** (Gemini pro+flash access-blocked; Kimi hit
+cycle quota on the resume — so 2 judges, not 3). One concept per genre (N=1/genre).
+
+**Headline:** humanising is a robust, cross-vendor *texture* win for expository prose, with a
+genre-scaled fidelity risk.
+
+- **Overall winner: Kimi 10/10 humanised, Grok 9/10 — agree 9/10.** Not single-judge bias.
+- **The lone divergence is narrative fiction:** Grok picked baseline and flagged an *event*
+  change (lighthouse light "kept" vs "failed to return"). The "be vivid" pressure drifted a fact.
+- **Quality gain is modest:** categorical quality-winner ≈9/10 humanised, but *numeric* scores
+  rose only ~6/10 — the rest were ties broken on liveliness. Never worse (expository).
+
+**Corrections to this note's own hypotheses:**
+- **H1 (structure ⊥ quality) is REFUTED.** Both judges show structure and quality *co-move*
+  (Grok: same winner both axes 10/10). Structural humanising tracked quality here.
+- The real cost axis is **quality vs fidelity, and it is genre-conditional** — it only bit in
+  narrative fiction. Expository genres humanised cleanly.
+
+**Method lessons (block a "real" study until fixed):**
+1. **LLM judges can't measure semantic fidelity holistically** — Kimi flagged drift 5/10, Grok
+   1/10 on the *same* texts. Fidelity needs a deterministic *claim-level* check (extract
+   claims/numbers from both versions, diff), not a judge's gestalt call.
+2. **Structure vs quality may be non-separable to a judge** (GPT-sol synthesis flagged the two
+   scores aren't operationally independent). Test dissociation with *deterministic structural
+   metrics* (burstiness, dependency depth), not `structural_winner`.
+3. Both surviving judges may share a "prefer punchy" bias — need a non-flourish-rewarding
+   evaluator (human panel, or the taste-graph move-diversity metric) to be sure.
+
+**Caveats:** N=1/genre; baseline and humanised are both GPT (self-rewrite, not human-vs-AI);
+detector axis (E3) and human panel (E4) not run.
+
 ## Next actions
 
-- [ ] Confirm the L1 pilot scope (which concepts, which model families).
-- [ ] Build the pilot workflow (generate → L1 → cross-vendor score on 5 axes).
+- [ ] **Retarget Pilot 2 to academic/econ intros** (MS/FF/NS-class), not more generic genres —
+      claim-level fidelity + structural metrics; ≥3 concepts. Aligns with ultimate goal:
+      AI writing that resembles economist/academic prose (`STATUS.md` 2026-07-22 revision).
 - [ ] Corroborate the tail-move discriminator on FF/NS *before* over-claiming it as human-only
-      (also unblocks the deferred S8 question in the evidence map).
+      (also unblocks the deferred S8 question in the evidence map). **In progress:** FF/NS AI
+      taste probes 2026-07-22.
+- [ ] Fold the "humanising is a texture win with genre-scaled fidelity risk" finding into the
+      evidence map once replicated **on academic register**.
