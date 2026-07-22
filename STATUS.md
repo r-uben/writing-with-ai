@@ -1,22 +1,16 @@
 # Status
 
-**Last updated:** 2026-07-22 (apply Case-1 levers to FF/NS; Pangram as secondary signal)
+**Last updated:** 2026-07-22 (Cases 3–10 P7 revises ready to check)
 
 ## Stage
 
-Case 1: AI-generated CS opener → P7 revise → Pangram *assisted* (softer than origin).
-**Positive use:** re-apply those taste levers on new cells; Pangram optional corroboration.
-**Not:** detector target in `skill/SKILL.md`.
+Eight more AI→P7 revise examples ready (FF×3 voices, NS×3 voices, Morris–Shin, full MP Kimi).
+Case 1 already showed softer Pangram after P7 on still-AI text. Case 2 needs your human seed.
 
-Protocol: `docs/notes/taste-probes/2026-07-22_register-revise-learning-loop.md`
-
-## Live thread
-
-- `/writing` + P7; Cases **3 (FF)** and **4 (NS)** revises ready for your taste + optional Pangram.
-- Case **2** still needs a human seed paste.
+Index: `docs/notes/taste-probes/2026-07-22_more-p7-examples-pack.md`
 
 ## Next action
 
-1. Taste-check Case 3 / 4 (`…-case3-ff-p7-revise.md`, `…-case4-ns-p7-revise.md`); run Pangram if you want the secondary signal.
-2. Paste a human seed for Case 2 (priority craft test).
-3. Log results in `…-register-revise-case-log.md`; fold new kills into author-antislop → P7.
+1. Taste-check Cases 3–10; optional Pangram on each; log in case-log.
+2. Paste human seed for Case 2.
+3. Fold recurring kills into `author-antislop-hits` → P7.

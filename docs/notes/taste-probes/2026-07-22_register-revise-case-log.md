@@ -1,30 +1,25 @@
 # Register-revise case log
 
-Protocol: `2026-07-22_register-revise-learning-loop.md`
+Protocol: `2026-07-22_register-revise-learning-loop.md`  
+Pack index: `2026-07-22_more-p7-examples-pack.md`
 
 ## Case 1 — MP / CS opener — 2026-07-22
 
-- Origin (tokens): AI-generated
-- Pangram: moderately AI assisted ; vs origin: **softer**
-- Levers applied: P7 metaphors, tour-guide bridges, bare market forwards, metronome
-- Author taste: improved; further residue possible
-- Skill update: P7 extended (yes)
-- Next: Cases 3–4 ready; Case 2 needs human paste
+- Origin: AI-generated · Pangram: moderately AI assisted (**softer**)
+- Levers: P7 metaphors, tour-guide, bare market forwards, metronome
+- Skill update: P7 extended
 
-## Case 2 — Human seed — blocked
+## Case 2 — Human seed — blocked (needs paste)
 
-- Paste author paragraph here when available.
+## Cases 3–10 — ready for author taste (+ optional Pangram)
 
-## Case 3 — FF P7 revise — 2026-07-22 (awaiting author)
-
-- Origin: AI-generated
-- File: `2026-07-22_case3-ff-p7-revise.md`
-- Pangram: TBD
-- Author taste: TBD
-
-## Case 4 — NS P7 revise — 2026-07-22 (awaiting author)
-
-- Origin: AI-generated
-- File: `2026-07-22_case4-ns-p7-revise.md`
-- Pangram: TBD
-- Author taste: TBD
+| Case | File | Origin | Taste | Pangram |
+|---|---|---|---|---|
+| 3 FF primary | `…-case3-ff-p7-revise.md` | AI-gen | TBD | TBD |
+| 4 NS grok | `…-case4-ns-p7-revise.md` | AI-gen | TBD | TBD |
+| 5 FF gpt | `…-case5-ff-gpt-p7-revise.md` | AI-gen | TBD | TBD |
+| 6 FF terse | `…-case6-ff-terse-p7-revise.md` | AI-gen | TBD | TBD |
+| 7 NS gpt | `…-case7-ns-gpt-p7-revise.md` | AI-gen | TBD | TBD |
+| 8 NS terse | `…-case8-ns-terse-p7-revise.md` | AI-gen | TBD | TBD |
+| 9 Morris–Shin | `…-case9-morris-shin-p7-revise.md` | AI-gen | TBD | TBD |
+| 10 MP Kimi full | `…-case10-mp-kimi-p7-revise.md` | AI-gen | TBD | TBD |
