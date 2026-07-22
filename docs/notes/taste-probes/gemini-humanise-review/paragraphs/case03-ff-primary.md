@@ -1,0 +1,7 @@
+# case03-ff-primary
+
+Textbooks in corporate finance stress that cash flows are uncertain. They say far less about the discount rate: once a pricing model is picked, the cost of equity is treated as a known input. It is not. Industry estimates under both the CAPM and the Fama–French three-factor model typically have standard errors above 3 percent per year. That figure is the applied stake of the paper, not a side remark.
+
+Model choice does not restore a precise industry rate. The CAPM is the default and remains contested; the three-factor model improves in-sample fit but rests on empirical motivation rather than a settled theoretical claim. At the industry level, both leave wide uncertainty bands. The noise has two layers that compound: uncertainty in the factor risk premia themselves, and imprecision in industry loadings on those factors. Drop either and the bands shrink; keep both and they remain wide. Textbook practice that treats model choice as the hard step and estimation as a secondary detail reverses the constraint that binds for applied work.
+
+That matters for practice. Industry costs of equity already carry more than 3 percent annual standard error. Firm and project rates inherit that noise and add their own. NPV calculations that treat the discount rate as known therefore overstate how sharp the answer can be, unless estimation risk enters the decision rather than being ignored after the rate is plugged in.
