@@ -112,6 +112,15 @@ The drafting model must not be the sole reviewer of its own draft (project chart
 2. Hand that file to an independent judge — reuse the Antigravity/Gemini path (Review Mode, Step 3) against the 20 rules. Optionally run deterministic linguistic metrics first.
 3. `--no-gemini` disables this; warn that draft mode then has no independent check. If `agy` fails, say so and do not pretend D6 passed.
 
+### Step D7: Optional AI-slop pass (`no-ai-slop`)
+
+After D6, offer a second pass with the installed `/no-ai-slop` skill (detect or edit) for generic AI voice patterns. Do not run it automatically. If the author accepts:
+
+- Prefer **detect** first on academic drafts, then edit only flagged lines.
+- **P2 still wins:** do not re-introduce epistemic hedges that this skill banned.
+- Domain anti-slop (`upstream`, *tape*, *looks like policy*, etc.) stays author/taste — not covered by upstream no-ai-slop.
+- Not a Pangram / detector objective.
+
 ### Draft Mode output
 
 ```
@@ -128,6 +137,9 @@ The drafting model must not be the sole reviewer of its own draft (project chart
 
 ### Independent review
 [judge's issues + rewrites, or "skipped (--no-gemini) — no independent check"]
+
+### Optional next
+Offer `/no-ai-slop` detect (or edit) on the draft — see Step D7.
 ```
 
 ## Review Mode Execution
