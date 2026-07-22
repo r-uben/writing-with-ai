@@ -1,22 +1,23 @@
 # Status
 
-**Last updated:** 2026-07-22 (`no-ai-slop` installed + writing skill D7 handoff)
+**Last updated:** 2026-07-22 (anti-slop consolidated into `/writing`; P7; no separate no-ai-slop)
 
 ## Stage
 
-Branch `setup/initial-structure`. **Repo skill** has Step D7 → `/no-ai-slop`; synced to
-`~/.config/ai-skills/writing/SKILL.md` (byte-identical; sha256 `2dfeb87b…`).
+Branch `cursor/cloud-agent-1784755866448-erbal` (cloud). Single craft skill: `skill/SKILL.md`
+includes curated anti-slop + **P7**. D7 `/no-ai-slop` handoff removed. Synced on this host to
+`~/.config/ai-skills/writing/SKILL.md` (sha256 `f4e17045…`). Author Mac may still need
+uninstall of any leftover `no-ai-slop` + resync from this branch.
 
 **Ultimate goal:** AI draft/revise in economist/academic register for real paper work.
 
 ## Live thread — taste + skill (MAIN LINE)
 
-- **P1–P5 confirmed** in `docs/notes/taste-profile.md`; encoded in `skill/SKILL.md`.
-- **P6 (enumerated-gaps) REJECTED** — author cares about epistemic hedges, not longer First/Second lists.
-- **P2 tightened (2026-07-22):** ban *to our knowledge* / *as far as we know* / *to the best of our
-  knowledge* / soft *at least…*; keep numeric lower bounds (*at least 3%*). D3 + D4(h) in repo skill.
-- **`no-ai-slop` installed** (upstream petergyang/no-ai-slop → `~/.config/ai-skills/no-ai-slop`,
-  Claude symlink). See `COMPAT.md` there: second pass only; P2 wins on hedges.
+- **P1–P5 confirmed**; **P6 rejected**; **P2 hedge ban**; **P7** econ anti-slop (see
+  `docs/notes/taste-profile.md`).
+- Anti-slop lives in D3 checklist + D4(i); provenance
+  `docs/notes/2026-07-22_anti-slop-consolidation.md`.
+- Separate `/no-ai-slop` retired for this craft line (uninstall on author machine if still present).
 
 ## Parked
 
@@ -25,5 +26,6 @@ Branch `setup/initial-structure`. **Repo skill** has Step D7 → `/no-ai-slop`; 
 
 ## Next action
 
-Prefer hybrid: human seed → writing revise → `/no-ai-slop` detect.
-Optional: run `/no-ai-slop` detect on MP belief v3 draft. No commit unless you ask.
+1. On author machine: uninstall `~/.config/ai-skills/no-ai-slop` + Claude symlink; sync
+   `skill/SKILL.md` → `~/.config/ai-skills/writing/SKILL.md` after approving this change.
+2. Prefer hybrid: human seed → `/writing` revise (anti-slop + P7 in-skill).

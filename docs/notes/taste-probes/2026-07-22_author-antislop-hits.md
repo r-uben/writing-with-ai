@@ -14,4 +14,4 @@ draft/revise passes (not as a Pangram target).
 | “standard model object” | weird noun pile even if parseable | “responses closer to a textbook monetary shock” (or similar) |
 | “not only an econometric nuisance” | hard reject — pure slop | Cut the whole rhetorical move; just turn to the theory paper |
 
-**Implied rule (candidate, not yet P-numbered):** ban cute method metaphors (*upstream*, *tape*, *nuisance*, *object*) and ban “looks like policy” shorthand; prefer identification language economists actually write.
+**Implied rule:** **P7** in `docs/notes/taste-profile.md` — ban cute method metaphors (*upstream*, *tape*, *nuisance*, *object*) and ban “looks like policy” shorthand; prefer identification language economists actually write. Encoded in `skill/SKILL.md` anti-slop checklist.
