@@ -1,33 +1,29 @@
 # Status
 
-**Last updated:** 2026-07-22 (anti-slop consolidated into `/writing`; P7; no separate no-ai-slop)
+**Last updated:** 2026-07-22 (register-revise learning loop; multi-case next)
 
 ## Stage
 
-Branch `cursor/cloud-agent-1784755866448-erbal` (cloud). Single craft skill: `skill/SKILL.md`
-includes curated anti-slop + **P7**. D7 `/no-ai-slop` handoff removed. Synced on this host to
-`~/.config/ai-skills/writing/SKILL.md` (sha256 `f4e17045…`). Author Mac may still need
-uninstall of any leftover `no-ai-slop` + resync from this branch.
+Branch `cursor/cloud-agent-1784755866448-erbal`. Single skill `/writing` with anti-slop + **P7**.
+Latest CS opener is **AI-assisted by construction**; Pangram *moderately AI assisted* matches
+that provenance — not a human-text claim. Protocol:
+`docs/notes/taste-probes/2026-07-22_register-revise-learning-loop.md`.
 
 **Ultimate goal:** AI draft/revise in economist/academic register for real paper work.
 
 ## Live thread — taste + skill (MAIN LINE)
 
-- **P1–P5 confirmed**; **P6 rejected**; **P2 hedge ban**; **P7** econ anti-slop (see
-  `docs/notes/taste-profile.md`).
-- Anti-slop lives in D3 checklist + D4(i); provenance
-  `docs/notes/2026-07-22_anti-slop-consolidation.md`.
-- Separate `/no-ai-slop` retired for this craft line (uninstall on author machine if still present).
+- **P1–P5**; **P6 rejected**; **P2** hedges; **P7** econ anti-slop (growing from author kills).
+- Learning loop: tag cell type → taste pass → fold kills into P7 → optional Pangram note.
+- Do **not** steer the skill at Pangram.
 
 ## Parked
 
-- Q2 individual-vs-collective pilot; idea-graph is archive only.
-- S8 / rhetorical-question-pivot change (still frozen).
+- Q2 / idea-graph archive; S8 RQP frozen; separate `no-ai-slop` retired.
 
 ## Next action
 
-1. On author machine: uninstall leftover `no-ai-slop`; sync `skill/SKILL.md`.
-2. Prefer hybrid: human seed → `/writing` revise (fairer than full-AI cells).
-3. Worked example: `docs/notes/taste-probes/2026-07-22_anti-slop-worked-example.md`.
-4. Pangram note (not a skill target): after P7 rewrite, author saw *moderately AI assisted*
-   / not AI-generated — `docs/notes/taste-probes/2026-07-22_pangram-observation-p7-rewrite.md`.
+1. **Case 2 (priority):** paste a human seed paragraph → `/writing` revise → log with template
+   in the learning-loop note (taste first; Pangram optional).
+2. Then Cases 3–4: FF and NS paragraphs under the same protocol.
+3. Author Mac: uninstall leftover `no-ai-slop`; sync `skill/SKILL.md` from this branch.
