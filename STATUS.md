@@ -27,5 +27,7 @@ uninstall of any leftover `no-ai-slop` + resync from this branch.
 ## Next action
 
 1. On author machine: uninstall leftover `no-ai-slop`; sync `skill/SKILL.md`.
-2. Prefer hybrid: human seed → `/writing` revise.
-3. Worked example of anti-slop+P7: `docs/notes/taste-probes/2026-07-22_anti-slop-worked-example.md`.
+2. Prefer hybrid: human seed → `/writing` revise (fairer than full-AI cells).
+3. Worked example: `docs/notes/taste-probes/2026-07-22_anti-slop-worked-example.md`.
+4. Pangram note (not a skill target): after P7 rewrite, author saw *moderately AI assisted*
+   / not AI-generated — `docs/notes/taste-probes/2026-07-22_pangram-observation-p7-rewrite.md`.
