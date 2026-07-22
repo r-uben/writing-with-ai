@@ -1,23 +1,31 @@
 # Pangram observation — MP belief after P7 rewrite (2026-07-22)
 
-**Text:** Caballero–Simsek opener after cutting *theory side* / bare *market forwards*
-(see `2026-07-22_anti-slop-worked-example.md`, `…-draft-v3.md`).
+**Text:** Caballero–Simsek opener after P7 cuts (*theory side*, bare *market forwards*, etc.).
+Files: `2026-07-22_anti-slop-worked-example.md`, `…-draft-v3.md`.
 
-**Provenance (load-bearing):** this paragraph is **AI-assisted** — a machine rewrite of
-earlier AI prose under the writing skill / P7. It is not unaided human writing.
+## True provenance (this cell)
 
-**Author-reported Pangram:** *moderately AI assisted*, 100% text; **not** AI generated.
+**AI-generated text.** The paragraph body is machine tokens: an AI rewrite of earlier AI
+prose. No human-authored sentences were mixed into the cell. Author input was *selection /
+taste flags / instructions*, not prose in the scored string.
 
-**Contrast:** earlier full AI drafts of the same synthesis (Kimi / antislop) were reported
-**100% AI**.
+So: **origin = AI-generated** (fully machine text in the Pangram window).
 
-## Reading
+## What Pangram said
 
-- Label matches cell type: AI-revise-of-AI → “AI assisted” is the honest class.
-- Taste pass (P7) changed texture vs full-AI draft; Pangram moved with it on this one cell.
-- Still **not** a skill win condition and **not** an evasion claim.
+Author-reported: *moderately AI assisted*, 100% text; **not** labeled AI generated.
 
-**Follow-on:** multi-case learning loop and next trials —
-`2026-07-22_register-revise-learning-loop.md`.
+**Contrast:** earlier full-AI drafts of the same synthesis (Kimi / antislop) → **100% AI**.
 
-Do not encode detector targets in `skill/SKILL.md`.
+## Correct reading
+
+- Pangram’s “assisted” label is **softer than true origin** on this cell. We did **not**
+  produce human or honestly hybrid prose and then get a matching score.
+- A taste/register pass (P7) moved the detector class without changing the fact that the
+  text is machine-written. That is a **detector-boundary observation** (dual-track /
+  characterization), not a craft success and not something to aim the skill at.
+- Do **not** say “the label matches provenance” for this cell — it doesn’t.
+
+**Follow-on:** `2026-07-22_register-revise-learning-loop.md` (corrected).
+
+Do not encode detector targets in `skill/SKILL.md`. Do not ship an evader.

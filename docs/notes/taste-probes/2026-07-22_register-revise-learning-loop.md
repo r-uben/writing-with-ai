@@ -1,66 +1,62 @@
 # Learning loop — register revise + secondary Pangram note (2026-07-22)
 
-## What is true about the latest paragraph
+## Correction (load-bearing)
 
-**Provenance:** the CS opener in `…-draft-v3.md` / the worked example is **AI-assisted**
-(machine rewrite under `/writing` + P7). It is not human-unaided prose.
+The revised CS opener is **AI-generated text** (machine rewrite of machine prose; no human
+tokens in the scored paragraph). Pangram called it *moderately AI assisted*.
 
-So Pangram’s *moderately AI assisted* / not *AI generated* matches that provenance. It is
-**not** a claim that we produced human text. Earlier cells that were full AI drafts from a
-clean outline were reported **100% AI** — different cell type, different label.
+That means we **moved Pangram’s class** while origin stayed machine-written — a detector
+soft-label / boundary fact. It is **not** “provenance matched the score,” and it is **not**
+a reason to tune `/writing` for Pangram.
 
-| Cell type | What we did | Honest label |
-|---|---|---|
-| Full AI draft | outline → model prose | AI-generated (expected) |
-| AI revise of AI | P7/anti-slop on AI prose | AI-assisted (this case) |
-| Human seed → AI revise | author paste → `/writing` | AI-assisted (target test) |
+| Cell type | Tokens in the window | Honest origin | Pangram (this run) |
+|---|---|---|---|
+| Full AI draft | model | AI-generated | 100% AI (earlier) |
+| AI revise of AI (this case) | model | AI-generated | said “assisted” ← softer than origin |
+| Human seed → AI revise | mix | AI-assisted (honest) | TBD — fair craft test |
 
 ## What to improve for next time
 
-1. **Always tag the cell type** before any Pangram paste (table above). Never compare a
-   full-AI score to an AI-revise score as if they were the same experiment.
-2. **Primary success = author taste** (P1–P5, P7 hits). Log which phrases the author kills;
-   fold survivors into P7 / anti-slop checklist the same day.
-3. **Pangram is secondary annotation only** — record label + cell type; do **not** change
-   `skill/SKILL.md` to chase a detector class. Dual-track still holds.
-4. **Prefer human seed next.** Paste rough econ prose → `/writing --draft` or review-style
-   revise → author taste pass → optional Pangram note.
-5. **Multi-case, same protocol** (below) so one lucky CS paragraph does not overfit P7.
+1. **Tag origin separately from Pangram.** Origin = who wrote the tokens. Pangram = what
+   the detector said. Never equate them after a rewrite pass.
+2. **Primary success = author taste** (P1–P5, P7). Log kills; fold into P7 if they recur.
+3. **Pangram is secondary characterization only.** If a taste pass moves the label on still-
+   machine text, log it as boundary evidence — do **not** change the skill to reproduce it.
+4. **Prefer human seed next** so “AI assisted” can be *true* of the cell, not a detector
+   under-call on pure AI text.
+5. **Multi-case, same protocol** so one CS paragraph does not overfit P7 or the detector.
 
-## Skill deltas already taken from this loop
+## Skill deltas already taken (taste only)
 
-From author kills on MP synthesis → **P7** in `taste-profile.md` + D3/D4(i):
-*upstream*, *tape*, “looks like policy,” *econometric nuisance*, *standard model object*,
-tour-guide bridges (*theory side* / *other direction*), bare *market forwards*.
+Author kills → **P7** / D3–D4(i): *upstream*, *tape*, “looks like policy,” *econometric
+nuisance*, *standard model object*, tour-guide bridges, bare *market forwards*.
 
-Next kills go in `2026-07-22_author-antislop-hits.md` first, then P7 if they recur.
+Next kills → `2026-07-22_author-antislop-hits.md`, then P7 if they recur. **No Pangram
+levers in the skill.**
 
-## Multi-case plan (try next)
+## Multi-case plan
 
-Run the **same log template** for each case. Stop after 3–4 cells or when P7 stops growing.
-
-| # | Case | Seed | Pass | Taste (author) | Pangram (optional) | Cell type |
+| # | Case | Seed | Pass | Taste (author) | Origin | Pangram (optional) |
 |---|---|---|---|---|---|---|
-| 1 | MP / CS opener (done) | AI draft | P7 revise | better; still some residue | moderately AI assisted | AI revise of AI |
-| 2 | **Human seed** (priority) | author paste, any paper ¶ | `/writing` revise | TBD | TBD | human→AI |
-| 3 | FF intro / related-work ¶ | human or AI probe | `/writing` | TBD | TBD | tag |
-| 4 | NS identification ¶ | human or AI probe | `/writing` | TBD | TBD | tag |
-| 5 | Second two-paper synthesis (different field) | outline or human | `/writing` | TBD | TBD | tag |
+| 1 | MP / CS opener (done) | AI draft | P7 revise | better; residue remains | AI-generated | said “assisted” (under-call) |
+| 2 | **Human seed** (priority) | author paste | `/writing` | TBD | hybrid | TBD |
+| 3 | FF ¶ | human or AI | `/writing` | TBD | tag | TBD |
+| 4 | NS ¶ | human or AI | `/writing` | TBD | tag | TBD |
+| 5 | Other two-paper synthesis | outline or human | `/writing` | TBD | tag | TBD |
 
-### Log template (copy per case)
+### Log template
 
 ```
 ## Case: [name] — [date]
-- Cell type: full-AI | AI-revise-of-AI | human→AI
-- Seed file / paste:
-- Skill pass: (D3/D4 / review)
-- Author taste: keep / kill phrases:
-- Skill update?: Y/N → P7 or hits note
-- Pangram (optional): label= ; note cell type
+- Origin (tokens): AI-generated | hybrid human+AI | human-only
+- Pangram (optional): label= ; vs origin: match | softer | harder
+- Seed / pass:
+- Author taste kills:
+- Skill update (taste only)?: Y/N
 - Next:
 ```
 
 ## Non-goals
 
-- Do not treat “not AI generated” as a shipping criterion.
-- Do not reopen detector-evasion tracks as skill work.
+- Do not treat “not AI generated” / “assisted” as a shipping criterion when tokens are AI.
+- Do not reopen detector-evasion as skill work; Track R stays research-only if revisited.

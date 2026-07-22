@@ -1,29 +1,28 @@
 # Status
 
-**Last updated:** 2026-07-22 (register-revise learning loop; multi-case next)
+**Last updated:** 2026-07-22 (correct Pangram reading: under-call on AI-generated cell)
 
 ## Stage
 
-Branch `cursor/cloud-agent-1784755866448-erbal`. Single skill `/writing` with anti-slop + **P7**.
-Latest CS opener is **AI-assisted by construction**; Pangram *moderately AI assisted* matches
-that provenance — not a human-text claim. Protocol:
-`docs/notes/taste-probes/2026-07-22_register-revise-learning-loop.md`.
+Branch `cursor/cloud-agent-1784755866448-erbal`. `/writing` + **P7** for taste/register.
+P7 rewrite of the CS opener is still **AI-generated tokens**; Pangram said *assisted* —
+softer than origin. Logged as detector-boundary observation, **not** a skill target.
+See `docs/notes/taste-probes/2026-07-22_register-revise-learning-loop.md`.
 
 **Ultimate goal:** AI draft/revise in economist/academic register for real paper work.
 
 ## Live thread — taste + skill (MAIN LINE)
 
-- **P1–P5**; **P6 rejected**; **P2** hedges; **P7** econ anti-slop (growing from author kills).
-- Learning loop: tag cell type → taste pass → fold kills into P7 → optional Pangram note.
+- **P1–P5**; **P6 rejected**; **P2**; **P7** (author kills only).
+- Learning loop: origin ≠ Pangram; taste first; optional detector note as characterization.
 - Do **not** steer the skill at Pangram.
 
 ## Parked
 
-- Q2 / idea-graph archive; S8 RQP frozen; separate `no-ai-slop` retired.
+- Q2 / idea-graph; S8 RQP; separate `no-ai-slop`.
 
 ## Next action
 
-1. **Case 2 (priority):** paste a human seed paragraph → `/writing` revise → log with template
-   in the learning-loop note (taste first; Pangram optional).
-2. Then Cases 3–4: FF and NS paragraphs under the same protocol.
-3. Author Mac: uninstall leftover `no-ai-slop`; sync `skill/SKILL.md` from this branch.
+1. **Case 2:** paste human seed → `/writing` revise → log origin + taste (+ optional Pangram).
+2. Then FF / NS under the same template.
+3. Author Mac: sync `skill/SKILL.md`; uninstall leftover `no-ai-slop` if any.
