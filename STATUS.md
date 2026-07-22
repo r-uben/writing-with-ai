@@ -26,6 +26,6 @@ uninstall of any leftover `no-ai-slop` + resync from this branch.
 
 ## Next action
 
-1. On author machine: uninstall `~/.config/ai-skills/no-ai-slop` + Claude symlink; sync
-   `skill/SKILL.md` → `~/.config/ai-skills/writing/SKILL.md` after approving this change.
-2. Prefer hybrid: human seed → `/writing` revise (anti-slop + P7 in-skill).
+1. On author machine: uninstall leftover `no-ai-slop`; sync `skill/SKILL.md`.
+2. Prefer hybrid: human seed → `/writing` revise.
+3. Worked example of anti-slop+P7: `docs/notes/taste-probes/2026-07-22_anti-slop-worked-example.md`.
