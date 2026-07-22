@@ -27,7 +27,7 @@
 
 - **P6 (enumerated gaps) — REJECTED 2026-07-22.** Author does not want a rule that lengthens First/Second lists or chases “at least N problems.” The live concern under certainty is epistemic hedges (*to our knowledge…*, soft *at least…*), handled under **P2**, not a separate enumeration mandate.
 
-- **P7 (econ anti-slop / register fakes): ban cute method metaphors and register fakes; prefer plain identification language.** From author flags on the MP belief synthesis drafts (`docs/notes/taste-probes/2026-07-22_author-antislop-hits.md`): *upstream*, *tape*, “looks like policy,” “econometric nuisance,” “standard model object,” plus metronomic short-sentence stacks already covered by P1/S2. Encoded in D3 anti-slop checklist + D4(i). **Confirmed 2026-07-22** (author hits → skill consolidation).
+- **P7 (econ anti-slop / register fakes): ban cute method metaphors and register fakes; prefer plain identification language.** From author flags on the MP belief synthesis drafts (`docs/notes/taste-probes/2026-07-22_author-antislop-hits.md`): *upstream*, *tape*, “looks like policy,” “econometric nuisance,” “standard model object,” tour-guide bridges (*from the theory side* / *from the other direction*), bare *market forwards* (prefer *policy path priced in futures*), plus metronomic short-sentence stacks already covered by P1/S2. Encoded in D3 anti-slop checklist + D4(i). **Confirmed 2026-07-22** (author hits → skill consolidation; extended same day).
 
 ---
 

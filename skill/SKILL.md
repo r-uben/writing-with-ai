@@ -110,7 +110,7 @@ Curated from generic AI-slop editors (provenance: `docs/notes/2026-07-22_anti-sl
 - **Synonym cycling:** don’t rotate agent/model/tool for style; repeat the clear term.
 - **Negative listing / dramatic fragments:** “Not X. Not Y. A Z.” / “X. And Y. And Z.” → say Z in complete sentences.
 - **Robotic metronome:** stacked same-shape punchy shorts (beyond a deliberate P1 pivot) → vary clause length (S2).
-- **P7 (econ register):** ban cute method metaphors and register fakes — *upstream*, *tape*, “looks like policy,” “econometric nuisance,” “standard model object.” Prefer plain identification language economists actually write.
+- **P7 (econ register):** ban cute method metaphors and register fakes — *upstream*, *tape*, “looks like policy,” “econometric nuisance,” “standard model object,” tour-guide bridges (*from the theory side* / *from the other direction*), bare *market forwards* (prefer *policy path priced in futures*). Prefer plain identification language economists actually write.
 
 ### Step D4: Self-critique + one revision (TICL-style)
 
