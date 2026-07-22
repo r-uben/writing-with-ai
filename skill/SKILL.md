@@ -1,6 +1,6 @@
 ---
 name: writing
-description: Draft or review academic LaTeX prose against a codified style profile. Review mode: Claude critiques, Antigravity/Gemini gives a parallel second opinion, output synthesizes concrete rewrites. Draft mode (--draft): turns a human-supplied idea/outline into near-final prose in a strong academic register, self-critiques against the 20 rules and measured AI-tells, and hands off to an independent judge. Use when the user wants to draft or tighten academic writing from a concept, review a LaTeX paper, or types /writing.
+description: Draft or review academic LaTeX prose against a codified style profile, including curated academic anti-slop (no separate slop skill). Review mode: Claude critiques, Antigravity/Gemini gives a parallel second opinion, output synthesizes concrete rewrites. Draft mode (--draft): turns a human-supplied idea/outline into near-final prose in a strong academic register, self-critiques against the 20 rules, measured AI-tells, and author taste P1–P5/P7, and hands off to an independent judge. Use when the user wants to draft or tighten academic writing from a concept, review a LaTeX paper, or types /writing.
 ---
 
 # Writing
@@ -81,8 +81,9 @@ Expand the concept into a one-line-per-paragraph outline where each line states 
 Draft prose from the confirmed outline in a strong academic register (`--venue` default: generic strong-academic; `AER` → flowing-prose economics style). Apply these rules **at generation time**, not as an afterthought:
 
 - **S2 / burstiness**: deliberately vary sentence length. No runs of same-length sentences; place at least one very short declarative sentence at an argumentative pivot ("It tightens.") — variance follows from that move; don't chase a numeric target.
-- **Excess-vocabulary ban**: avoid the measured tell-register. Treat this as *examples of a register to avoid*, not a fixed blocklist (the specific words date as models are steered off them). Avoid: *delve, underscore, showcase, intricate, meticulous(ly), pivotal, realm, tapestry, testament, nuanced, crucial, comprehensive*; formal-connector overuse: *furthermore, moreover, additionally, notably, it is worth noting, importantly*. The durable rule is: flat, uniformly-flowery register is the tell — write plainly and variably instead.
+- **Excess-vocabulary ban**: avoid the measured tell-register. Treat this as *examples of a register to avoid*, not a fixed blocklist (the specific words date as models are steered off them). Avoid: *delve, underscore, showcase, intricate, meticulous(ly), pivotal, realm, tapestry, testament, nuanced, crucial, comprehensive, foster, leverage, utilize, facilitate, empower, streamline, robust, cutting-edge, paradigm, transformative, elevate, embark, harness, multifaceted*; formal-connector overuse: *furthermore, moreover, additionally, notably, it is worth noting, importantly*. The durable rule is: flat, uniformly-flowery register is the tell — write plainly and variably instead.
 - **Stock-register test**: stock academic phrases are slop even when off any tell list ("do the heavy lifting", "in the classic sense", "the standard prescription"). If a phrase could appear unchanged in a hundred other papers, replace it.
+- **Anti-slop (academic):** cut generic AI voice moves that survive the excess-vocab ban — see checklist below. Also apply **P7** (econ register fakes).
 - **Argument-carried transitions**: the logic of adjacent sentences carries the turn; do not scaffold with *therefore/thus/yet/hence* where the content already turns.
 - **S4/S5/S10/S11/S16**: no filler, conclusion-first, confident not arrogant. Ban apologetic wool on ordinary claims (**P2**). Include epistemic throat-clear: *to our knowledge*, *as far as we know*, *to the best of our knowledge*, *as far as we are aware*, and soft *at least* (“we can at least say…”, “this at least suggests…”) — rewrite as a flat claim or a named P3 limit. Do **not** ban quantitative lower bounds (“standard errors of at least 3%”). **P3 exception:** when stating a *genuine* identification or scope limit the human flagged, prefer explicit caution that names what cannot be delivered (Q3=B) — not punchy telegraphic denial (“The size is not.”) as the default. Do not use limit-caution as cover for soft claims elsewhere. The memorable formulation must compress the argument's mechanism itself — decorative symmetry that could caption any argument gets cut. First-person: follow S12 from authorship context (solo → "I"; coauthored → "we"), not a baked-in solo assumption.
 - **S6/S7**: anchor claims to the human-supplied numbers; label uncertainty the human flagged (P3 voice for real limits). Never fabricate a figure to satisfy S6 — if a claim needs a number the human did not supply, insert `[VERIFY: description]` **inline in the prose** at that point (do not invent a plausible value). Placeholders flow into D5 automatically.
@@ -97,9 +98,24 @@ Draft prose from the confirmed outline in a strong academic register (`--venue` 
 - **Weld the number into the claim sentence.** Good: "the multiplier is 1.4 at 8 quarters and 1.1 at 16" (Ramey). Not: "the effect is large and persistent."
 - **Instantiate before generalizing.** Run one concrete scenario through the mechanism ("Concretely, suppose…", Caballero & Simsek) before stating the general result.
 
+### Anti-slop (academic) — generation + critique checklist
+
+Curated from generic AI-slop editors (provenance: `docs/notes/2026-07-22_anti-slop-consolidation.md`) plus author econ hits (**P7**). Not a detector objective; not a second skill. **P2 still bans** soft epistemic hedges — do not re-introduce “I think / maybe / to be honest” as voice.
+
+- **Binary contrasts:** “This is not X. It’s Y.” / “The question isn’t X, it’s Y.” → state Y directly.
+- **Throat-clearing / faux-insight:** “Here’s the thing,” “What most people get wrong,” “The part everyone misses.” → cut setup; make the claim.
+- **Colon-reveal drama:** “The detail that makes it work: a separate agent grades it.” → plain sentence; keep colons for lists/labels.
+- **Importance puffery / superficial `-ing` clauses:** “marks a pivotal moment,” “highlighting/underscoring/showcasing….” → state the fact; explain with a mechanism or number.
+- **Weasel attribution:** “studies show,” “experts agree” without a cite → name the source or cut.
+- **Synonym cycling:** don’t rotate agent/model/tool for style; repeat the clear term.
+- **Negative listing / dramatic fragments:** “Not X. Not Y. A Z.” / “X. And Y. And Z.” → say Z in complete sentences.
+- **Robotic metronome:** stacked same-shape punchy shorts (beyond a deliberate P1 pivot) → vary clause length (S2).
+- **P7 (econ register):** ban cute method metaphors and register fakes — *upstream*, *tape*, “looks like policy,” “econometric nuisance,” “standard model object,” tour-guide bridges (*from the theory side* / *from the other direction*), bare *market forwards* (prefer *policy path priced in futures*). Prefer plain identification language economists actually write.
+
 ### Step D4: Self-critique + one revision (TICL-style)
 
-Critique the draft against the 20 rules, anti-tell register, and author taste **P1–P5** (`docs/notes/taste-profile.md`). For each weak passage, name *what* it drifts toward and *why*, then rewrite once. Targeted passes: (a) **stock-register hunt**; (b) **connector strip**; (c) **memorable-line test**; (d) **declarative-then-justify**; (e) **limit voice (P3)** — genuine limits stated with clear caution naming the missing object, not punchy denial-by-default and not wool on non-limits; (f) **opening (P4)** — cut stock big-Q; keep concrete fact or real setup as context demands; (g) **citation work (P5)** — for each cluster, either each source earns a clause or the stack is honestly ancillary; (h) **epistemic-hedge hunt (P2)** — cut *to our knowledge* / *as far as we know* / *to the best of our knowledge* / *as far as we are aware* / soft *at least*; keep quantitative lower bounds. Not a substitute for independent review (Step D6).
+Critique the draft against the 20 rules, anti-tell register, anti-slop checklist, and author taste **P1–P5 / P7** (`docs/notes/taste-profile.md`). For each weak passage, name *what* it drifts toward and *why*, then rewrite once. Targeted passes: (a) **stock-register hunt**; (b) **connector strip**; (c) **memorable-line test**; (d) **declarative-then-justify**; (e) **limit voice (P3)** — genuine limits stated with clear caution naming the missing object, not punchy denial-by-default and not wool on non-limits; (f) **opening (P4)** — cut stock big-Q; keep concrete fact or real setup as context demands; (g) **citation work (P5)** — for each cluster, either each source earns a clause or the stack is honestly ancillary; (h) **epistemic-hedge hunt (P2)** — cut *to our knowledge* / *as far as we know* / *to the best of our knowledge* / *as far as we are aware* / soft *at least*; keep quantitative lower bounds; (i) **anti-slop + P7** — binary contrasts, colon reveals, puffery, weasel attribution, metronome, econ register fakes. Not a substitute for independent review (Step D6).
+
 ### Step D5: Verify-before-use list
 
 Extract every factual claim, quantity, date, and citation in the draft into a checklist for the human to confirm. This is the accountability pass — one review, not heavy editing. Flag explicitly any place the draft needed a fact the human did not supply. Nothing in this list may be an invented value. Any `NEEDS SOURCE` item must correspond to a `[VERIFY: …]` placeholder still in the draft body — confirmation of the list alone is not permission to use unverified prose; the human must supply the value or delete the claim.
@@ -147,7 +163,7 @@ Read the target file. If it contains `\input{}` or `\include{}` directives for p
 
 ### Step 2: Claude Review
 
-Apply the style profile (all 20 rules, or the user-specified subset) to the prose.
+Apply the style profile (all 20 rules, or the user-specified subset) to the prose. Also apply the **Anti-slop (academic)** checklist and **P7** when scoring impact — flag with rule `slop` or `P7` in the Issue column if no S-rule fits.
 
 **Abstract check**: If the file contains an abstract (`\begin{abstract}` ... `\end{abstract}`), count its words. If it exceeds 100 words, flag it separately at the top of the output with the current word count and a concrete cut-down rewrite.
 
