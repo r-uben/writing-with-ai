@@ -1,9 +1,9 @@
 ---
-name: writing
-description: Draft or review academic LaTeX prose against a codified style profile. Review mode: Claude critiques, Antigravity/Gemini gives a parallel second opinion, output synthesizes concrete rewrites. Draft mode (--draft): turns a human-supplied idea/outline into near-final prose in a strong academic register, self-critiques against the 20 rules and measured AI-tells, and hands off to an independent judge. Use when the user wants to draft or tighten academic writing from a concept, review a LaTeX paper, or types /writing.
+name: no-ai-slop
+description: Draft or review academic LaTeX prose against a codified anti-slop style profile. Review mode: Claude critiques, Antigravity/Gemini gives a parallel second opinion, output synthesizes concrete rewrites. Draft mode (--draft): turns a human-supplied idea/outline into near-final prose in a strong academic register, self-critiques against the 20 rules and measured AI-tells, and hands off to an independent judge. Use when the user wants to draft or tighten academic writing from a concept, review a LaTeX paper, or types /no-ai-slop.
 ---
 
-# Writing
+# No AI Slop
 
 Two modes over one 20-rule academic style profile.
 
@@ -41,15 +41,15 @@ Apply these rules when reviewing. Each issue MUST reference its rule ID.
 
 ## Input Parsing
 
-The user invokes `/writing` with arguments in any order:
+The user invokes `/no-ai-slop` with arguments in any order:
 
 ```
-/writing path/to/file.tex              # Review a file (all rules)
-/writing path/to/file.tex S1 S5 S6     # Review with rule subset only
-/writing path/to/file.tex --no-gemini  # Claude-only review
-/writing --no-gemini S3 S12 file.tex   # Flags and rules in any order
-/writing --draft concept.md            # Draft mode: idea/outline → prose
-/writing --draft --section intro --words 400 "core claim + evidence"
+/no-ai-slop path/to/file.tex              # Review a file (all rules)
+/no-ai-slop path/to/file.tex S1 S5 S6     # Review with rule subset only
+/no-ai-slop path/to/file.tex --no-gemini  # Claude-only review
+/no-ai-slop --no-gemini S3 S12 file.tex   # Flags and rules in any order
+/no-ai-slop --draft concept.md            # Draft mode: idea/outline → prose
+/no-ai-slop --draft --section intro --words 400 "core claim + evidence"
 ```
 
 **Parse rules:**

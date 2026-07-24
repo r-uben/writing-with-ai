@@ -28,8 +28,8 @@ You are expected to exercise judgment, not suspend it—this note exists to poin
 ## Skill source and deployment
 
 - `skill/SKILL.md` is the repository source of truth. Develop and review changes here; do not make durable edits only in an installed copy.
-- After a skill change is finished, independently reviewed, and tested, propose syncing it to `~/.config/ai-skills/writing/SKILL.md`. Do not overwrite the installed skill without explicit user approval.
-- `~/.claude/skills/writing` is currently a consumer symlink to `~/.config/ai-skills/writing`; do not deploy separately to both paths.
+- After a skill change is finished, independently reviewed, and tested, propose syncing it to `~/.config/ai-skills/no-ai-slop/SKILL.md`. Do not overwrite the installed skill without explicit user approval.
+- `~/.claude/skills/no-ai-slop` is currently a consumer symlink to `~/.config/ai-skills/no-ai-slop`; do not deploy separately to both paths. Remove any leftover `writing` install paths after the rename so `/writing` does not shadow `/no-ai-slop`.
 - Before deployment, verify that the symlink and canonical destination still resolve as documented. After deployment, compare the repository and installed files byte-for-byte.
 - Deployment is not publication: do not commit, push, or release merely because the local skill was installed.
 

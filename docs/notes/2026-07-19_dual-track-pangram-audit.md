@@ -72,7 +72,7 @@ Per concept:
 
 ## Explicit non-goals
 
-- Do not deploy Track P into `~/.config/ai-skills/writing/`.
+- Do not deploy Track P into `~/.config/ai-skills/no-ai-slop/`.
 - Do not treat a Pangram pass as proof the prose is good, or a fail as proof it is bad.
 - Do not invent facts/citations to game either track (charter).
 - Do not claim the audit "beats" Pangram — claim only what the contingency table shows.

@@ -71,6 +71,6 @@ uv run track-r docs/notes/pangram-audit/fixtures/<id>-track-q.md --reviser claud
 ## Explicit non-goals
 
 - Do not build or retain a corpus of certified-undetectable machine essays.
-- Do not deploy Track R into `~/.config/ai-skills/writing/` or `skill/`.
+- Do not deploy Track R into `~/.config/ai-skills/no-ai-slop/` or `skill/`.
 - Do not report a rate without its denominator, or a "no drift" claim without independent certification.
 - Do not treat a single pass as the finding; the finding is the boundary and the ablation.
