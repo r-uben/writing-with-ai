@@ -1,9 +1,9 @@
 ---
-name: writing
-description: Draft or review academic LaTeX prose against a codified style profile. Review mode: Claude critiques, Antigravity/Gemini gives a parallel second opinion, output synthesizes concrete rewrites. Draft mode (--draft): turns a human-supplied idea/outline into near-final prose in a strong academic register, self-critiques against the 20 rules and measured AI-tells, and hands off to an independent judge. Use when the user wants to draft or tighten academic writing from a concept, review a LaTeX paper, or types /writing.
+name: no-ai-slop
+description: Draft or review academic LaTeX prose against a codified anti-slop style profile. Review mode: Claude critiques, Antigravity/Gemini gives a parallel second opinion, output synthesizes concrete rewrites. Draft mode (--draft): turns a human-supplied idea/outline into near-final prose in a strong academic register, self-critiques against the 20 rules and measured AI-tells, and hands off to an independent judge. Use when the user wants to draft or tighten academic writing from a concept, review a LaTeX paper, or types /no-ai-slop.
 ---
 
-# Writing
+# No AI Slop
 
 Two modes over one 20-rule academic style profile.
 
@@ -41,15 +41,15 @@ Apply these rules when reviewing. Each issue MUST reference its rule ID.
 
 ## Input Parsing
 
-The user invokes `/writing` with arguments in any order:
+The user invokes `/no-ai-slop` with arguments in any order:
 
 ```
-/writing path/to/file.tex              # Review a file (all rules)
-/writing path/to/file.tex S1 S5 S6     # Review with rule subset only
-/writing path/to/file.tex --no-gemini  # Claude-only review
-/writing --no-gemini S3 S12 file.tex   # Flags and rules in any order
-/writing --draft concept.md            # Draft mode: idea/outline → prose
-/writing --draft --section intro --words 400 "core claim + evidence"
+/no-ai-slop path/to/file.tex              # Review a file (all rules)
+/no-ai-slop path/to/file.tex S1 S5 S6     # Review with rule subset only
+/no-ai-slop path/to/file.tex --no-gemini  # Claude-only review
+/no-ai-slop --no-gemini S3 S12 file.tex   # Flags and rules in any order
+/no-ai-slop --draft concept.md            # Draft mode: idea/outline → prose
+/no-ai-slop --draft --section intro --words 400 "core claim + evidence"
 ```
 
 **Parse rules:**
@@ -83,10 +83,11 @@ Draft prose from the confirmed outline in a strong academic register (`--venue` 
 - **S2 / burstiness**: deliberately vary sentence length. No runs of same-length sentences; place at least one very short declarative sentence at an argumentative pivot ("It tightens.") — variance follows from that move; don't chase a numeric target.
 - **Excess-vocabulary ban**: avoid the measured tell-register. Treat this as *examples of a register to avoid*, not a fixed blocklist (the specific words date as models are steered off them). Avoid: *delve, underscore, showcase, intricate, meticulous(ly), pivotal, realm, tapestry, testament, nuanced, crucial, comprehensive*; formal-connector overuse: *furthermore, moreover, additionally, notably, it is worth noting, importantly*. The durable rule is: flat, uniformly-flowery register is the tell — write plainly and variably instead.
 - **Stock-register test**: stock academic phrases are slop even when off any tell list ("do the heavy lifting", "in the classic sense", "the standard prescription"). If a phrase could appear unchanged in a hundred other papers, replace it.
+- **No "not X, (it) is Y" theater**: ban the contrastive definition frame — *this is not X; it is Y*, *the issue is not X but Y*, *far from being X, …*, *the point is not A; it is B*. It stages a fake correction instead of stating the claim. Say the affirmative mechanism or fact once. **Carve-out:** genuine Scope Fence limits (below) may use parallel can/cannot borders; they must not open with the theatrical *this is not…* setup.
 - **Argument-carried transitions**: the logic of adjacent sentences carries the turn; do not scaffold with *therefore/thus/yet/hence* where the content already turns.
 - **Noun-driven over adjective-driven**: strip non-quantitative adjectives and adverbs (*crucial*, *intricate*, *profoundly*). If an effect is "large", state the mechanism or the exact number. Strong academic writing relies on precise nouns and active verbs.
 - **S4/S5/S10/S11/S16**: no filler, conclusion-first, confident not arrogant. Ban apologetic wool on ordinary claims (**P2**). Include epistemic throat-clear: *to our knowledge*, *as far as we know*, *to the best of our knowledge*, *as far as we are aware*, and soft *at least* (“we can at least say…”, “this at least suggests…”) — rewrite as a flat claim or a named P3 limit. Do **not** ban quantitative lower bounds (“standard errors of at least 3%”). **P3 exception:** when stating a *genuine* identification or scope limit the human flagged, prefer explicit caution that names what cannot be delivered (Q3=B) — not punchy telegraphic denial (“The size is not.”) as the default. Do not use limit-caution as cover for soft claims elsewhere. The memorable formulation must compress the argument's mechanism itself — decorative symmetry that could caption any argument gets cut. First-person: follow S12 from authorship context (solo → "I"; coauthored → "we"), not a baked-in solo assumption.
-- **The Scope Fence (Limitations)**: when conceding a limitation or lack of power, define the exact border of what is still valid using a strict contrast ("Cannot X; Can Y"). Never spiral into an apologetic hedge. "Identification improves; power does not."
+- **The Scope Fence (Limitations)**: when conceding a limitation or lack of power, define the exact border of what is still valid using a strict parallel contrast ("Cannot X; Can Y"). Never spiral into an apologetic hedge. Good: "Identification improves; power does not." Not: "This is not a failure of identification; it is a failure of power."
 - **S6/S7**: anchor claims to the human-supplied numbers; label uncertainty the human flagged (P3 voice for real limits). Never fabricate a figure to satisfy S6 — if a claim needs a number the human did not supply, insert `[VERIFY: description]` **inline in the prose** at that point (do not invent a plausible value). Placeholders flow into D5 automatically.
 - **Author taste P4 (openings):** if a dated/named/quantified fact is in the concept, prefer opening on it; a real setup / section-frame question is OK when it states this draft’s job. Never stock “A central question in [field] is…”.
 - **Author taste P5 (citations):** narrative `\citet` when the source does sentence-level work; parenthetical clusters OK for ancillary or well-established stacks — pick by context, don’t force one mode.
@@ -101,7 +102,7 @@ Draft prose from the confirmed outline in a strong academic register (`--venue` 
 
 ### Step D4: Self-critique + one revision (TICL-style)
 
-Critique the draft against the 20 rules, anti-tell register, and author taste **P1–P5** (`docs/notes/taste-profile.md`). For each weak passage, name *what* it drifts toward and *why*, then rewrite once. Targeted passes: (a) **stock-register hunt**; (b) **connector strip**; (c) **memorable-line test**; (d) **declarative-then-justify**; (e) **limit voice (P3)** — genuine limits stated with clear caution naming the missing object, not punchy denial-by-default and not wool on non-limits; (f) **opening (P4)** — cut stock big-Q; keep concrete fact or real setup as context demands; (g) **citation work (P5)** — for each cluster, either each source earns a clause or the stack is honestly ancillary; (h) **epistemic-hedge hunt (P2)** — cut *to our knowledge* / *as far as we know* / *to the best of our knowledge* / *as far as we are aware* / soft *at least*; keep quantitative lower bounds; (i) **novelty-claim strip** — cut *novel*, *unprecedented*, etc.; (j) **scope fence check** — ensure conceded limits end in a strict "Cannot X; Can Y" contrast. Not a substitute for independent review (Step D6).
+Critique the draft against the 20 rules, anti-tell register, and author taste **P1–P5** (`docs/notes/taste-profile.md`). For each weak passage, name *what* it drifts toward and *why*, then rewrite once. Targeted passes: (a) **stock-register hunt**; (b) **connector strip**; (c) **memorable-line test**; (d) **declarative-then-justify**; (e) **limit voice (P3)** — genuine limits stated with clear caution naming the missing object, not punchy denial-by-default and not wool on non-limits; (f) **opening (P4)** — cut stock big-Q; keep concrete fact or real setup as context demands; (g) **citation work (P5)** — for each cluster, either each source earns a clause or the stack is honestly ancillary; (h) **epistemic-hedge hunt (P2)** — cut *to our knowledge* / *as far as we know* / *to the best of our knowledge* / *as far as we are aware* / soft *at least*; keep quantitative lower bounds; (i) **novelty-claim strip** — cut *novel*, *unprecedented*, etc.; (j) **scope fence check** — ensure conceded limits end in a strict "Cannot X; Can Y" contrast; (k) **not-X-is-Y strip** — rewrite *this is not X; it is Y* / *not X but Y* definitional theater as a single affirmative claim (keep only true Scope Fence can/cannot borders). Not a substitute for independent review (Step D6).
 ### Step D5: Verify-before-use list
 
 Extract every factual claim, quantity, date, and citation in the draft into a checklist for the human to confirm. This is the accountability pass — one review, not heavy editing. Flag explicitly any place the draft needed a fact the human did not supply. Nothing in this list may be an invented value. Any `NEEDS SOURCE` item must correspond to a `[VERIFY: …]` placeholder still in the draft body — confirmation of the list alone is not permission to use unverified prose; the human must supply the value or delete the claim.

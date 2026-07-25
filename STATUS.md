@@ -1,12 +1,13 @@
 # Status
 
-**Last updated:** 2026-07-23 (Added novelty strip, scope fence, noun-driven constraints, and tightened S10/S14)
+**Last updated:** 2026-07-24 (Renamed skill invoke from `/writing` → `/no-ai-slop`)
 
 ## Stage
 
-Branch `setup/initial-structure`. Not pushed. **Repo skill synced** to
-`~/.config/ai-skills/writing/SKILL.md` (and via symlink `~/.claude/skills/writing`).
-Byte-identical to `skill/SKILL.md` (sha256 `7a4dbfe0…`). Deployment ≠ commit/push.
+Branch `cursor/rename-skill-no-ai-slop-860f`. Skill renamed in repo (`name: no-ai-slop`).
+**Cloud env synced** to `~/.config/ai-skills/no-ai-slop/SKILL.md` (symlink
+`~/.claude/skills/no-ai-slop`); byte-identical (sha256 `fc5b08e9…`). Your local Claude
+machine still needs the same sync + removal of leftover `writing` install dirs.
 
 **Ultimate goal:** AI draft/revise in economist/academic register for real paper work.
 
@@ -17,6 +18,8 @@ Byte-identical to `skill/SKILL.md` (sha256 `7a4dbfe0…`). Deployment ≠ commit
 - **P2 tightened (2026-07-22):** ban *to our knowledge* / *as far as we know* / *to the best of our
   knowledge* / soft *at least…*; keep numeric lower bounds (*at least 3%*). D3 + D4(h) in repo skill.
 - **Anti-slop constraints added (2026-07-23):** Ban explicit novelty claims (S10), require substantive signposting (S14), strip non-quantitative adjectives for noun-driven prose, and enforce a strict contrast "Scope Fence" for limitations.
+- **Rename (2026-07-24):** skill invoke `/writing` → `/no-ai-slop` (frontmatter `name`, docs, deploy paths).
+- **Not-X-is-Y ban (2026-07-25):** D3 + D4(k) — ban contrastive definition theater (*this is not X; it is Y*); Scope Fence can/cannot borders still allowed.
 - Taste graph / FF–NS probes remain useful as audit evidence; not a drafting recipe.
 
 ## Parked
@@ -26,5 +29,8 @@ Byte-identical to `skill/SKILL.md` (sha256 `7a4dbfe0…`). Deployment ≠ commit
 
 ## Next action
 
-Sync repo skill to `~/.config/ai-skills/writing/SKILL.md`. Smoke-test `--draft` on `examples/ff-concept.md` or `examples/ns-concept.md` and confirm new constraints (hedges, novelty bans, scope fences) hold up.
-No commit/push unless you ask.
+On the machine where Claude loads skills:
+1. Sync `skill/SKILL.md` → `~/.config/ai-skills/no-ai-slop/SKILL.md`
+2. Symlink `~/.claude/skills/no-ai-slop` → that dir; remove old `writing` install paths
+3. Smoke-test `/no-ai-slop --draft` on `examples/ff-concept.md` or `examples/ns-concept.md`
+   (hedges, novelty bans, scope fences)

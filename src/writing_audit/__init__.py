@@ -1,1 +1,1 @@
-"""Research tooling for writing-with-ai experiments (not the /writing skill)."""
+"""Research tooling for writing-with-ai experiments (not the /no-ai-slop skill)."""
