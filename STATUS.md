@@ -19,6 +19,7 @@ machine still needs the same sync + removal of leftover `writing` install dirs.
   knowledge* / soft *at least…*; keep numeric lower bounds (*at least 3%*). D3 + D4(h) in repo skill.
 - **Anti-slop constraints added (2026-07-23):** Ban explicit novelty claims (S10), require substantive signposting (S14), strip non-quantitative adjectives for noun-driven prose, and enforce a strict contrast "Scope Fence" for limitations.
 - **Rename (2026-07-24):** skill invoke `/writing` → `/no-ai-slop` (frontmatter `name`, docs, deploy paths).
+- **Not-X-is-Y ban (2026-07-25):** D3 + D4(k) — ban contrastive definition theater (*this is not X; it is Y*); Scope Fence can/cannot borders still allowed.
 - Taste graph / FF–NS probes remain useful as audit evidence; not a drafting recipe.
 
 ## Parked
