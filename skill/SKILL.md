@@ -1,6 +1,6 @@
 ---
 name: writing
-description: Draft or review prose destined for an academic paper, against a codified 20-rule style profile plus the CJ register tick. Review mode: Claude takes the argument lens, Antigravity/Gemini the register lens, output synthesizes concrete rewrites. Draft mode (--draft) turns a human-supplied idea or outline into near-final academic prose, self-critiques, and hands off to an independent judge. Use when the destination is a journal, working paper, or dissertation chapter — including a .md concept note being drafted toward one. For prose destined anywhere else (README, blog, Slack, docs, email), use no-ai-slop instead.
+description: Draft or review prose destined for an academic paper, against a codified 20-rule style profile plus the CJ register tick and the N1-N3 register-neutral tells. Review mode: Claude takes the argument lens, Antigravity/Gemini the register lens, output synthesizes concrete rewrites. Draft mode (--draft) turns a human-supplied idea or outline into near-final academic prose, self-critiques, and hands off to an independent judge. Use when the destination is a journal, working paper, or dissertation chapter — including a .md concept note being drafted toward one. For prose destined anywhere else (README, blog, Slack, docs, email), use no-ai-slop instead.
 ---
 
 # Writing
@@ -72,16 +72,28 @@ Cite **CJ** in the Rule column when flagging the empty scaffold; cite **S13** wh
 
 The test is whether the X-side is a live rival: an attributed claim, a stated hypothesis, a plausible identification threat, or an evidenced alternative. If nothing in the literature or the data ever proposed X, the contrast is scaffolding. S13 never requires the literal "not X but Y" wording.
 
+## Register-neutral tells: N1–N3
+
+Three failures that are not about academic register at all — they degrade any prose, and papers are not exempt. Cite them by ID like CJ.
+
+| ID | Tell | Directive |
+|----|------|-----------|
+| N1 | Superficial analysis | Trailing `-ing` clauses that pretend to explain significance: *highlighting*, *underscoring*, *reflecting*, *showcasing*, *demonstrating the importance of*. They assert that something matters instead of saying what it does. Replace with the mechanism or the consequence. Bad: "Spreads widen on announcement days, underscoring the role of information frictions." Good: "Spreads widen on announcement days, and the widening is concentrated in firms without analyst coverage." |
+| N2 | Synonym cycling | Rotating terms for variety when one word is correct. In a paper this is worse than inelegant — it reads as three different objects. Bad: "The instrument predicts spreads. The shock series explains credit costs. Our measure tracks borrowing conditions." Good: repeat the instrument's name each time. Fix the naming once and use it throughout, including in tables and figure notes. |
+| N3 | Weasel attribution | *Studies show*, *the literature suggests*, *it is widely regarded*, *many argue*, *it is generally accepted* with no `\citep`/`\citet` attached. Name the source or cut the claim. Never invent a citation to satisfy this — in draft mode, insert `[VERIFY: source for <claim>]` and let it flow into D5. |
+
+N1–N3 sit on the register lens with CJ. They are never grounds for cutting a claim the human supplied — only for making it say something.
+
 ## Decorrelated review lenses (default)
 
-By default the two reviewers do **not** share the same checklist (correlated hits waste a second model). Escape: `--full-profile` restores S1–S20 (+ CJ) for both.
+By default the two reviewers do **not** share the same checklist (correlated hits waste a second model). Escape: `--full-profile` restores S1–S20 (+ CJ + N1–N3) for both.
 
 | Reviewer | Lens | Primary IDs |
 |----------|------|-------------|
 | **Claude** | **Argument** — claims, structure, openings, dialectic, evidence altitude | S1 (openings / stock big-Q), S5, S6, S7, S8, S10, S11, S13, S14, S18, S19 + opening-moves split |
-| **Gemini** | **Register** — voice, rhythm, filler, jargon, AER surface, CJ tick | S2, S3, S4, S9, S12, S15, S16, S17, S20, **CJ** |
+| **Gemini** | **Register** — voice, rhythm, filler, jargon, AER surface, CJ tick, register-neutral tells | S2, S3, S4, S9, S12, S15, S16, S17, S20, **CJ**, **N1–N3** |
 
-User-specified `S\d+` subsets still override: both reviewers get only those IDs (plus CJ if register-relevant and not excluded). `--full-profile` ignores the lens split.
+User-specified `S\d+` subsets still override: both reviewers get only those IDs (plus CJ and N1–N3 if register-relevant and not excluded). `--full-profile` ignores the lens split.
 
 ## Opening moves (three laws — do not conflate)
 
@@ -187,7 +199,7 @@ Draft prose from the confirmed outline in a strong academic register (`--venue` 
 
 Critique the draft against the 20 rules, CJ, and author taste **P1–P5** (`docs/notes/taste-profile.md`). For each weak passage, name *what* it drifts toward and *why*, then rewrite once. Targeted passes:
 
-(a) **stock-register hunt**; (b) **connector strip**; (c) **memorable-line test** — does it compress the mechanism, or could it caption any argument?; (d) **declarative-then-justify**; (e) **limit voice (P3)** — genuine limits stated with clear caution naming the missing object, not punchy denial-by-default and not wool on non-limits; (f) **opening (P4)** — cut stock big-Q; keep concrete fact or real setup as context demands; (g) **citation work (P5)** — for each cluster, either each source earns a clause or the stack is honestly ancillary; (h) **epistemic-hedge hunt (P2)** — cut *to our knowledge* / *as far as we know* / *to the best of our knowledge* / *as far as we are aware* / soft *at least*; keep quantitative lower bounds; (i) **novelty-claim strip** — cut *novel*, *unprecedented*, etc.; (j) **scope fence check** — ensure conceded limits end in a strict "Cannot X; Can Y" contrast; (k) **CJ pass** — every "not X but Y" has a live rival on the X-side, or it goes.
+(a) **stock-register hunt**; (b) **connector strip**; (c) **memorable-line test** — does it compress the mechanism, or could it caption any argument?; (d) **declarative-then-justify**; (e) **limit voice (P3)** — genuine limits stated with clear caution naming the missing object, not punchy denial-by-default and not wool on non-limits; (f) **opening (P4)** — cut stock big-Q; keep concrete fact or real setup as context demands; (g) **citation work (P5)** — for each cluster, either each source earns a clause or the stack is honestly ancillary; (h) **epistemic-hedge hunt (P2)** — cut *to our knowledge* / *as far as we know* / *to the best of our knowledge* / *as far as we are aware* / soft *at least*; keep quantitative lower bounds; (i) **novelty-claim strip** — cut *novel*, *unprecedented*, etc.; (j) **scope fence check** — ensure conceded limits end in a strict "Cannot X; Can Y" contrast; (k) **CJ pass** — every "not X but Y" has a live rival on the X-side, or it goes; (l) **N1–N3 pass** — kill trailing `-ing` significance clauses (N1), fix any term that changed name mid-draft (N2), and attach a citation or a `[VERIFY: source]` to every *studies show* / *the literature suggests* (N3).
 
 Not a substitute for independent review (Step D6).
 
@@ -271,7 +283,7 @@ Record Claude's issues internally for synthesis in Step 4.
 
 Fire an Antigravity query in parallel using the Bash tool. Use `agy -p` for non-interactive review and `@` file references so Antigravity reads the file directly. Do not call the legacy `gemini` CLI from this skill.
 
-**Default: send the register-lens IDs only** (S2, S3, S4, S9, S12, S15, S16, S17, S20, CJ). With `--full-profile`, send S1–S20 + CJ. With a user rule subset, send that subset.
+**Default: send the register-lens IDs only** (S2, S3, S4, S9, S12, S15, S16, S17, S20, CJ, N1–N3). With `--full-profile`, send S1–S20 + CJ + N1–N3. With a user rule subset, send that subset.
 
 ```bash
 agy -p "$(cat <<'PROMPT'
@@ -289,6 +301,11 @@ S20: Reference consistency — \eqref for equations, consistent naming for Propo
 CJ: Corrective juxtaposition — flag "not X, but rather Y" / "rather than merely A, we B" where X
     was never a live rival claim (no attributed claim, stated hypothesis, identification threat,
     or evidenced alternative). Do NOT flag a real counterargument that the text then resolves.
+N1: Superficial analysis — trailing "-ing" clauses that assert significance instead of stating it
+    (highlighting, underscoring, reflecting, showcasing). Replace with the mechanism or consequence.
+N2: Synonym cycling — the same object renamed for variety across sentences. Pick one term, repeat it.
+N3: Weasel attribution — "studies show", "the literature suggests", "it is widely regarded", with no
+    \citep/\citet attached. Name the source or cut the claim. Never invent a citation.
 
 INSTRUCTIONS:
 - Identify the 10-15 most impactful STYLE issues (not grammar/spelling).
@@ -301,7 +318,7 @@ STRENGTHS:
 
 ISSUES:
 1. PASSAGE: [original text]
-   RULE: [S# or CJ]
+   RULE: [S# or CJ or N#]
    SEVERITY: [major/minor]
    REWRITE: [concrete replacement]
 
