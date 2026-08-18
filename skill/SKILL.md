@@ -211,7 +211,7 @@ Extract every factual claim, quantity, date, and citation in the draft into a ch
 
 The drafting model must not be the sole reviewer of its own draft (project charter).
 
-1. **Materialize the draft** to a temp `.tex` or `.md` file under the project (or `/tmp`) so `agy` can use `@FILE_PATH` — D3/D4 output in the chat buffer alone is not enough.
+1. **Materialize the draft** to a temp `.tex` or `.md` file under the project (or `/tmp`). D3/D4 output living only in the chat buffer is not enough — the judge must review a fixed artifact, and D5's `[VERIFY: …]` placeholders must be visible in it. Pass its contents inline to `agy` exactly as in Step 3; do not use an `@` reference.
 2. Hand that file to an independent judge — reuse the Antigravity/Gemini path (Review Mode, Step 3) against the style profile. Optionally run deterministic linguistic metrics first.
 3. `--no-gemini` disables this; warn that draft mode then has no independent check. If `agy` fails, say so and do not pretend D6 passed.
 
@@ -281,7 +281,11 @@ Record Claude's issues internally for synthesis in Step 4.
 
 **Skip this step if `--no-gemini` was specified.**
 
-Fire an Antigravity query in parallel using the Bash tool. Use `agy -p` for non-interactive review and `@` file references so Antigravity reads the file directly. Do not call the legacy `gemini` CLI from this skill.
+Fire an Antigravity query in parallel using the Bash tool with `run_in_background: true`, so Claude's own review (Step 2) proceeds while it runs. Do not call the legacy `gemini` CLI from this skill.
+
+**Pass the prose inline. Do NOT use `@FILE_PATH` references.** Headless `agy -p` cannot prompt for the `read_file` permission an `@` reference needs, so the tool call is auto-denied, the review comes back empty — **and the process still exits 0**. Exit status is not a success signal here. Read the file with `cat` and interpolate it instead.
+
+Interpolate `$PROSE` inside the outer double quotes, *outside* the quoted heredoc. Parameter expansion is not re-processed for escapes, so LaTeX backslashes (`\citep`, `\\`) survive intact. Putting the prose inside an unquoted heredoc would mangle them.
 
 **Default: send the register-lens IDs only** (S2, S3, S4, S9, S12, S15, S16, S17, S20, CJ, N1–N3). With `--full-profile`, send S1–S20 + CJ + N1–N3. With a user rule subset, send that subset.
 
@@ -325,14 +329,22 @@ ISSUES:
 STRUCTURAL NOTES:
 [Any observations about paragraph ordering, argument flow, signposting]
 
-Review @FILE_PATH.
+Here is the document:
 PROMPT
-)" --add-dir "$(dirname FILE_PATH)"
+)
+
+$PROSE"
 ```
 
-Replace `FILE_PATH` with the actual file path, and replace `$(dirname FILE_PATH)` with the containing directory. If the current working directory already contains the file, `--add-dir` can be omitted.
+Set `PROSE` first, in the same command: `PROSE="$(cat FILE_PATH)"`, with `FILE_PATH` the actual path. No `--add-dir` is needed — Antigravity never touches the filesystem in this invocation.
 
-**Timeout**: If Antigravity takes longer than 120 seconds or fails, proceed Claude-only and note this in the output. For long reviews, pass `--print-timeout 10m` or run the command in the background.
+**Verify the response before using it.** `agy` exits 0 on several failure modes, so check the body, not the status:
+
+- Contains `no output produced` or names a denied permission → the call failed. Do not report a clean register lens.
+- Missing the `STRENGTHS:` / `ISSUES:` markers → malformed. Discard and proceed Claude-only with a note.
+- Empty or whitespace-only → treat as failure.
+
+**Timeout**: If Antigravity takes longer than 120 seconds or fails, proceed Claude-only and note this in the output. For long reviews, pass `--print-timeout 10m`. When polling for completion, wait on a marker in the output file rather than a fixed sleep.
 
 ### Step 4: Synthesize
 
